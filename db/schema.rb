@@ -10,9 +10,109 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20180226174227) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "articles", force: :cascade do |t|
+    t.string "title"
+    t.string "subtitle"
+    t.text "summary"
+    t.text "content"
+    t.string "picture"
+    t.date "publishing_date"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_articles_on_category_id"
+    t.index ["user_id"], name: "index_articles_on_user_id"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.string "picture"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "categories_prefs", force: :cascade do |t|
+    t.bigint "category_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_categories_prefs_on_category_id"
+    t.index ["user_id"], name: "index_categories_prefs_on_user_id"
+  end
+
+  create_table "donations", force: :cascade do |t|
+    t.integer "amount_cents", default: 0, null: false
+    t.bigint "user_id"
+    t.bigint "article_id"
+    t.jsonb "payment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["article_id"], name: "index_donations_on_article_id"
+    t.index ["user_id"], name: "index_donations_on_user_id"
+  end
+
+  create_table "opinions", force: :cascade do |t|
+    t.text "content"
+    t.bigint "user_id"
+    t.bigint "article_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["article_id"], name: "index_opinions_on_article_id"
+    t.index ["user_id"], name: "index_opinions_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer "rating"
+    t.integer "emotion"
+    t.integer "temperature"
+    t.bigint "user_id"
+    t.bigint "article_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["article_id"], name: "index_reviews_on_article_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.inet "current_sign_in_ip"
+    t.inet "last_sign_in_ip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.string "city"
+    t.text "bio"
+    t.string "picture"
+    t.string "emotion_pref"
+    t.string "temperature_pref"
+    t.string "badge"
+    t.string "link"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  add_foreign_key "articles", "categories"
+  add_foreign_key "articles", "users"
+  add_foreign_key "categories_prefs", "categories"
+  add_foreign_key "categories_prefs", "users"
+  add_foreign_key "donations", "articles"
+  add_foreign_key "donations", "users"
+  add_foreign_key "opinions", "articles"
+  add_foreign_key "opinions", "users"
+  add_foreign_key "reviews", "articles"
+  add_foreign_key "reviews", "users"
 end
