@@ -7,7 +7,7 @@ gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '5.1.5'
 gem 'redis'
-
+gem 'devise'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
@@ -15,6 +15,7 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+gem 'money-rails'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

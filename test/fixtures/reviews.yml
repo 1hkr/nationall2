@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rating: 1
+  emotion: 1
+  temperature: 1
+  user: one
+  article: one
+
+two:
+  rating: 1
+  emotion: 1
+  temperature: 1
+  user: two
+  article: two
