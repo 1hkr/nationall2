@@ -1,22 +1,24 @@
 class DonationsController < ApplicationController
-  def index
-  end
-
-  def show
-  end
-
-  def new
-  end
+  before_action :set_article
 
   def create
+    @donation = Donation.new(donation_params)
+    @donation.article = @article
+    @donation.user = current_user
+    if @donation.save
+      redirect_to article_path(@article)
+    else
+      render 'articles/show'
+    end
   end
 
-  def edit
+  private
+
+  def set_article
+    @article = Article.find(params[:article_id])
   end
 
-  def update
-  end
-
-  def destroy
+  def donation_params
+    params.require(:donation).permit(:amount)
   end
 end
