@@ -1,6 +1,6 @@
 class Article < ApplicationRecord
-  belongs_to :user_id
-  belongs_to :category_id
+  belongs_to :user
+  belongs_to :category
 
   has_many :donations, dependent: :nullify
   has_many :users, through: :donations
