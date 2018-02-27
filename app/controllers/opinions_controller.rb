@@ -27,7 +27,7 @@ class OpinionsController < ApplicationController
   def update
 
     if @opinion.update(opinion_params)
-      redirect_to article_path(@article), notice: 'opinion was successfully updated.'
+      redirect_to article_path(@article), notice: 'Opinion was successfully updated.'
     else
       render :edit
     end
@@ -35,7 +35,7 @@ class OpinionsController < ApplicationController
 
   def destroy
     @opinion.destroy
-    redirect_to article_path(@article), notice: 'opinion was successfully destroyed.'
+    redirect_to article_path(@article), notice: 'Opinion was successfully destroyed.'
   end
 
   private
