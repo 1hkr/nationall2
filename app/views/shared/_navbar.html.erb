@@ -21,10 +21,10 @@
         <!-- Center Navigation -->
         <div class="align-h navbar-center">
           <div class="align-v width-map">
-            <%= link_to "Map", root_path, class: "navbar-wagon-item navbar-wagon-link" %>
+            <%= link_to "Map", root_path, class: "navbar-wagon-item navbar-wagon-link #{"page-active" if current_page?(controller: 'pages', action: 'home')}" %>
           </div>
           <div class="border-left align-v">
-            <%= link_to "Articles", articles_path, class: "navbar-wagon-item navbar-wagon-link" %>
+            <%= link_to "Articles", articles_path, class: "navbar-wagon-item navbar-wagon-link #{"page-active" if current_page?(controller: 'articles', action: 'index')}" %>
           </div>
         </div>
 
