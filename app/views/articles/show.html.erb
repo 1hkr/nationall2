@@ -1,13 +1,15 @@
-
 <!-- Article banner -->
 
 <div class="article-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= @article.picture %>);">
 </div>
 
+<div class="row margin-left">
 
 <!-- LEFT SIDE -->
-<div class="row margin-left">
   <div class="col-xs-7 col-md-7 col-sm-7">
+
+    <!-- Articles informations -->
+
     <div class="article-text margins">
       <div class="article-details">
         <p> <%= @article.category.name.upcase %></p>
@@ -22,7 +24,7 @@
       <h4>Summary</h4>
       <p> <%= @article.summary %></p>
 
-  <!-- Profile of the writer -->
+      <!-- Profile of the writer -->
       <div class="article-profile">
 
         <div class="center">
@@ -30,113 +32,97 @@
         </div>
 
         <div class="user-details">
-
           <div>
             <p> <b><%= @article.user.first_name%> <%= @article.user.last_name %></b> </p>
           </div>
-
           <div>
             <p class="grow"> <%= @article.user.city %></p>
           </div>
-
         </div>
-      </div>
 
-      <div>
+      </div>
 
     </div>
 
     <% if Donation.find_by(user_id: current_user.id, article_id: @article.id) %>
 
-      <div class="article-content">
+    <div class="article-content">
 
-        <h4>Full article</h4>
+      <h4>Full article</h4>
 
-        <p><%= raw @article.content %></p>
-        <h4>Review</h4>
+      <p><%= raw @article.content %></p>
 
-          <div class="rating">
-            <span><input type="radio" name="rating" id="str1" value="1"><label for="str1"></label></span>
-            <span><input type="radio" name="rating" id="str2" value="2"><label for="str2"></label></span>
-            <span><input type="radio" name="rating" id="str3" value="3"><label for="str3"></label></span>
-            <span><input type="radio" name="rating" id="str4" value="4"><label for="str4"></label></span>
-            <span><input type="radio" name="rating" id="str5" value="5"><label for="str5"></label></span>
-          </div>
 
-          <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+      <!-- Add a review -->
+      <h4>Review</h4>
 
-          <script type="text/javascript">
-            $(document).ready(function(){
-                // Check Radio-box
-                $(".rating input:radio").attr("checked", false);
-
-                $('.rating input').click(function () {
-                    $(".rating span").removeClass('checked');
-                    $(this).parent().addClass('checked');
-                });
-
-                $('input:radio').change(
-                  function(){
-                    var userRating = this.value;
-                    var simpleForm = document.getElementById("simple-f")
-                    simpleForm.insertAdjacentHTML('afterbegin', '<input type="number" name="rating", value=${userRating}')
-                });
-            });
-          </script>
-
-          <div id="simple-f">
-            <%= simple_form_for [@article, @review] do |f| %>
-            <%= f.input :comment, placeholder: "Your review matters.", :input_html => { :rows => 7} %>
-            <%= f.submit "Submit Review", class: "btn-blue" %>
-            <% end %>
-          </div>
-
+      <div class="rating">
+        <span><input type="radio" name="rating" id="str1" value="1"><label for="str1"></label></span>
+        <span><input type="radio" name="rating" id="str2" value="2"><label for="str2"></label></span>
+        <span><input type="radio" name="rating" id="str3" value="3"><label for="str3"></label></span>
+        <span><input type="radio" name="rating" id="str4" value="4"><label for="str4"></label></span>
+        <span><input type="radio" name="rating" id="str5" value="5"><label for="str5"></label></span>
       </div>
+
+      <div id="simple-f">
+        <%= simple_form_for [@article, @review] do |f| %>
+        <%= f.input :comment, placeholder: "Your review matters.", :input_html => { :rows => 7} %>
+        <%= f.submit "Submit Review", class: "btn-blue" %>
+        <% end %>
+      </div>
+
+    </div>
 
     <% end %>
 
     <hr>
 
+    <!-- List of reviews -->
+
     <% if @reviews.exists? %>
 
-      <% @reviews.each do |review| %>
+    <% @reviews.each do |review| %>
 
-        <div class="article-profile">
+    <!-- Writer of the review -->
 
-          <div class="center">
-            <img class="card-user" src=<%= review.user.picture %>>
-          </div>
+    <div class="article-profile">
 
-          <div class="user-details">
+      <div class="center">
+        <img class="card-user" src=<%= review.user.picture %>>
+      </div>
 
-            <div>
-              <p><b><%= review.user.first_name%> <%= review.user.last_name %></b></p>
-            </div>
-            <div>
-              <p class="grow"> <%= review.user.city %></p>
-            </div>
+      <div class="user-details">
 
-          </div>
+        <div>
+          <p><b><%= review.user.first_name%> <%= review.user.last_name %></b></p>
         </div>
+        <div>
+          <p class="grow"> <%= review.user.city %></p>
+        </div>
+      </div>
 
-        <ul class="list-inline">
-          <% review.rating.times do %>
-            <li class="list-inline-item"><i class="glyphicon glyphicon-star"></i></li>
-          <% end %>
-          <% unless review.rating == 5 %>
-            <% (5 - review.rating).times do %>
-            <li class="list-inline-item"><i class="glyphicon glyphicon-star-empty"></i></li>
-            <% end %>
-          <% end %>
-        </ul>
+    </div>
 
-        <p><%= review.comment %></p>
+    <!-- Stars of the review -->
 
-        <hr>
-
+    <ul class="list-inline">
+      <% review.rating.times do %>
+      <li class="list-inline-item"><i class="glyphicon glyphicon-star"></i></li>
       <% end %>
+      <% unless review.rating == 5 %>
+      <% (5 - review.rating).times do %>
+      <li class="list-inline-item"><i class="glyphicon glyphicon-star-empty"></i></li>
+      <% end %>
+      <% end %>
+    </ul>
+
+    <hr>
 
     <% end %>
+
+    <% end %>
+
+    <!-- End buttons -->
 
     <div class="buttons">
       <%= link_to "Back", articles_path, class: "btn-gray" %>
@@ -145,25 +131,26 @@
     <div class="buttons">
 
       <% if policy(@article).edit? %>
-        <%= link_to "Edit", edit_article_path(@article), class: "btn-gray" %>
+      <%= link_to "Edit", edit_article_path(@article), class: "btn-gray" %>
       <% end %>
 
       <% if policy(@article).destroy? %>
-        <%= link_to "Delete", article_path(@article), class: "btn-gray", method: :delete, data: { confirm: "Are you sure?"} %>
+      <%= link_to "Delete", article_path(@article), class: "btn-gray", method: :delete, data: { confirm: "Are you sure?"} %>
       <% end %>
 
     </div>
-
   </div>
+
+<!-- RIGHT SIDE -->
 
   <div class="col-xs-5 col-md-5 col-sm-5">
 
     <% if donation = Donation.find_by(user_id: current_user.id, article_id: @article.id) %>
 
-      <h3>Donation</h3>
-      <p><%= donation.amount %>€</p>
-      <a href="#", class= "btn-blue-empty">Donation done</a>
-      <h5> Thank you for your donation ! </h5>
+    <h3>Donation</h3>
+    <p><%= donation.amount %>€</p>
+    <a href="#", class= "btn-blue-empty">Donation done</a>
+    <h5> Thank you for your donation ! </h5>
 
     <% else %>
 
