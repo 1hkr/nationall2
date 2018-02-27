@@ -1,0 +1,15 @@
+<%= simple_form_for(@article) do |f| %>
+<%= f.input :title, placeholder: "Title", label: false, input_html: { class: 'form_light no_border form_title' } %>
+<%= f.input :subtitle, placeholder: "Subtitle", label: false, input_html: { class: 'form_light no_border form_subtitle margin_bottom' }%>
+<div class='no_padding'>
+  <%= f.input :content, placeholder: "Enter the content.", label: false, input_html: { class: 'quill_container no_padding_left' }%>
+</div>
+<%= f.input :summary, placeholder: "Summary", label: false, input_html: { class: 'form_light no_border' } %>
+<%= f.input :picture, placeholder: "Picture's HTML", label: false, input_html: { class: 'form_light no_border' } %>
+<div class="dropdown_wrapper">
+<%= f.input :category, collection: Article::CATEGORIES, prompt: "Category", label: false, input_html: { class: 'form_light no_border no_padding' }%>
+<%= f.association :project, prompt: "Choose a project to donate to", label: false, input_html: { class: 'form_light no_border' }%>
+</div>
+<%= f.button :submit, class: "btn btn-primary"  %>
+<% end %>
+
