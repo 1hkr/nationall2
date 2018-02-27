@@ -18,6 +18,8 @@ gem 'webpacker'
 gem 'money-rails'
 gem "pundit"
 gem 'geocoder'
+gem 'jquery-rails'
+gem 'quilljs-rails'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

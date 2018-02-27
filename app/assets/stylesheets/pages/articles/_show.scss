@@ -1,0 +1,28 @@
+
+// for the position of the date
+.article-text {
+  position: relative;
+  padding: 2px 5px 0px 0px;
+}
+
+// for the size of the category and date
+.article-details {
+ font-size: 14px;
+}
+
+// for the avatar and the name next to it
+.article-profile {
+  display: flex;
+  font-size: 14px;
+  .user-details {
+    display: flex;
+    flex-direction: column;
+    line-height: 8px;
+    margin-left: 15px;
+    margin-top: 5px;
+    .grow {
+      flex: 1 0 50px;
+    }
+  }
+}
+

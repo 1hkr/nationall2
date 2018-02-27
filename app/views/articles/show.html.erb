@@ -3,14 +3,14 @@
 <div class="article-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= @article.picture %>);">
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid side-margin">
   <div class="row margin-left">
 
   <!-- LEFT SIDE -->
     <div class="col-xs-7 col-md-7 col-sm-7">
 
       <!-- Articles informations -->
-      <div class="article-text margins">
+      <div class="article-text">
         <div class="article-details">
           <p> <%= @article.category.name.upcase %></p>
           <p class="top-right"><%= @article.publishing_date %></p>
@@ -27,7 +27,7 @@
 
   <hr>
 
-      <div class="article-content">
+      <div>
         <h4>Full article</h4>
         <p><%= raw @article.content %></p>
       </div>
