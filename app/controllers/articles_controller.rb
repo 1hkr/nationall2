@@ -15,23 +15,29 @@ class ArticlesController < ApplicationController
             height: 50,
             width: 50
           }
-        },
-        style: {
-          'border-radius': '50%'
-        }
+          },
+          style: {
+            'border-radius': '50%'
+          }
         # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
       }
+    end
+
+    if params[:query].present?
+      @articles = policy_scope(Article).where("title ILIKE ?", "%#{params[:query]}%")
+    else
+      @articles = policy_scope(Article).order(created_at: :desc)
     end
   end
 
   def show
     @donation = Donation.new
     @opinion = Opinion.new
-    @opinions = Review.where(article: @article)
+    @opinions = Opinion.where(article: @article)
     @review = Review.new
     @reviews = Review.where(article: @article)
     authorize @donation
-    authorize @opinion
+
   end
 
   def new
