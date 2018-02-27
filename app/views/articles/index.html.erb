@@ -12,7 +12,7 @@
               </div>
               <div class="card-text grow">
                 <div class="card-details">
-                  <p> <%= article.category.upcase %></p>
+                  <p> <%= article.category.name.upcase %></p>
                   <p class="top-right"><%= article.publishing_date %></p>
                 </div>
                 <div class="card-titles">
@@ -28,7 +28,7 @@
                       <p> <b><%= article.user.first_name%> <%= article.user.last_name %></b> </p>
                     </div>
                     <div>
-                      <p class="grow"> <%= article.user.address %></p>
+                      <p class="grow"> <%= article.user.city %></p>
                     </div>
                   </div>
                 </div>
