@@ -68,9 +68,20 @@ p 'Creating users'
   email: 'marcus@nationall.eu',
   password: 'password',
   bio: 'Becoming a journalist in @UPFBarcelona. Specialized in Politics. Working for Nationall. Collaborations in @elpuntavui, @beteve, @VilaWeb i @beteve91fm.',
-  picture: 'https://avatars1.githubusercontent.com/u/35156075?s=400&v=4',
+  picture: 'https://avatars2.githubusercontent.com/u/23409802?s=400&v=4',
   emotion_pref: 'https://avatars2.githubusercontent.com/u/23409802?s=400&v=4',
   temperature_pref: 'intense'
+  },
+  {
+  first_name: 'Test',
+  last_name: 'Account',
+  city: 'london',
+  email: 'test@nationall.eu',
+  password: 'password',
+  bio: 'I test app',
+  picture: 'https://images-na.ssl-images-amazon.com/images/I/61V8uaqUgXL._UY535_.jpg',
+  emotion_pref: 'sad',
+  temperature_pref: 'chill'
   },
   {
   first_name: 'Alexandre',
@@ -145,7 +156,7 @@ p 'Creating users'
   email: 'nicholas@nationall.eu',
   password: 'password',
   bio: 'India is Fashion Editor at @CultureTrip, an Editor of The Omnivore & Online @twin_magazine',
-  picture: 'https://avatars1.githubusercontent.com/u/31583151?s=460&v=4',
+  picture: 'https://avatars0.githubusercontent.com/u/32316057?s=400&v=4',
   emotion_pref: 'happy',
   temperature_pref: 'chill'
   }])
