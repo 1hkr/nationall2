@@ -1,0 +1,50 @@
+
+.buttons {
+  margin: 35px 0px;
+}
+
+.btn-gray {
+  color: $gray;
+  border: 1px solid $gray;
+  padding: 8px 15px;
+  border-radius: 3px;
+  font-weight: lighter;
+  opacity: 0.6;
+}
+
+.btn-gray:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: #999999;
+}
+
+.btn-blue {
+  color: white;
+  background-color: $blue;
+  border: 1px solid $blue;
+  padding: 8px 15px;
+  border-radius: 3px;
+  font-weight: lighter;
+  opacity: 0.6;
+}
+
+.btn-blue:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: #999999;
+}
+
+.btn-blue-empty {
+  color: $blue;
+  border: 1px solid $blue;
+  padding: 8px 15px;
+  border-radius: 3px;
+  font-weight: lighter;
+  opacity: 0.6;
+}
+
+.btn-blue-empty:hover {
+  opacity: 1;
+  text-decoration: none;
+  font-weight: light;
+}
