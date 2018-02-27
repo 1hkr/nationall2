@@ -1,2 +1,55 @@
-<h1>Articles#index</h1>
-<p>Find me in app/views/articles/index.html.erb</p>
+<div class="container-fluid">
+
+  <div class="row margin-left">
+
+    <div class="col-xs-7 col-md-7 col-sm-7">
+    <h1 class="index-title">Articles</h1>
+      <div class="row">
+        <% @articles.each do |article| %>
+          <div class="col-xs-12 col-sm-6">
+            <div class="card-container">
+              <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= article.picture %>);">
+              </div>
+              <div class="card-text grow">
+                <div class="card-details">
+                  <p> <%= article.category.upcase %></p>
+                  <p class="top-right"><%= article.publishing_date %></p>
+                </div>
+                <div class="card-titles">
+                  <h5><%= link_to truncate(article.title, length: 65), article_path(article) %></h5>
+                  <p><%= truncate(article.subtitle, length: 40) %></p>
+                </div>
+                <div class="card-profile">
+                  <div class="center">
+                    <img class="card-user" src=<%= article.user.picture %>>
+                  </div>
+                  <div class="user-details">
+                    <div>
+                      <p> <b><%= article.user.first_name%> <%= article.user.last_name %></b> </p>
+                    </div>
+                    <div>
+                      <p class="grow"> <%= article.user.address %></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="col-xs-5 col-md-5 col-sm-5 sticky-div">
+      <div
+        id="map"
+        style="width: 100%;
+        height: 800px;"
+        data-markers="<%= @markers.to_json %>" >
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
