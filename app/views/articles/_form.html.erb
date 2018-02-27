@@ -7,8 +7,7 @@
 <%= f.input :summary, placeholder: "Summary", label: false, input_html: { class: 'form_light no_border' } %>
 <%= f.input :picture, placeholder: "Picture's HTML", label: false, input_html: { class: 'form_light no_border' } %>
 <div class="dropdown_wrapper">
-<%= f.input :category, collection: Article::CATEGORIES, prompt: "Category", label: false, input_html: { class: 'form_light no_border no_padding' }%>
-<%= f.association :project, prompt: "Choose a project to donate to", label: false, input_html: { class: 'form_light no_border' }%>
+<%= f.association :category, prompt: "Choose a category", label: false, input_html: { class: 'form_light no_border no_padding' }%>
 </div>
 <%= f.button :submit, class: "btn btn-primary"  %>
 <% end %>

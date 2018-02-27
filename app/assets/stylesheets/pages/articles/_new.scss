@@ -1,0 +1,51 @@
+.no_border {
+  border-left: 0px solid #6d6467;
+  padding-left: 0;
+}
+
+.form_title {
+  font-size: 46px;
+  font-weight: bold;
+}
+
+.form_subtitle {
+  font-size: 28px;
+}
+
+.link_thin {
+  font-weight: 100;
+}
+
+.link_thin a:hover {
+  color: #66afe9;
+}
+
+.ql-toolbar.ql-snow {
+  border: 0px solid #ccc;
+  box-sizing: unset;
+  font-family: 'Open Sans', sans-serif;
+  padding: 0px;
+}
+
+.ql-container.ql-snow {
+  border: 0px solid #ccc;
+  box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+}
+
+.ql-snow .ql-picker-label {
+  padding-left: 0;
+}
+
+.dropdown_wrapper {
+  margin-left: -8px;
+  opacity: 0.45;
+}
+
+.no_padding .form-control {
+  padding-left: 0 !important;
+}
+
+.ql-editor {
+  padding-left:0;
+  padding-bottom: 15%;
+}
