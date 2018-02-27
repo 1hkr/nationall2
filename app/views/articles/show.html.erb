@@ -132,7 +132,26 @@
   <hr>
         <h4>Other opinions</h4>
         <% @opinions.each do |opinion| %>
-          <p>opinion</p>
+
+        <!-- Writer of the opinion -->
+
+        <div class="article-profile">
+          <div class="center">
+            <img class="card-user" src=<%= opinion.user.picture %>>
+          </div>
+          <div class="user-details">
+            <div>
+              <p><b><%= opinion.user.first_name%> <%= opinion.user.last_name %></b></p>
+            </div>
+            <div>
+              <p class="grow"> <%= opinion.user.city %></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content of the opinion-->
+          <p><%= opinion.content %></p>
+
         <% end %>
       <% end %>
 
@@ -156,6 +175,7 @@
 
       </div>
     </div>
+
 
   <!-- RIGHT SIDE -->
 
