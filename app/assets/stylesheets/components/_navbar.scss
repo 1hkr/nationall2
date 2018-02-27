@@ -10,10 +10,18 @@
   justify-content: space-between;
 }
 
+.navbar-center {
+  display: flex;
+  height: 39px;
+  flex: 0 0 34%;
+  justify-content: center;
+}
+
 .navbar-left {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  flex: 0 0 33%;
 }
 
 /* Logo */
@@ -51,7 +59,8 @@
 .navbar-wagon-right {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
+  flex: 0 0 33%;
 }
 
 /* Basic navbar item */

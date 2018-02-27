@@ -14,11 +14,15 @@
   align-items: center;
 }
 
-.border-left {
-  border-left: 1px solid grey;
+.width-map {
+  width: 99.8px;
+  text-align: right;
 }
 
-.navbar-element-size {
-  height: 39px;
-  flex: 0 0 14.5%;
+.width-map a {
+  padding-left: 43.22px
+}
+
+.border-left {
+  border-left: 1px solid grey;
 }
