@@ -3,26 +3,163 @@
 <div class="article-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= @article.picture %>);">
 </div>
 
-<div class="row margin-left">
+<div class="container-fluid">
+  <div class="row margin-left">
 
-<!-- LEFT SIDE -->
-  <div class="col-xs-7 col-md-7 col-sm-7">
+  <!-- LEFT SIDE -->
+    <div class="col-xs-7 col-md-7 col-sm-7">
 
-    <!-- Articles informations -->
+      <!-- Articles informations -->
+      <div class="article-text margins">
+        <div class="article-details">
+          <p> <%= @article.category.name.upcase %></p>
+          <p class="top-right"><%= @article.publishing_date %></p>
+        </div>
 
-    <div class="article-text margins">
-      <div class="article-details">
-        <p> <%= @article.category.name.upcase %></p>
-        <p class="top-right"><%= @article.publishing_date %></p>
+        <h1><%= @article.title %></h1>
+        <h5><%= @article.subtitle %></h5>
+
+  <hr>
+
+        <h4>Summary</h4>
+        <p> <%= @article.summary %></p>
       </div>
 
-      <h1><%= @article.title %></h1>
-      <h5><%= @article.subtitle %></h5>
+  <hr>
+
+      <div class="article-content">
+        <h4>Full article</h4>
+        <p><%= raw @article.content %></p>
+      </div>
+
+  <hr>
+
+        <!-- Rate the article-->
+
+      <div>
+        <h4>Rate the article</h4>
+
+        <div id="simple-f">
+          <%= simple_form_for [@article, @review] do |f| %>
+          <%= f.input :rating, collection: 1..5 %>
+          <%= f.input :emotion, collection: 1..2 %>
+          <%= f.input :temperature, collection: 1..3 %>
+          <%= f.submit "Add my ratings", class: "btn-blue" %>
+          <% end %>
+        </div>
+      </div>
+
+  <hr>
+
+      <!-- List of the ratings -->
+
+      <% if @reviews.exists? %>
+  <hr>
+      <h4>Other reviews</h4>
+      <% @reviews.each do |review| %>
+
+      <!-- Writer of the review -->
+
+      <div class="article-profile">
+        <div class="center">
+          <img class="card-user" src=<%= review.user.picture %>>
+        </div>
+        <div class="user-details">
+          <div>
+            <p><b><%= review.user.first_name%> <%= review.user.last_name %></b></p>
+          </div>
+          <div>
+            <p class="grow"> <%= review.user.city %></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stars of the review -->
+
+      <ul class="list-inline">
+        <% review.rating.times do %>
+        <li class="list-inline-item"><i class="glyphicon glyphicon-star"></i></li>
+        <% end %>
+        <% unless review.rating == 5 %>
+        <% (5 - review.rating).times do %>
+        <li class="list-inline-item"><i class="glyphicon glyphicon-star-empty"></i></li>
+        <% end %>
+        <% end %>
+      </ul>
+
+      <ul class="list-inline">
+        <% review.emotion.times do %>
+        <li class="list-inline-item"><i class="glyphicon glyphicon-heart"></i></li>
+        <% end %>
+        <% unless review.emotion == 2 %>
+        <% (2 - review.emotion).times do %>
+        <li class="list-inline-item"><i class="glyphicon glyphicon-heart-empty"></i></li>
+        <% end %>
+        <% end %>
+      </ul>
+
+      <ul class="list-inline">
+        <% review.temperature.times do %>
+        <li class="list-inline-item"><i class="glyphicon glyphicon-asterisk"></i></li>
+        <% end %>
+        <% unless review.temperature == 3 %>
+        <% (3 - review.temperature).times do %>
+        <li class="list-inline-item"><i class="glyphicon glyphicon-asterisk-empty"></i></li>
+        <% end %>
+        <% end %>
+      </ul>
 
       <hr>
 
-      <h4>Summary</h4>
-      <p> <%= @article.summary %></p>
+      <% end %>
+
+      <% end %>
+
+        <!-- Add an opinion -->
+        <h4>Share your opinion</h4>
+
+        <div id="simple-f">
+          <%= simple_form_for [@article, @opinion] do |f| %>
+          <%= f.input :content, placeholder: "Your opinion matters.", :input_html => { :rows => 5} %>
+          <%= f.submit "Add my opinion", class: "btn-blue" %>
+          <% end %>
+        </div>
+
+
+        <!-- List of opinions -->
+
+        <% if @opinions.exists? %>
+  <hr>
+        <h4>Other opinions</h4>
+        <% @opinions.each do |opinion| %>
+          <p>opinion</p>
+        <% end %>
+      <% end %>
+
+
+
+      <!-- End buttons -->
+
+      <div class="buttons">
+        <%= link_to "Back", articles_path, class: "btn-gray" %>
+      </div>
+
+      <div class="buttons">
+
+        <% if policy(@article).edit? %>
+        <%= link_to "Edit", edit_article_path(@article), class: "btn-gray" %>
+        <% end %>
+
+        <% if policy(@article).destroy? %>
+        <%= link_to "Delete", article_path(@article), class: "btn-gray", method: :delete, data: { confirm: "Are you sure?"} %>
+        <% end %>
+
+      </div>
+    </div>
+
+  <!-- RIGHT SIDE -->
+
+    <div class="col-xs-5 col-md-5 col-sm-5">
 
       <!-- Profile of the writer -->
       <div class="article-profile">
@@ -42,130 +179,31 @@
 
       </div>
 
-    </div>
+  <hr>
 
-    <% if Donation.find_by(user_id: current_user.id, article_id: @article.id) %>
-
-    <div class="article-content">
-
-      <h4>Full article</h4>
-
-      <p><%= raw @article.content %></p>
-
-
-      <!-- Add a review -->
-      <h4>Review</h4>
-
-      <div class="rating">
-        <span><input type="radio" name="rating" id="str1" value="1"><label for="str1"></label></span>
-        <span><input type="radio" name="rating" id="str2" value="2"><label for="str2"></label></span>
-        <span><input type="radio" name="rating" id="str3" value="3"><label for="str3"></label></span>
-        <span><input type="radio" name="rating" id="str4" value="4"><label for="str4"></label></span>
-        <span><input type="radio" name="rating" id="str5" value="5"><label for="str5"></label></span>
-      </div>
-
-      <div id="simple-f">
-        <%= simple_form_for [@article, @review] do |f| %>
-        <%= f.input :comment, placeholder: "Your review matters.", :input_html => { :rows => 7} %>
-        <%= f.submit "Submit Review", class: "btn-blue" %>
-        <% end %>
-      </div>
-
-    </div>
-
-    <% end %>
-
-    <hr>
-
-    <!-- List of reviews -->
-
-    <% if @reviews.exists? %>
-
-    <% @reviews.each do |review| %>
-
-    <!-- Writer of the review -->
-
-    <div class="article-profile">
-
-      <div class="center">
-        <img class="card-user" src=<%= review.user.picture %>>
-      </div>
-
-      <div class="user-details">
-
-        <div>
-          <p><b><%= review.user.first_name%> <%= review.user.last_name %></b></p>
-        </div>
-        <div>
-          <p class="grow"> <%= review.user.city %></p>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Stars of the review -->
-
-    <ul class="list-inline">
-      <% review.rating.times do %>
-      <li class="list-inline-item"><i class="glyphicon glyphicon-star"></i></li>
-      <% end %>
-      <% unless review.rating == 5 %>
-      <% (5 - review.rating).times do %>
-      <li class="list-inline-item"><i class="glyphicon glyphicon-star-empty"></i></li>
-      <% end %>
-      <% end %>
-    </ul>
-
-    <hr>
-
-    <% end %>
-
-    <% end %>
-
-    <!-- End buttons -->
-
-    <div class="buttons">
-      <%= link_to "Back", articles_path, class: "btn-gray" %>
-    </div>
-
-    <div class="buttons">
-
-      <% if policy(@article).edit? %>
-      <%= link_to "Edit", edit_article_path(@article), class: "btn-gray" %>
-      <% end %>
-
-      <% if policy(@article).destroy? %>
-      <%= link_to "Delete", article_path(@article), class: "btn-gray", method: :delete, data: { confirm: "Are you sure?"} %>
-      <% end %>
-
-    </div>
-  </div>
-
-<!-- RIGHT SIDE -->
-
-  <div class="col-xs-5 col-md-5 col-sm-5">
-
-    <% if donation = Donation.find_by(user_id: current_user.id, article_id: @article.id) %>
-
-    <h3>Donation</h3>
-    <p><%= donation.amount %>€</p>
-    <a href="#", class= "btn-blue-empty">Donation done</a>
-    <h5> Thank you for your donation ! </h5>
-
-    <% else %>
-
-    <div>
+      <% if donation = Donation.find_by(user_id: current_user.id, article_id: @article.id) %>
 
       <h3>Donation</h3>
-      <p>For <%= @article.user.first_name %></p>
-      <%= simple_form_for [@article, @donation] do |f| %>
-      <%= f.input :amount, placeholder: "0.10" %>
-      <%= f.submit "Donate", class: "btn-blue" %>
+      <p><%= donation.amount %>€</p>
+      <a href="#", class= "btn-blue-empty">Donation done</a>
+      <h5> Thank you for your donation ! </h5>
+
+      <% else %>
+
+      <div>
+
+        <h3>Donation</h3>
+        <p>For <%= @article.user.first_name %></p>
+        <%= simple_form_for [@article, @donation] do |f| %>
+        <%= f.input :amount, placeholder: "0.10" %>
+        <%= f.submit "Donate", class: "btn-blue" %>
+        <% end %>
+
+      </div>
+
       <% end %>
 
     </div>
-
-    <% end %>
 
   </div>
 

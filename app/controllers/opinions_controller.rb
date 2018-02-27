@@ -7,9 +7,9 @@ class OpinionsController < ApplicationController
     @opinion.article = @article
     authorize @opinion
     if @opinion.save
-      redirect_to artilce_path(@article), notice: 'Opinion was successfully created.'
+      redirect_to article_path(@article), notice: 'Opinion was successfully created.'
     else
-      render :new
+      render 'articles/show', article: @article, reviews: @reviews, reviews: @opinion, donation: @donation
     end
   end
 

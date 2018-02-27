@@ -55,10 +55,7 @@ p 'Creating categories'
   }])
 
 p categories
-
-
-
-p 'Creating users'
+p '------------------------------Categories created------------------------------'
 
 
   users = User.create([{
