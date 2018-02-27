@@ -3,3 +3,22 @@
 // @import "dashboard";
 // @import "profile";
 // @import "map";
+
+.align-h {
+  display: flex;
+  flex-direction: row;
+}
+
+.align-v {
+  display: flex;
+  align-items: center;
+}
+
+.border-left {
+  border-left: 1px solid grey;
+}
+
+.navbar-element-size {
+  height: 39px;
+  flex: 0 0 14.5%;
+}

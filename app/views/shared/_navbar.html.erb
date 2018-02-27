@@ -1,6 +1,7 @@
 <div class="navbar-wagon">
+
+  <!-- Left Navigation -->
   <div class="navbar-left">
-    <!-- Logo -->
     <%= link_to articles_path, class: "navbar-wagon-brand" do %>
     <%= image_tag "logo_blue.png", height: 50 %>
     <% end %>
@@ -14,8 +15,18 @@
       <% end %>
     </div>
 
+    <!-- Center Navigation -->
+    <div class="align-h navbar-element-size">
+      <div class="align-v">
+      <%= link_to "Map", root_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      </div>
+      <div class="border-left align-v">
+      <%= link_to "Articles", articles_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      </div>
+    </div>
+
     <!-- Right Navigation -->
-    <div class="navbar-wagon-right hidden-xs hidden-sm">
+    <div class="navbar-wagon-right hidden-xs">
 
       <% if user_signed_in? %>
 
@@ -44,7 +55,7 @@
     </div>
 
     <!-- Dropdown list appearing on mobile only -->
-    <div class="navbar-wagon-item hidden-md hidden-lg">
+    <div class="navbar-wagon-item hidden -sm hidden-md hidden-lg">
       <div class="dropdown">
         <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
