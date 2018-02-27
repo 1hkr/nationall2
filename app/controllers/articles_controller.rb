@@ -37,7 +37,6 @@ class ArticlesController < ApplicationController
     @review = Review.new
     @reviews = Review.where(article: @article)
     authorize @donation
-
   end
 
   def new
