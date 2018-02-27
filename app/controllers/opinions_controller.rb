@@ -1,15 +1,17 @@
 class OpinionsController < ApplicationController
-  before_action :find_article, only: [:edit, :update, :destroy]
+  before_action :set_opinion, only: [:create, :edit, :update, :destroy]
 
   def create
+    @opinions = Opinion.where(article: @article)
     @opinion = Opinion.new(opinion_params)
-    @opinion.user = current_user
     @opinion.article = @article
+    @opinion.user = current_user
     authorize @opinion
+
     if @opinion.save
-      redirect_to artilce_path(@article), notice: 'Opinion was successfully created.'
+      redirect_to article_path(@article), notice: 'Opinion was successfully created.'
     else
-      render :new
+      render 'articles/show', article: @article, reviews: @reviews, opinions: @opinion, donation: @donation
     end
   end
 
@@ -34,8 +36,8 @@ class OpinionsController < ApplicationController
 
   private
 
-  def find_opinion
-    @opinion = opinion.find(params[:id])
+  def set_opinion
+    @opinion = Opinion.find(params[:article_id])
   end
 
   def opinion_params
