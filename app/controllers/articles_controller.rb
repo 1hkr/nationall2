@@ -30,17 +30,23 @@ class ArticlesController < ApplicationController
 
   def show
     @donation = Donation.new
+    @opinion = Opinion.new
+    @opinions = Review.where(article: @article)
     @review = Review.new
     @reviews = Review.where(article: @article)
+    authorize @donation
+    authorize @opinion
   end
 
   def new
     @article = Article.new
+    authorize @article
   end
 
   def create
     @article = Article.new(article_params)
     @article.user = current_user
+    authorize @article
 
     if @article.save
       redirect_to articles_path, notice: 'Article was successfully created.'
@@ -50,9 +56,11 @@ class ArticlesController < ApplicationController
   end
 
   def edit
+    authorize @article
   end
 
   def update
+    authorize @article
     if @article.update(article_params)
       redirect_to @article, notice: 'Article was successfully updated.'
     else
@@ -61,6 +69,7 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
+    authorize @article
     @article.destroy
     redirect_to articles_url, notice: 'Article was successfully destroyed.'
   end

@@ -6,6 +6,7 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.article = @article # assignment in order to associate article with review
     @review.user = current_user
+    authorize @review
 
     if @review.save
       redirect_to article_path(@article), notice: 'Review was successfully created.'
