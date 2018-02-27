@@ -1,58 +1,72 @@
-<div class="navbar-wagon">
-  <div class="navbar-left">
-    <!-- Logo -->
-    <%= link_to articles_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "logo_blue.png", height: 50 %>
-    <% end %>
+    <div class="navbar-wagon">
 
-    <%= form_tag articles_path, method: :get, class: "navbar-wagon-search" do %>
-    <%= text_field_tag :query,
-    params[:query],
-    class: "form-control navbar-search-input form_restaure_padding",
-      placeholder: "Find an article..."
-      %>
-      <% end %>
-    </div>
-
-    <!-- Right Navigation -->
-    <div class="navbar-wagon-right hidden-xs hidden-sm">
-
-      <% if user_signed_in? %>
-
-      <!-- Links when logged in -->
-      <%= link_to "Write an article", new_article_path, class: "navbar-wagon-item navbar-wagon-link" %>
-
-      <!-- Avatar with dropdown menu -->
-      <div class="navbar-wagon-item">
-        <div class="dropdown">
-          <% if current_user.picture %>
-          <%= image_tag current_user.picture, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+      <!-- Left Navigation -->
+      <div class="navbar-left">
+        <div>
+          <%= link_to articles_path, class: "navbar-wagon-brand" do %>
+          <%= image_tag "logo_blue.png", height: 50 %>
           <% end %>
-          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-            <li>
-              <%= link_to destroy_user_session_path, method: :delete do %>
-              <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+        </div>
+        <div>
+          <%= form_tag articles_path, method: :get, class: "navbar-wagon-search" do %>
+          <%= text_field_tag :query,
+          params[:query],
+          class: "form-control navbar-search-input form_restaure_padding",
+            placeholder: "Find an article..."
+            %>
+            <% end %>
+          </div>
+        </div>
+
+        <!-- Center Navigation -->
+        <div class="align-h navbar-center">
+          <div class="align-v width-map">
+            <%= link_to "Map", root_path, class: "navbar-wagon-item navbar-wagon-link #{"page-active" if current_page?(controller: 'pages', action: 'home')}" %>
+          </div>
+          <div class="border-left align-v">
+            <%= link_to "Articles", articles_path, class: "navbar-wagon-item navbar-wagon-link #{"page-active" if current_page?(controller: 'articles', action: 'index')}" %>
+          </div>
+        </div>
+
+        <!-- Right Navigation -->
+        <div class="navbar-wagon-right hidden-xs">
+
+          <% if user_signed_in? %>
+
+          <!-- Links when logged in -->
+          <%= link_to "Write an article", new_article_path, class: "navbar-wagon-item navbar-wagon-link" %>
+
+          <!-- Avatar with dropdown menu -->
+          <div class="navbar-wagon-item">
+            <div class="dropdown">
+              <% if current_user.picture %>
+              <%= image_tag current_user.picture, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
               <% end %>
-            </li>
-          </ul>
+              <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+                <li>
+                  <%= link_to destroy_user_session_path, method: :delete do %>
+                  <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+                  <% end %>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <% else %>
+          <!-- Login link (when logged out) -->
+          <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+          <% end %>
+        </div>
+
+        <!-- Dropdown list appearing on mobile only -->
+        <div class="navbar-wagon-item hidden -sm hidden-md hidden-lg">
+          <div class="dropdown">
+            <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+            <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+              <li><a href="#">Some mobile link</a></li>
+              <li><a href="#">Other one</a></li>
+              <li><a href="#">Other one</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-      <% else %>
-      <!-- Login link (when logged out) -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <% end %>
-    </div>
-
-    <!-- Dropdown list appearing on mobile only -->
-    <div class="navbar-wagon-item hidden-md hidden-lg">
-      <div class="dropdown">
-        <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li><a href="#">Some mobile link</a></li>
-          <li><a href="#">Other one</a></li>
-          <li><a href="#">Other one</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
 
