@@ -1,48 +1,6 @@
-
-<div class="wrapper">
-
-  <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_url "national_top.jpg" %>);">
-
-      <h1 class="title">NΔTIONΔLL</h1>
-
-      <h2 class="center">Discover Europe</h2>
-
-      <%= link_to "Read Articles", articles_path, class: "btn btn-success" %>
-  </div>
-
-  <br>
-
-  <div class="row home-latest">
-    <h2 class="articles-header">Latest articles</h2>
-    <% @articles.each do |article| %>
-      <div class="col-xs-12 col-md-6 col-lg-4">
-        <div class="card-container">
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= article.picture %>);">
-          </div>
-          <div class="card-text">
-            <div class="card-details">
-              <p> <%= article.category.name.upcase %></p>
-              <p class="top-right"><%= article.publishing_date %></p>
-            </div>
-            <div class="card-titles">
-              <h5><%= link_to article.title, article_path(article) %></h5>
-              <p><%= truncate(article.subtitle, length: 40) %></p>
-            </div>
-            <div class="card-profile">
-              <div class="center">
-                <img class="card-user" src=<%= article.user.picture %>>
-              </div>
-              <div class="user-details">
-                <div>
-                  <p> <%= article.user.first_name%> <%= article.user.last_name %></p>
-                </div>
-                <div>
-                  <p class="grow"> <%= article.user.city %></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    <% end %>
-  </div>
+<div
+  id="map"
+  style="width: 100vw;
+  height: 100vh;"
+  data-markers="<%= @markers.to_json %>" >
+</div>
