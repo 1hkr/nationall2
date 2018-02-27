@@ -1,19 +1,11 @@
 class OpinionsController < ApplicationController
   before_action :find_article, only: [:edit, :update, :destroy]
 
-  def show
-    @opinions = Opinion.where(article: @article)
-  end
-
-  def new
-    @opinion = Opinion.new
-  end
-
   def create
     @opinion = Opinion.new(opinion_params)
     @opinion.user = current_user
     @opinion.article = @article
-
+    authorize @opinion
     if @opinion.save
       redirect_to artilce_path(@article), notice: 'Opinion was successfully created.'
     else
@@ -22,10 +14,11 @@ class OpinionsController < ApplicationController
   end
 
   def edit
+    authorize @opinion
   end
 
   def update
-
+    authorize @opinion
     if @opinion.update(opinion_params)
       redirect_to article_path(@article), notice: 'Opinion was successfully updated.'
     else
@@ -34,6 +27,7 @@ class OpinionsController < ApplicationController
   end
 
   def destroy
+    authorize @opinion
     @opinion.destroy
     redirect_to article_path(@article), notice: 'Opinion was successfully destroyed.'
   end

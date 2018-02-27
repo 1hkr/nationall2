@@ -5,6 +5,7 @@ class DonationsController < ApplicationController
     @donation = Donation.new(donation_params)
     @donation.article = @article
     @donation.user = current_user
+    authorize @donation
     if @donation.save
       redirect_to article_path(@article)
     else
