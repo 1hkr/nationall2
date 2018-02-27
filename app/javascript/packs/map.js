@@ -103,15 +103,19 @@ map.addStyle({
   styles: styles,
   mapTypeId: 'map_style'
 });
+
 map.setStyle('map_style');
 
   map.addMarkers(markers);
   if (markers.length === 0) {
     map.setZoom(2);
+    markers.title("Hello");
   } else if (markers.length === 1) {
     map.setCenter(markers[0].lat, markers[0].lng);
     map.setZoom(14);
+    markers.title("Hello");
   } else {
     map.fitLatLngBounds(markers);
+    markers.title("Hello");
   }
 }
