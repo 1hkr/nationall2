@@ -1,5 +1,5 @@
 class OpinionsController < ApplicationController
-  before_action :set_opinion, only: [:create, :edit, :update, :destroy]
+  before_action :set_article, only: [:create, :edit, :update, :destroy]
 
   def create
     @opinions = Opinion.where(article: @article)
@@ -36,9 +36,9 @@ class OpinionsController < ApplicationController
 
   private
 
-  def set_opinion
-    @opinion = Opinion.find(params[:article_id])
-  end
+   def set_article
+     @article = Article.find(params[:article_id])
+   end
 
   def opinion_params
     params.require(:opinion).permit(:content)
