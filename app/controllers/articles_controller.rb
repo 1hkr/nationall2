@@ -16,9 +16,6 @@ class ArticlesController < ApplicationController
             width: 50
           }
           },
-          style: {
-            'border-radius': '50%'
-          }
         # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
       }
     end

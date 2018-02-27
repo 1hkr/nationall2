@@ -64,7 +64,7 @@ p 'Creating users'
   users = User.create([{
   first_name: 'Marcus',
   last_name: 'Zierke',
-  city: 'Berlin',
+  city: 'Berlin, Germany',
   email: 'marcus@nationall.eu',
   password: 'password',
   bio: 'Becoming a journalist in @UPFBarcelona. Specialized in Politics. Working for Nationall. Collaborations in @elpuntavui, @beteve, @VilaWeb i @beteve91fm.',
@@ -75,7 +75,7 @@ p 'Creating users'
   {
   first_name: 'Test',
   last_name: 'Account',
-  city: 'london',
+  city: 'London',
   email: 'test@nationall.eu',
   password: 'password',
   bio: 'I test app',
@@ -86,7 +86,7 @@ p 'Creating users'
   {
   first_name: 'Alexandre',
   last_name: 'Gorius',
-  city: 'Paris',
+  city: 'Paris, France',
   email: 'alex@nationall.eu',
   password: 'password',
   bio: 'Socialist and teacher-in-training.',
@@ -106,20 +106,63 @@ p 'Creating users'
   temperature_pref: 'intense'
   },
   {
-  first_name: 'Takahiko',
-  last_name: 'Okada',
-  city: 'Faroe Islands',
-  email: 'taka@nationall.eu',
+  first_name: 'Terminator',
+  last_name: '2',
+  city: 'Kiev, Ukraine',
+  email: 'terminator@nationall.eu',
   password: 'password',
-  bio: 'India is Fashion Editor at @CultureTrip, an Editor of The Omnivore & Online @twin_magazine',
-  picture: 'https://avatars1.githubusercontent.com/u/31583151?s=460&v=4',
+  bio: 'I\'ll be back.',
+  picture: 'https://images-na.ssl-images-amazon.com/images/I/51qfUTmeHHL._SY463_.jpg',
   emotion_pref: 'happy',
-  temperature_pref: 'chill'
+  temperature_pref: 'intense'
+  },
+  {
+  first_name: 'Ludwig van',
+  last_name: 'Beethoven',
+  city: 'Vienna, Austria',
+  email: 'music@nationall.eu',
+  password: 'password',
+  bio: '
+    Music is a higher revelation than philosophy.
+    Music is the mediator between the spiritual and the sensual life.
+    Music should strike fire from the heart of man, and bring tears from the eyes of woman.
+    Music is the one incorporeal entrance into the higher world of knowledge which comprehends mankind but which mankind cannot comprehend.
+    Never shall I forget the time I spent with you. Please continue to be my friend, as you will always find me yours.
+    Friends applaud, the comedy is over.
+    Only the pure in heart can make a good soup.
+    What you are, you are by accident of birth; what I am, I am by myself. There are and will be a thousand princes; there is only one Beethoven.
+    Plaudite, amici, comedia finita est. (Applaud, my friends, the comedy is over.) [Said on his deathbed]
+    I want to seize fate by the throat.',
+  picture: 'http://cdn3.classical-music.com/sites/default/files/imagecache/623px_wide/Beethoven%202_0.jpg',
+  emotion_pref: 'happy',
+  temperature_pref: 'intense'
+  },
+  {
+  first_name: 'Don',
+  last_name: 'Corleone',
+  city: 'Cisily, Italy',
+  email: 'don@nationall.eu',
+  password: 'password',
+  bio: '...',
+  picture: 'https://i.ebayimg.com/images/g/Qn8AAOSwB09YLtvT/s-l300.jpg',
+  emotion_pref: 'happy',
+  temperature_pref: 'intense'
+  },
+  {
+  first_name: 'Santa',
+  last_name: 'Claus',
+  city: 'Rovaniemi, Finland',
+  email: 'santa@nationall.eu',
+  password: 'password',
+  bio: 'Merry Christmas',
+  picture: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp0rToR8gNjRf91F3v2h1Puj0w0kqtQDsr0PWM5MM_ehl0a9sj',
+  emotion_pref: 'happy',
+  temperature_pref: 'intense'
   },
   {
   first_name: 'Konstantinos',
   last_name: 'Mitsainas',
-  city: 'Athens',
+  city: 'Athens, Greece',
   email: 'konst@nationall.eu',
   password: 'password',
   bio: 'India is Fashion Editor at @CultureTrip, an Editor of The Omnivore & Online @twin_magazine',
@@ -130,7 +173,7 @@ p 'Creating users'
   {
   first_name: 'Tanel',
   last_name: 'Vahisalu',
-  city: 'Tallin',
+  city: 'Tartu, Estonia',
   email: 'tanel@nationall.eu',
   password: 'password',
   bio: 'India is Fashion Editor at @CultureTrip, an Editor of The Omnivore & Online @twin_magazine',
@@ -141,7 +184,7 @@ p 'Creating users'
   {
   first_name: 'Vini',
   last_name: 'Tiet',
-  city: 'Berlin',
+  city: 'Berlin, Germany',
   email: 'vini@nationall.eu',
   password: 'password',
   bio: 'India is Fashion Editor at @CultureTrip, an Editor of The Omnivore & Online @twin_magazine',
@@ -404,7 +447,7 @@ The possibility for the UK to come back once the renovations will be over in 202
 ",
 picture: 'https://cdn-images-1.medium.com/max/2000/1*17DLR3Zxj76Pg7zEQ2dKqQ.jpeg',
 category_id: Category.find_by_name("Politics").id,
-user_id: User.find_by_first_name("Takahiko").id,
+user_id: User.find_by_first_name("Terminator").id,
 publishing_date: Date.parse("2017-10-03"),
 },
 {
@@ -534,19 +577,77 @@ p '----------------------------------------Articles Created---------------------
 p 'Creating Opinions'
   opinions = Opinion.create([{
   content: "This article is amazing",
-  user_id: 3,
-  article_id: 2
+  user_id: User.find_by_first_name("Tanel").id,
+  article_id: Article.first.id
   },
   {
   content: 'Need to improve research quality',
-  user_id: 2,
-  article_id: 4
+  user_id: User.find_by_first_name("Marcus").id,
+  article_id: Article.last.id
   },
   {
   content: 'This article is so inspiring but lacks details.',
-  user_id: 1,
-  article_id: 6
+  user_id: User.find_by_first_name("Don").id,
+  article_id: Article.first.id
   }])
 
 p opinions
 p '----------------------------------------Opinions created----------------------------------------'
+
+
+p 'Creating Reviews'
+
+  reviews = Review.create([{
+    rating: 5,
+    user_id: User.find_by_first_name("Terminator").id,
+    article_id: Article.find_by_title("Blockchain: Crypto-Catalonia").id,
+    emotion: 2,
+    temperature: 3
+    },
+    {
+    rating: 4,
+    user_id: User.find_by_first_name("Santa").id,
+    article_id: Article.find_by_title("E. Macron’s plans to break nations’ borders.").id,
+    emotion: 1,
+    temperature: 2
+    },
+        {
+    rating: 3,
+    user_id: User.find_by_first_name("Tanel").id,
+    article_id: Article.find_by_title("Blockchain: Crypto-Catalonia").id,
+    emotion: 1,
+    temperature: 2
+    },
+        {
+    rating: 2,
+    user_id: User.find_by_first_name("Alexandre").id,
+    article_id: Article.find_by_title("E. Macron’s plans to break nations’ borders.").id,
+    emotion: 1,
+    temperature: 2
+    },
+        {
+    rating: 1,
+    user_id: User.find_by_first_name("Lorene").id,
+    article_id: Article.find_by_title("Why is the Left losing in Germany?").id,
+    emotion: 1,
+    temperature: 2
+    },
+        {
+    rating: 5,
+    user_id: User.find_by_first_name("Marcus").id,
+    article_id: Article.find_by_title("Greece’s Odyssey for Sustainable Fashion").id,
+    emotion: 1,
+    temperature: 2
+    },
+        {
+    rating: 4,
+    user_id: User.find_by_first_name("Nicholas").id,
+    article_id: Article.find_by_title("Austrian recipe: Kaiserschmarn").id,
+    emotion: 1,
+    temperature: 2
+    }])
+
+  p reviews
+
+p '---------------------------------------Reviews created----------------------------------------'
+
