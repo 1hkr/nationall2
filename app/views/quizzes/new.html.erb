@@ -1,14 +1,35 @@
 <div class="container-fluid side-margin">
 
-  <h1>Quizz</h1>
   <div class="row margin-left">
+  <h1>Quizz</h1>
 
-<!--     <div>
-      <%= simple_form_for [@categories_pref] do |f| %>
-      <%= f.association :category, prompt: "Choose a category", label: false %>
+    <div>
+      <h4>Categories preferences</h4>
+      <%= simple_form_for @categories_pref do |f| %>
+      <%= f.association :category, as: :check_boxes, label: false %>
       <%= f.submit "Choose this category", class: "btn-blue" %>
       <% end %>
-    </div> -->
+    </div>
+
+    <hr>
+
+    <div>
+      <h4>Emotion preferences</h4>
+      <%= simple_form_for current_user, url: emotion_prefs_path, method: :patch do |f| %>
+      <%= f.input :emotion_pref, collection: 1..2, as: :radio_buttons, label: false %>
+      <%= f.submit "Choose this emotion", class: "btn-blue" %>
+      <% end %>
+    </div>
+
+    <hr>
+
+    <div>
+      <h4>Temperature preferences</h4>
+      <%= simple_form_for current_user, url: temperature_prefs_path, method: :patch do |f| %>
+      <%= f.input :temperature_pref, collection: 1..4, as: :radio_buttons, label: false %>
+      <%= f.submit "Choose this temperature", class: "btn-blue" %>
+      <% end %>
+    </div>
 
   </div>
 </div>

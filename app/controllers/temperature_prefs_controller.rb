@@ -1,5 +1,7 @@
 class TemperaturePrefsController < ApplicationController
-  def create
-    current_user.temperature_pref = params[:temperature_pref]
+  skip_after_action :verify_authorized
+
+  def update
+    current_user.update(temperature_pref: params[:user][:temperature_pref])
   end
 end
