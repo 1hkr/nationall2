@@ -89,7 +89,7 @@ p '------------------------------Categories created-----------------------------
   bio: 'Socialist and teacher-in-training.',
   picture: 'https://avatars1.githubusercontent.com/u/35156075?s=400&v=4',
   emotion_pref: 1,
-  temperature_pref: 1
+  temperature_pref: 4
   },
   {
   first_name: 'Lorene',
@@ -100,7 +100,7 @@ p '------------------------------Categories created-----------------------------
   bio: 'Percussionist in Vienna, regularly with: Vienna Philharmonic, Vienna state and popular opera, the Vienna Tonkünstler orchestra…Member of Louie’s Cage Percussion.',
   picture: 'https://avatars0.githubusercontent.com/u/33373707?s=400&v=4',
   emotion_pref: 2,
-  temperature_pref: 3
+  temperature_pref: 2
   },
   {
   first_name: 'Terminator',
@@ -132,7 +132,7 @@ p '------------------------------Categories created-----------------------------
     I want to seize fate by the throat.',
   picture: 'http://cdn3.classical-music.com/sites/default/files/imagecache/623px_wide/Beethoven%202_0.jpg',
   emotion_pref: 2,
-  temperature_pref: 3
+  temperature_pref: 1
   },
   {
   first_name: 'Don',
@@ -143,7 +143,7 @@ p '------------------------------Categories created-----------------------------
   bio: '...',
   picture: 'https://i.ebayimg.com/images/g/Qn8AAOSwB09YLtvT/s-l300.jpg',
   emotion_pref: 2,
-  temperature_pref: 3
+  temperature_pref: 2
   },
   {
   first_name: 'Santa',
@@ -154,7 +154,7 @@ p '------------------------------Categories created-----------------------------
   bio: 'Merry Christmas',
   picture: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp0rToR8gNjRf91F3v2h1Puj0w0kqtQDsr0PWM5MM_ehl0a9sj',
   emotion_pref: 2,
-  temperature_pref: 1
+  temperature_pref: 4
   },
   {
   first_name: 'Konstantinos',
@@ -176,7 +176,7 @@ p '------------------------------Categories created-----------------------------
   bio: 'India is Fashion Editor at @CultureTrip, an Editor of The Omnivore & Online @twin_magazine',
   picture: 'https://avatars3.githubusercontent.com/u/33349905?s=400&v=4',
   emotion_pref: 1,
-  temperature_pref: 1
+  temperature_pref: 4
   },
   {
   first_name: 'Vini',
@@ -187,7 +187,7 @@ p '------------------------------Categories created-----------------------------
   bio: 'India is Fashion Editor at @CultureTrip, an Editor of The Omnivore & Online @twin_magazine',
   picture: 'https://avatars3.githubusercontent.com/u/15719184?s=400&v=4',
   emotion_pref: 1,
-  temperature_pref: 1
+  temperature_pref: 2
   },
   {
   first_name: 'Nicholas',
@@ -198,7 +198,7 @@ p '------------------------------Categories created-----------------------------
   bio: 'India is Fashion Editor at @CultureTrip, an Editor of The Omnivore & Online @twin_magazine',
   picture: 'https://avatars0.githubusercontent.com/u/32316057?s=400&v=4',
   emotion_pref: 2,
-  temperature_pref: 1
+  temperature_pref: 3
   }])
 
 p users
