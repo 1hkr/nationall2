@@ -11,13 +11,13 @@
   justify-content: space-between;
 }
 
-.navbar-center {
-  display: flex;
-  height: 39px;
-  flex: 0 0 34%;
-  justify-content: center;
+.page-active {
+  color: #03359a !important;
+  font-weight: 500 !important;
 }
 
+
+// Left section
 .navbar-left {
   display: flex;
   align-items: center;
@@ -54,6 +54,27 @@
   height: 50px;
   width: 50px;
   border-radius: 50%;
+}
+
+// Center section
+.navbar-center {
+  display: flex;
+  height: 39px;
+  flex: 0 0 34%;
+  justify-content: center;
+}
+
+.width-map {
+  width: 99.8px;
+  text-align: right;
+}
+
+.width-map a {
+  padding-left: 43.22px
+}
+
+.border-left {
+  border-left: 1px solid grey;
 }
 
 /* Right section */

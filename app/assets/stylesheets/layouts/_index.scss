@@ -3,31 +3,3 @@
 // @import "dashboard";
 // @import "profile";
 // @import "map";
-
-.align-h {
-  display: flex;
-  flex-direction: row;
-}
-
-.align-v {
-  display: flex;
-  align-items: center;
-}
-
-.width-map {
-  width: 99.8px;
-  text-align: right;
-}
-
-.width-map a {
-  padding-left: 43.22px
-}
-
-.border-left {
-  border-left: 1px solid grey;
-}
-
-.page-active {
-  color: #03359a !important;
-  font-weight: 500 !important;
-}
