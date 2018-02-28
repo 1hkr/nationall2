@@ -12,7 +12,9 @@
   <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
 </head>
 <body>
-  <%= render 'shared/navbar' %>
+  <% color = params[:controller] == 'pages' && params[:action] == 'home' ? 'page-active' : '' %>
+  <% color_articles = params[:controller] == 'articles' && params[:action] == 'index' ? 'page-active' : '' %>
+  <%= render 'shared/navbar', color_map: color, color_articles: color_articles %>
   <%= render 'shared/flashes' %>
 
   <%= yield %>
