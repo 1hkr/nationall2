@@ -8,7 +8,7 @@ class CategoriesPrefsController < ApplicationController
     if @categories_pref.save
       redirect_to articles_path, notice: 'Your categories preferences were successfully saved.'
     else
-      render :new
+      render 'quizzes#new'
     end
   end
 
