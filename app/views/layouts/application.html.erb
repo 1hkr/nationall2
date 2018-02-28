@@ -16,14 +16,11 @@
   <% color_articles = params[:controller] == 'articles' && params[:action] == 'index' ? 'page-active' : '' %>
   <%= render 'shared/navbar', color_map: color, color_articles: color_articles %>
   <%= render 'shared/flashes' %>
-
   <%= yield %>
-
   <%= javascript_include_tag 'application' %>
   <%= javascript_pack_tag 'application' %>
   <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
-  <%= javascript_pack_tag "map" %> <!-- add this line -->
-
+  <%= javascript_pack_tag "map" %>
   <%= yield(:after_js) %>
 </body>
 </html>
