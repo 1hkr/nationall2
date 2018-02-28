@@ -1,39 +1,41 @@
 <div class="container-fluid side-margin">
-
-  <h1>Articles</h1>
+  <div class="col-xs-12 index-titles">
+    <h1>NΔTIONΔLL</h1>
+  </div>
   <div class="row margin-left">
 
-        <% @articles.each do |article| %>
-          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card-container">
-              <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= article.picture %>);">
+    <% @articles.each_with_index do |article, index| %>
+    <% class_name = (index % 6 == 0) || ((index - 5) % 6 == 0) ? "col-xs-12 col-sm-6 col-md-4 col-lg-6" : "col-xs-12 col-sm-6 col-md-4 col-lg-3" %>
+    <div class="<%= class_name %>">
+      <div class="card-container shadow">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= article.picture %>);">
+        </div>
+        <div class="card-text grow">
+          <div class="card-details">
+            <p> <%= article.category.name.upcase %></p>
+            <p class="top-right"><%= article.publishing_date %></p>
+          </div>
+          <div class="card-titles">
+            <h5><%= link_to truncate(article.title, length: 65), article_path(article) %></h5>
+            <p><%= truncate(article.subtitle, length: 40) %></p>
+          </div>
+          <div class="card-profile">
+            <div class="center">
+              <img class="card-user" src=<%= article.user.picture %>>
+            </div>
+            <div class="user-details">
+              <div>
+                <p> <b><%= article.user.first_name%> <%= article.user.last_name %></b> </p>
               </div>
-              <div class="card-text grow">
-                <div class="card-details">
-                  <p> <%= article.category.name.upcase %></p>
-                  <p class="top-right"><%= article.publishing_date %></p>
-                </div>
-                <div class="card-titles">
-                  <h5><%= link_to truncate(article.title, length: 65), article_path(article) %></h5>
-                  <p><%= truncate(article.subtitle, length: 40) %></p>
-                </div>
-                <div class="card-profile">
-                  <div class="center">
-                    <img class="card-user" src=<%= article.user.picture %>>
-                  </div>
-                  <div class="user-details">
-                    <div>
-                      <p> <b><%= article.user.first_name%> <%= article.user.last_name %></b> </p>
-                    </div>
-                    <div>
-                      <p> <%= article.user.city %></p>
-                    </div>
-                  </div>
-                </div>
+              <div>
+                <p> <%= article.user.city %></p>
               </div>
             </div>
           </div>
-        <% end %>
+        </div>
+      </div>
+    </div>
+    <% end %>
 
 
   </div>

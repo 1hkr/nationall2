@@ -6,9 +6,13 @@
 
 
 // The margin on the side for every pages
+body {
+  background-color: white;
+}
+
 .side-margin {
-  margin-right: 30px;
-  margin-left: 30px;
+  margin-right: 40px;
+  margin-left: 40px;
 }
 
 .align-h {
@@ -19,4 +23,17 @@
 .align-v {
   display: flex;
   align-items: center;
+}
+
+.shadow {
+  box-shadow: 0px 10px 23px 0px #eaeaea;
+}
+
+.index-titles {
+  text-align: center;
+  font-family: arial;
+  font-weight: 900;
+  color: white;
+  text-shadow: 1px 1px white, -1px -1px #44444475;
+  margin: 50px 0;
 }
