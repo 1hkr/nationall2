@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   end
   devise_for :users
   root to: 'pages#home'
-  get '/quizz', to: 'quizzes#new'
+  resources :quizzes, only: [:new]
+  resources :categories_prefs, only: [:create]
 end
