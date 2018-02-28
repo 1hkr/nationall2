@@ -16,12 +16,11 @@ class PagesController < ApplicationController
             height: 50,
             width: 50
           }
-          },
-        shape: {
-          coords: [1, 1, 1, 20, 18, 20, 18, 1],
-          type: 'poly'
         },
-        # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+        # shape: {
+        #   coords: [1, 1, 1, 20, 18, 20, 18, 1],
+        #   type: 'poly'
+        # }
       }
     end
   end
