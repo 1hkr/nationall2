@@ -3,8 +3,8 @@
     <h1>NΔTIONΔLL</h1>
   </div>
   <div class="row margin-left">
-
     <% @articles.each_with_index do |article, index| %>
+    <%= link_to article_path(article) do %>
     <% class_name = (index % 6 == 0) || ((index - 5) % 6 == 0) ? "col-xs-12 col-sm-6 col-md-4 col-lg-6" : "col-xs-12 col-sm-6 col-md-4 col-lg-3" %>
     <div class="<%= class_name %>">
       <div class="card-container shadow">
@@ -16,7 +16,7 @@
             <p class="top-right"><%= article.publishing_date %></p>
           </div>
           <div class="card-titles">
-            <h5><%= link_to truncate(article.title, length: 65), article_path(article) %></h5>
+            <h5><%= truncate(article.title, length: 65) %></h5>
             <p><%= truncate(article.subtitle, length: 40) %></p>
           </div>
           <div class="card-profile">
@@ -36,8 +36,7 @@
       </div>
     </div>
     <% end %>
-
-
+    <% end %>
   </div>
 
 </div>
