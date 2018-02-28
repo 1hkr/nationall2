@@ -6,10 +6,11 @@ class PagesController < ApplicationController
     @articles = Article.all
     @users = User.where.not(latitude: nil, longitude: nil)
     @markers = @users.map do |user|
+      @article_by_user = Article.find_by_user_id(user.id)
       {
         lat: user.latitude,
         lng: user.longitude,
-        draggable: true,
+        url: article_path(@article_by_user),
         icon: {
           url: user.picture,
           scaledSize: {
@@ -17,10 +18,6 @@ class PagesController < ApplicationController
             width: 50
           }
         },
-        # shape: {
-        #   coords: [1, 1, 1, 20, 18, 20, 18, 1],
-        #   type: 'poly'
-        # }
       }
     end
   end
