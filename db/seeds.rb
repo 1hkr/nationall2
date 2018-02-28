@@ -66,8 +66,8 @@ p '------------------------------Categories created-----------------------------
   password: 'password',
   bio: 'Becoming a journalist in @UPFBarcelona. Specialized in Politics. Working for Nationall. Collaborations in @elpuntavui, @beteve, @VilaWeb i @beteve91fm.',
   picture: 'https://avatars2.githubusercontent.com/u/23409802?s=400&v=4',
-  emotion_pref: 'https://avatars2.githubusercontent.com/u/23409802?s=400&v=4',
-  temperature_pref: 'intense'
+  emotion_pref: 1,
+  temperature_pref: 3
   },
   {
   first_name: 'Test',
@@ -77,8 +77,8 @@ p '------------------------------Categories created-----------------------------
   password: 'password',
   bio: 'I test app',
   picture: 'https://images-na.ssl-images-amazon.com/images/I/61V8uaqUgXL._UY535_.jpg',
-  emotion_pref: 'sad',
-  temperature_pref: 'chill'
+  emotion_pref: 1,
+  temperature_pref: 1
   },
   {
   first_name: 'Alexandre',
@@ -88,8 +88,8 @@ p '------------------------------Categories created-----------------------------
   password: 'password',
   bio: 'Socialist and teacher-in-training.',
   picture: 'https://avatars1.githubusercontent.com/u/35156075?s=400&v=4',
-  emotion_pref: 'sad',
-  temperature_pref: 'chill'
+  emotion_pref: 1,
+  temperature_pref: 1
   },
   {
   first_name: 'Lorene',
@@ -99,8 +99,8 @@ p '------------------------------Categories created-----------------------------
   password: 'password',
   bio: 'Percussionist in Vienna, regularly with: Vienna Philharmonic, Vienna state and popular opera, the Vienna Tonkünstler orchestra…Member of Louie’s Cage Percussion.',
   picture: 'https://avatars0.githubusercontent.com/u/33373707?s=400&v=4',
-  emotion_pref: 'happy',
-  temperature_pref: 'intense'
+  emotion_pref: 2,
+  temperature_pref: 3
   },
   {
   first_name: 'Terminator',
@@ -110,8 +110,8 @@ p '------------------------------Categories created-----------------------------
   password: 'password',
   bio: 'I\'ll be back.',
   picture: 'https://images-na.ssl-images-amazon.com/images/I/51qfUTmeHHL._SY463_.jpg',
-  emotion_pref: 'happy',
-  temperature_pref: 'intense'
+  emotion_pref: 2,
+  temperature_pref: 3
   },
   {
   first_name: 'Ludwig van',
@@ -131,8 +131,8 @@ p '------------------------------Categories created-----------------------------
     Plaudite, amici, comedia finita est. (Applaud, my friends, the comedy is over.) [Said on his deathbed]
     I want to seize fate by the throat.',
   picture: 'http://cdn3.classical-music.com/sites/default/files/imagecache/623px_wide/Beethoven%202_0.jpg',
-  emotion_pref: 'happy',
-  temperature_pref: 'intense'
+  emotion_pref: 2,
+  temperature_pref: 3
   },
   {
   first_name: 'Don',
@@ -142,8 +142,8 @@ p '------------------------------Categories created-----------------------------
   password: 'password',
   bio: '...',
   picture: 'https://i.ebayimg.com/images/g/Qn8AAOSwB09YLtvT/s-l300.jpg',
-  emotion_pref: 'happy',
-  temperature_pref: 'intense'
+  emotion_pref: 2,
+  temperature_pref: 3
   },
   {
   first_name: 'Santa',
@@ -153,8 +153,8 @@ p '------------------------------Categories created-----------------------------
   password: 'password',
   bio: 'Merry Christmas',
   picture: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp0rToR8gNjRf91F3v2h1Puj0w0kqtQDsr0PWM5MM_ehl0a9sj',
-  emotion_pref: 'happy',
-  temperature_pref: 'intense'
+  emotion_pref: 2,
+  temperature_pref: 1
   },
   {
   first_name: 'Konstantinos',
@@ -164,8 +164,8 @@ p '------------------------------Categories created-----------------------------
   password: 'password',
   bio: 'India is Fashion Editor at @CultureTrip, an Editor of The Omnivore & Online @twin_magazine',
   picture: 'https://avatars2.githubusercontent.com/u/34167137?s=400&v=4',
-  emotion_pref: 'happy',
-  temperature_pref: 'chill'
+  emotion_pref: 2,
+  temperature_pref: 1
   },
   {
   first_name: 'Tanel',
@@ -175,8 +175,8 @@ p '------------------------------Categories created-----------------------------
   password: 'password',
   bio: 'India is Fashion Editor at @CultureTrip, an Editor of The Omnivore & Online @twin_magazine',
   picture: 'https://avatars3.githubusercontent.com/u/33349905?s=400&v=4',
-  emotion_pref: 'happy',
-  temperature_pref: 'chill'
+  emotion_pref: 1,
+  temperature_pref: 1
   },
   {
   first_name: 'Vini',
@@ -186,8 +186,8 @@ p '------------------------------Categories created-----------------------------
   password: 'password',
   bio: 'India is Fashion Editor at @CultureTrip, an Editor of The Omnivore & Online @twin_magazine',
   picture: 'https://avatars3.githubusercontent.com/u/15719184?s=400&v=4',
-  emotion_pref: 'happy',
-  temperature_pref: 'chill'
+  emotion_pref: 1,
+  temperature_pref: 1
   },
   {
   first_name: 'Nicholas',
@@ -197,8 +197,8 @@ p '------------------------------Categories created-----------------------------
   password: 'password',
   bio: 'India is Fashion Editor at @CultureTrip, an Editor of The Omnivore & Online @twin_magazine',
   picture: 'https://avatars0.githubusercontent.com/u/32316057?s=400&v=4',
-  emotion_pref: 'happy',
-  temperature_pref: 'chill'
+  emotion_pref: 2,
+  temperature_pref: 1
   }])
 
 p users
@@ -235,7 +235,7 @@ Catalonian markets should make major moves in Blockchain technology to secure th
 picture: 'https://cdn-images-1.medium.com/max/1600/1*1Kjxg36-D3pOVMgu8H2TCA.jpeg',
 category_id: Category.find_by_name("Business & Tech").id,
 user_id: User.find_by_first_name("Vini").id,
-publishing_date: Date.parse("2017-11-13"),
+publishing_date: Date.parse("2017-11-13")
 },
 {
 title: "The Story of a Collaborative Referendum",
@@ -329,7 +329,7 @@ Although Pomak, known in Greek as Pomakika, is not the language spoken at home i
 picture: 'https://cdn-images-1.medium.com/max/2000/1*NTaK3agsNiPvJ2San_3FQQ.jpeg',
 category_id: Category.find_by_name("Politics").id,
 user_id: User.find_by_first_name("Lorene").id,
-publishing_date: Date.parse("2017-10-09"),
+publishing_date: Date.parse("2017-10-09")
 },
 {
 title: "Is Brussels courting the idea of reversing the referendum result?",
@@ -368,7 +368,7 @@ But it will be interesting to watch what manoeuvres the three Remainers and thei
 picture: 'https://cdn-images-1.medium.com/max/1600/1*nxJF8P4hUJuw2WQzuN7Ryg.jpeg',
 category_id: Category.find_by_name("Politics").id,
 user_id: User.find_by_first_name("Alexandre").id,
-publishing_date: Date.parse("2017-10-30"),
+publishing_date: Date.parse("2017-10-30")
 },
 {
 title: "E. Macron’s plans to break nations’ borders.",
@@ -445,7 +445,7 @@ The possibility for the UK to come back once the renovations will be over in 202
 picture: 'https://cdn-images-1.medium.com/max/2000/1*17DLR3Zxj76Pg7zEQ2dKqQ.jpeg',
 category_id: Category.find_by_name("Politics").id,
 user_id: User.find_by_first_name("Terminator").id,
-publishing_date: Date.parse("2017-10-03"),
+publishing_date: Date.parse("2017-10-03")
 },
 {
 title: "Austrian recipe: Kaiserschmarn",
@@ -475,7 +475,7 @@ Enjoy your meal !!",
 picture: 'https://cdn-images-1.medium.com/max/2000/1*UfX1V7aOGGbbw6H0xtWnbg.jpeg',
 category_id: Category.find_by_name("Food").id,
 user_id: User.find_by_first_name("Konstantinos").id,
-publishing_date: Date.parse("2017-09-24"),
+publishing_date: Date.parse("2017-09-24")
 },
 {
 title: "Greece’s Odyssey for Sustainable Fashion",
@@ -517,7 +517,7 @@ Thus the Greek fashion industry finds itself in an exciting position, at a time 
 picture: 'https://cdn-images-1.medium.com/max/2000/1*mCAeFNv4Z4tVo7sHeHroog.jpeg',
 category_id: Category.find_by_name("Fashion").id,
 user_id: User.find_by_first_name("Tanel").id,
-publishing_date: Date.parse("2017-05-08"),
+publishing_date: Date.parse("2017-05-08")
 },
 {
 title: "Why is the Left losing in Germany?",
@@ -542,7 +542,7 @@ Sadly, this has hardly been the strategy of the Left in Europe. The Social Democ
 picture: 'https://cdn-images-1.medium.com/max/2000/1*nayF5UYd_eGNiWdo_fmNGg.jpeg',
 category_id: Category.find_by_name("Politics").id,
 user_id: User.find_by_first_name("Marcus").id,
-publishing_date: Date.parse("2017-09-26"),
+publishing_date: Date.parse("2017-09-26")
 },
 {
 title: "NEWS TO BREAK BORDERS",
@@ -564,7 +564,7 @@ Alex & Romain",
 picture: 'https://cdn-images-1.medium.com/max/2000/1*Y1Vu1aEHUAQgXQEBoebsEA.png',
 category_id: Category.find_by_name("Lifestyle").id,
 user_id: User.find_by_first_name("Marcus").id,
-publishing_date: Date.parse("2017-06-19"),
+publishing_date: Date.parse("2017-06-19")
 }])
 
 p articles
