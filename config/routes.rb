@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :quizzes, only: [:new]
   resources :categories_prefs, only: [:create]
+  resource :emotion_prefs, only: [:update]
+  resource :temperature_prefs, only: [:update]
 end

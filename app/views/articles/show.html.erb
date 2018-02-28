@@ -43,7 +43,7 @@
           <%= simple_form_for [@article, @review] do |f| %>
           <%= f.input :rating, collection: 1..5 %>
           <%= f.input :emotion, collection: 1..2 %>
-          <%= f.input :temperature, collection: 1..3 %>
+          <%= f.input :temperature, collection: 1..4 %>
           <%= f.submit "Add my ratings", class: "btn-blue" %>
           <% end %>
         </div>
