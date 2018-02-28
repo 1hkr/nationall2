@@ -14,6 +14,8 @@ class User < ApplicationRecord
 
 
   validates :bio, length: { maximum: 1000, too_long: "%{count} characters is the maximum allowed" }
+  validates :emotion_pref, inclusion: { in: [1,2] }
+  validates :temperature_pref, inclusion: { in: [1,2,3,4] }
   geocoded_by :city
   after_validation :geocode, if: :will_save_change_to_city?
 
