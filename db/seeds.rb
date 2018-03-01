@@ -23,35 +23,35 @@ p 'Reviews destroyed'
 p 'Creating categories'
   categories = Category.create([{
   name: "Business & Tech",
-  picture: "https://www.pexels.com/photo/party-glass-architecture-windows-34092/"
+  picture: "https://images.pexels.com/photos/34092/pexels-photo.jpg?w=1260&h=750&auto=compress&cs=tinysrgb"
   },
   {
   name: 'Politics',
-  picture: 'https://www.pexels.com/photo/berlin-eu-european-union-federal-chancellery-4666/'
+  picture: 'https://images.pexels.com/photos/4666/berlin-eu-european-union-federal-chancellery.jpg?w=1260&h=750&auto=compress&cs=tinysrgb'
   },
   {
   name: 'Food',
-  picture: 'https://www.pexels.com/photo/burrito-chicken-delicious-dinner-461198/'
+  picture: 'https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb'
   },
   {
   name: 'Lifestyle',
-  picture: 'https://www.pexels.com/photo/man-in-black-tank-top-laying-on-gray-concrete-surface-near-black-bike-681294/'
+  picture: 'https://images.pexels.com/photos/681294/pexels-photo-681294.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb'
   },
   {
   name: 'Arts',
-  picture: 'https://www.pexels.com/photo/woman-pouring-down-a-brown-paint-730807/'
+  picture: 'https://images.pexels.com/photos/730807/pexels-photo-730807.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb'
   },
   {
   name: 'Sports',
-  picture: 'https://www.pexels.com/photo/brown-and-white-track-field-163444/'
+  picture: 'https://images.pexels.com/photos/163444/sport-treadmill-tor-route-163444.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb'
   },
   {
   name: 'Travel',
-  picture: 'https://www.pexels.com/photo/ball-shaped-blur-close-up-focus-346885/'
+  picture: 'https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb'
   },
   {
   name: 'Fashion',
-  picture: 'https://www.pexels.com/photo/adult-beautiful-elegant-eyewear-291762/'
+  picture: 'https://images.pexels.com/photos/291762/pexels-photo-291762.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb'
   }])
 
 p categories
