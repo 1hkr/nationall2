@@ -70,6 +70,17 @@ p '------------------------------Categories created-----------------------------
   temperature_pref: 3
   },
   {
+  first_name: 'Image',
+  last_name: 'File',
+  city: 'Barcelona, Spain',
+  email: 'img@nationall.eu',
+  password: 'password',
+  bio: 'Image file test',
+  picture: 'https://cdn.pixabay.com/photo/2018/02/09/19/58/composing-3142301_960_720.jpg',
+  emotion_pref: 1,
+  temperature_pref: 3
+  },
+  {
   first_name: 'Test',
   last_name: 'Account',
   city: 'London',

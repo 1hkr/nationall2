@@ -8,6 +8,7 @@ class PagesController < ApplicationController
     @markers = @users.map do |user|
       @article_by_user = Article.find_by_user_id(user.id)
       {
+        name: user.first_name + ' ' + user.last_name,
         lat: user.latitude,
         lng: user.longitude,
         url: article_path(@article_by_user),
