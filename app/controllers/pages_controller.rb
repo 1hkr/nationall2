@@ -10,6 +10,8 @@ class PagesController < ApplicationController
       @writer_name = user.first_name + " " + user.last_name
       @writer_location = user.city
       @writer_bio = user.bio
+
+      if @article_by_user
       {
         name: user.first_name + ' ' + user.last_name,
         bio: "<div class='writer-info'>
@@ -28,6 +30,7 @@ class PagesController < ApplicationController
           }
         },
       }
+      end
     end
     @markers = @markers.compact
   end
