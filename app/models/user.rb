@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :articles
-  has_many :articles, through: :donations
+  # has_many :articles, through: :donations
   has_many :donations, dependent: :destroy
   has_many :reviews
   has_many :opinions

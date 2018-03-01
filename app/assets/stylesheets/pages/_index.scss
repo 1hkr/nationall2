@@ -16,6 +16,20 @@ body {
   margin-left: 40px;
 }
 
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.margin-bottom {
+  margin-bottom: 40px;
+}
+
+.bottomize {
+  display: flex;
+  align-items: flex-end;
+}
+
 .align-h {
   display: flex;
   flex-direction: row;
@@ -39,6 +53,6 @@ body {
   font-family: arial !important;
   font-weight: 900 !important;
   font-size: 60px !important;
-  color: white;
-  text-shadow: 1px 1px white, -1px -1px #44444475;
+  color: rgba(239, 239, 239, 0.8);
+  text-shadow: 1px 4px 6px #fff, 0px 0px 0 #5d5d5d, 1px 4px 6px #fff;
 }
