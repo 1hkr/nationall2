@@ -23,35 +23,35 @@ p 'Reviews destroyed'
 p 'Creating categories'
   categories = Category.create([{
   name: "Business & Tech",
-  picture: "https://cdn.pixabay.com/photo/2018/02/12/16/48/network-3148727_960_720.jpg"
+  picture: "https://www.pexels.com/photo/party-glass-architecture-windows-34092/"
   },
   {
   name: 'Politics',
-  picture: 'https://cdn.pixabay.com/photo/2017/08/03/11/05/people-2575608_960_720.jpg'
+  picture: 'https://www.pexels.com/photo/berlin-eu-european-union-federal-chancellery-4666/'
   },
   {
   name: 'Food',
-  picture: 'https://cdn.pixabay.com/photo/2018/02/26/17/25/chicken-3183558_960_720.jpg'
+  picture: 'https://www.pexels.com/photo/burrito-chicken-delicious-dinner-461198/'
   },
   {
   name: 'Lifestyle',
-  picture: 'https://cdn.pixabay.com/photo/2017/06/20/22/14/men-2425121_960_720.jpg'
+  picture: 'https://www.pexels.com/photo/man-in-black-tank-top-laying-on-gray-concrete-surface-near-black-bike-681294/'
   },
   {
   name: 'Arts',
-  picture: 'https://cdn.pixabay.com/photo/2018/02/23/13/43/brush-3175578_960_720.jpg'
+  picture: 'https://www.pexels.com/photo/woman-pouring-down-a-brown-paint-730807/'
   },
   {
   name: 'Sports',
-  picture: 'https://cdn.pixabay.com/photo/2018/02/16/17/07/motocross-3158085_960_720.jpg'
+  picture: 'https://www.pexels.com/photo/brown-and-white-track-field-163444/'
   },
   {
   name: 'Travel',
-  picture: 'https://cdn.pixabay.com/photo/2017/06/05/11/01/airport-2373727_960_720.jpg'
+  picture: 'https://www.pexels.com/photo/ball-shaped-blur-close-up-focus-346885/'
   },
   {
   name: 'Fashion',
-  picture: 'https://cdn.pixabay.com/photo/2017/11/26/19/50/jeans-2979818_960_720.jpg'
+  picture: 'https://www.pexels.com/photo/adult-beautiful-elegant-eyewear-291762/'
   }])
 
 p categories
