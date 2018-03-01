@@ -201,7 +201,7 @@
 
   <hr>
 
-      <% if donation = Donation.find_by(user_id: current_user.id, article_id: @article.id) %>
+      <% if user_signed_in? && donation = Donation.find_by(user_id: current_user.id, article_id: @article.id) %>
 
       <h3>Donation</h3>
       <p><%= donation.amount %>€</p>
