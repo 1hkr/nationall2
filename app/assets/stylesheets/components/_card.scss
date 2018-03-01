@@ -4,6 +4,7 @@
   background-size: cover !important;
   background-position: center;
   color: white;
+  overflow: hidden;
 }
 
 .card-container {
@@ -62,5 +63,18 @@
     }
   }
 }
+
+.video .videoplay{
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  color: white;
+}
+
+
+
 
 
