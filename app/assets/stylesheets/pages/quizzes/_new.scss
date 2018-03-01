@@ -33,3 +33,43 @@
   opacity: 1;
   }
 }
+
+#chill {
+  background-color: yellow;
+  height: 30px;
+  width: 50px;
+  &:hover {
+    opacity: 0.3;
+    cursor: pointer;
+  }
+}
+
+#posey {
+  background-color: orange;
+  height: 30px;
+  width: 50px;
+  &:hover {
+    opacity: 0.3;
+    cursor: pointer;
+  }
+}
+
+#smart {
+  background-color: pink;
+  height: 30px;
+  width: 50px;
+  &:hover {
+    opacity: 0.3;
+    cursor: pointer;
+  }
+}
+
+#intense {
+  background-color: red;
+  height: 30px;
+  width: 50px;
+  &:hover {
+    opacity: 0.3;
+    cursor: pointer;
+  }
+}
