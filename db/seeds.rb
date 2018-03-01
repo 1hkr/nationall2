@@ -30,6 +30,10 @@ p 'Creating categories'
   picture: 'https://images.pexels.com/photos/4666/berlin-eu-european-union-federal-chancellery.jpg?w=1260&h=750&auto=compress&cs=tinysrgb'
   },
   {
+  name: 'Europe',
+  picture: 'https://images.pexels.com/photos/269790/pexels-photo-269790.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb'
+  },
+  {
   name: 'Food',
   picture: 'https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb'
   },
