@@ -15,6 +15,20 @@ body {
   margin-left: 40px;
 }
 
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.margin-bottom {
+  margin-bottom: 40px;
+}
+
+.bottomize {
+  display: flex;
+  align-items: flex-end;
+}
+
 .align-h {
   display: flex;
   flex-direction: row;
