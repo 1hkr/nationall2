@@ -6,8 +6,7 @@ class PagesController < ApplicationController
     @articles = Article.all
     @users = User.where.not(latitude: nil, longitude: nil)
     @markers = @users.map do |user|
-      # @article_by_user = Article.find_by_user_id(user.id)
-      @article_by_user = Article.last.id
+      @article_by_user = user.articles.last
       @writer_name = user.first_name + " " + user.last_name
       @writer_location = user.city
       @writer_bio = user.bio
@@ -30,5 +29,6 @@ class PagesController < ApplicationController
         },
       }
     end
+    @markers = @markers.compact
   end
 end
