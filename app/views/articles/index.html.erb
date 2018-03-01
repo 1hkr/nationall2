@@ -11,25 +11,27 @@
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url(<%= article.picture %>);">
         </div>
         <div class="card-text grow">
-          <div class="card-details">
+          <div class="card-details color">
             <p> <%= article.category.name.upcase %></p>
             <p class="top-right"><%= article.publishing_date %></p>
           </div>
-          <div class="card-titles">
+          <div class="card-titles color">
             <h5><%= truncate(article.title, length: 65) %></h5>
             <p><%= truncate(article.subtitle, length: 40) %></p>
           </div>
           <div class="card-profile">
+            <div class="align-v">
             <div class="center">
               <img class="card-user" src=<%= article.user.picture %>>
             </div>
-            <div class="user-details">
+            <div class="user-details color">
               <div>
                 <p> <b><%= article.user.first_name%> <%= article.user.last_name %></b> </p>
               </div>
               <div>
                 <p> <%= article.user.city %></p>
               </div>
+            </div>
             </div>
           </div>
         </div>
