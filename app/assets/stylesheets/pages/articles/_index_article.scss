@@ -1,0 +1,44 @@
+// cards display
+.color {
+  color: $dark-gray;
+}
+
+.color h5 {
+  color: $blue;
+  margin-bottom: 5px;
+  line-height: 1.2;
+}
+
+.user-details p {
+  margin: 0;
+  line-height: 20px;
+}
+
+.card {
+  height: 185px;
+}
+
+.card-text {
+  display:flex;
+  flex-direction:column;
+  height: 175px;
+  min-height: 174px;
+}
+
+.card-titles {
+  margin-bottom: 1px;
+}
+
+.card-titles h4, .h4, h5, .h5, h6, .h6 {
+    margin-top: -0.5px;
+}
+
+.card-titles p {
+  margin: 0 0 -2.5px;
+}
+
+.card-profile {
+  height:100%;
+  display: flex;
+  align-items: flex-end;
+}

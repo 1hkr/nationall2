@@ -11,12 +11,15 @@
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
 </head>
-<body>
+<body class="Site" >
   <% color = params[:controller] == 'pages' && params[:action] == 'home' ? 'page-active' : '' %>
   <% color_articles = params[:controller] == 'articles' && params[:action] == 'index' ? 'page-active' : '' %>
   <%= render 'shared/navbar', color_map: color, color_articles: color_articles %>
   <%= render 'shared/flashes' %>
-  <%= yield %>
+  <div class="Site-content">
+    <%= yield %>
+  </div>
+  <%= render 'shared/footer' %>
   <%= javascript_include_tag 'application' %>
   <%= javascript_pack_tag 'application' %>
   <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
