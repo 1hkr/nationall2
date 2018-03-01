@@ -14,10 +14,16 @@ class PagesController < ApplicationController
       if @article_by_user
       {
         name: user.first_name + ' ' + user.last_name,
-        bio: "<div class='writer-info'>
-              <h3 id='name'>#{@writer_name}</h3>
-              <h4 id='location'>#{@writer_location}</h4>
-              <p id='bio'>#{@writer_bio}</p>
+        bio: "<div class='panel panel-primary'>
+                <div class='panel-heading'>
+                  <div class='panel-title'>
+                    <h3>#{@writer_name}</h3>
+                  </div>
+                </div>
+                <div class='panel-body'>
+                  <h4 id='location'>#{@writer_location}</h4>
+                  <p id='bio'>#{@writer_bio}</p>
+                </div>
               </div>",
         lat: user.latitude,
         lng: user.longitude,

@@ -142,6 +142,10 @@ const mapElement = document.getElementById('map');
         infowindow.open(map, marker)
       });
 
+      marker.addListener('mouseout', function() {
+        infowindow.close();
+      });
+
       marker.addListener('click', function() {
         window.location.href = marker.url;
       });

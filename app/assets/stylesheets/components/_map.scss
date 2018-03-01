@@ -4,30 +4,34 @@
   height: 100vh;
 }
 
-.writer-info {
-  #name {
-    background-color: #4733C3;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    margin-top: 0px;
-    margin-bottom: 2px;
-    padding: 7px 0px 1px 7px;
-    border-radius: 5px;
-  }
-  #location {
-    font-size: 14px;
-    font-weight: bold;
-    margin-top: 3px;
-    margin-bottom: 10px;
-    padding-left: 7px;
-  }
-  #bio {
-    font-size: 14px;
-  }
+#name {
+  background-color: #4733C3;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 2px;
+  padding: 7px 0px 1px 7px;
+  border-radius: 5px;
 }
 
-.gm-style-iw {
-  background-color: white;
-  border-radius: 10px;
+#location {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 3px;
+  margin-bottom: 10px;
+  padding-left: 7px;
+}
+
+#bio {
+  font-size: 14px;
+  padding-left: 7px;
+}
+
+.panel-heading .panel-body {
+  padding: 0px;
+}
+
+h3 {
+  margin: 0px;
 }
