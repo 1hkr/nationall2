@@ -1,14 +1,18 @@
 <div class="container-fluid side-margin">
-  <div class=row>
-    <div class="col-xs-12 index-titles">
-      <h1>NΔTIONΔLL</h1>
-    </div>
-  </div>
 
-  <div>
-    <% if user_signed_in? && current_user.answered === nil %>
+
+  <% if user_signed_in? && current_user.answered === nil %>
+    <div>
       <%= render 'quizz_banner' %>
-  </div>
+    </div>
+    <% else %>
+      <div class=row>
+        <div class="col-xs-12 index-titles">
+          <h1>NΔTIONΔLL</h1>
+        </div>
+      </div>
+
+  <% end %>
 
 
   <div class="row margin-left">
@@ -68,7 +72,7 @@
     <% end %>
     <% end %>
   </div>
-  <% end %>
+
 </div>
 
 
