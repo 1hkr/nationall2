@@ -8,7 +8,7 @@ class CategoriesPrefsController < ApplicationController
       authorize @categories_pref
       return render 'quizzes#new' unless @categories_pref.save
     end
-    redirect_to articles_path, notice: 'Your categories preferences were successfully saved.'
+    redirect_to '/quizzes/new', notice: 'Your categories preferences were successfully saved.'
   end
 
   private

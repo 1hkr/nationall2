@@ -34,10 +34,6 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
 
-  def has_answered
-    @user.answered = true
-  end
-
   private
 
   def set_article
