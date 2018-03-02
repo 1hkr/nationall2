@@ -2,14 +2,13 @@ class CategoriesPrefsController < ApplicationController
 
   def create
     @categories_pref = CategoriesPref.new(categories_params)
-    @categories_pref.user = current_user
-    authorize @categories_pref
-
-    if @categories_pref.save
-      redirect_to articles_path, notice: 'Your categories preferences were successfully saved.'
-    else
-      render 'quizzes#new'
+    params[:categories_pref][:category_id].each do |cat_id|
+      cat = Category.find(cat_id)
+      @categories_pref = CategoriesPref.new(user: current_user, category: cat)
+      authorize @categories_pref
+      return render 'quizzes#new' unless @categories_pref.save
     end
+    redirect_to articles_path, notice: 'Your categories preferences were successfully saved.'
   end
 
   private

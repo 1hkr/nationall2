@@ -1,36 +1,92 @@
 <div class="container-fluid side-margin">
-
   <div class="row margin-left">
-  <h1>Quizz</h1>
+    <div class="col-xs-12 col-sm-6 col-lg-8 col-sm-offset-3 col-lg-offset-2 align-h bottomize space-between margin-bottom">
+      <div class="form-post">
+        <h1>Quizz</h1>
+  <hr>
+          <h4>Categories preferences</h4>
 
-    <div>
-      <h4>Categories preferences</h4>
-      <%= simple_form_for @categories_pref do |f| %>
-      <%= f.association :category, as: :check_boxes, label: false %>
-      <%= f.submit "Choose this category", class: "btn-blue" %>
-      <% end %>
+
+ <!-- TESTTING A NEW WAY TO DO THE FORM -->
+        <div>
+          <%= simple_form_for @categories_pref do |f| %>
+
+            <div class="form-group margin-bottom">
+              <div class="category-choices">
+                <div class="row">
+                <% Category.all.each do |category| %>
+                  <div class="col-xs-12 col-sm-4">
+
+                      <input type="checkbox" class="hidden" value="<%= category.id %>" name="categories_pref[category_id][]" id="categories_pref_category_id_<%= category.id %>">
+
+                        <label for="categories_pref_category_id_<%= category.id %>" class="category-choice" style="background-image: url('<%= category.picture %>')" style="cursor: pointer;">
+                          <%= category.name %>
+                        </label>
+
+                  </div>
+                    <% end %>
+                </div>
+               </div>
+
+            <%= f.submit "Save", class: "btn-blue" %>
+            <% end %>
+            <hr>
+          </div>
+        </div>
+
+
+        <div>
+          <h4>Emotion preferences</h4>
+
+          <%= simple_form_for current_user, url: emotion_prefs_path, method: :patch do |f| %>
+          <div class="form-group margin-bottom">
+            <div class="emotion-choices">
+
+              <input type="radio" class="hidden" value="1" name="user[emotion_pref]" id="user_emotion_pref_1">
+                <label for="user_emotion_pref_1" class="category-choice" style="background-image: url('https://images.pexels.com/photos/347135/pexels-photo-347135.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb')" style="cursor: pointer;">
+                </label>
+
+              <input type="radio" class="hidden" value="2" name="user[emotion_pref]" id="user_emotion_pref_2">
+                <label for="user_emotion_pref_2" class="category-choice" style="background-image: url('https://images.pexels.com/photos/846747/pexels-photo-846747.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb')" style="cursor: pointer;">
+                </label>
+
+            </div>
+            <%= f.submit "Save", class: "btn-blue" %>
+            <% end %>
+          </div>
+        </div>
+
+        <hr>
+
+        <div>
+          <h4>Temperature preferences</h4>
+          <%= simple_form_for current_user, url: temperature_prefs_path, method: :patch do |f| %>
+
+
+         <input type="radio" class="hidden" value="1" name="user[temperature_pref]" id="user_temperature_pref_1">
+           <label for="user_temperature_pref_1" id="chill" style="cursor: pointer;">
+           </label>
+
+           <input type="radio" class="hidden"  value="2" name="user[temperature_pref]" id="user_temperature_pref_2">
+             <label for="user_temperature_pref_2" id="posey" style="cursor: pointer;">
+             </label>
+
+          <input type="radio" class="hidden" value="3" name="user[temperature_pref]" id="user_temperature_pref_3">
+            <label for="user_temperature_pref_3" id="smart" style="cursor: pointer;">
+            </label>
+
+          <input type="radio" class="hidden" value="3" name="user[temperature_pref]" id="user_temperature_pref_3">
+            <label for="user_temperature_pref_3" id="intense" style="cursor: pointer;">
+            </label>
+
+        </div>
+          <%= f.submit "Save", class: "btn-blue" %>
+          <% end %>
+      </div>
     </div>
-
-    <hr>
-
-    <div>
-      <h4>Emotion preferences</h4>
-      <%= simple_form_for current_user, url: emotion_prefs_path, method: :patch do |f| %>
-      <%= f.input :emotion_pref, collection: 1..2, as: :radio_buttons, label: false %>
-      <%= f.submit "Choose this emotion", class: "btn-blue" %>
-      <% end %>
-    </div>
-
-    <hr>
-
-    <div>
-      <h4>Temperature preferences</h4>
-      <%= simple_form_for current_user, url: temperature_prefs_path, method: :patch do |f| %>
-      <%= f.input :temperature_pref, collection: 1..4, as: :radio_buttons, label: false %>
-      <%= f.submit "Choose this temperature", class: "btn-blue" %>
-      <% end %>
-    </div>
-
   </div>
 </div>
+
+
+
 
