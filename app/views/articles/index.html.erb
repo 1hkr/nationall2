@@ -1,7 +1,16 @@
 <div class="container-fluid side-margin">
-  <div class="col-xs-12 index-titles">
-    <h1>NΔTIONΔLL</h1>
+  <div class=row>
+    <div class="col-xs-12 index-titles">
+      <h1>NΔTIONΔLL</h1>
+    </div>
   </div>
+
+  <div>
+    <% if user_signed_in? && current_user.answered === nil %>
+      <%= render 'quizz_banner' %>
+  </div>
+
+
   <div class="row margin-left">
     <% @articles.each_with_index do |article, index| %>
     <%= link_to article_path(article) do %>
@@ -59,6 +68,7 @@
     <% end %>
     <% end %>
   </div>
+  <% end %>
 </div>
 
 
