@@ -11,10 +11,6 @@ class PagesController < ApplicationController
         {
           lat: user.latitude,
           lng: user.longitude,
-          name: user.first_name + " " + user.last_name,
-          location: user.city,
-          latest_article_title: user.articles.last.title,
-          latest_article_content: user.articles.last.content.first(120)+"...",
           url: article_path(@article_by_user),
           icon: {
             url: user.picture,
