@@ -214,32 +214,28 @@
       <h4>Bio</h4>
       <p> <%= @article.user.bio %></p>
 
-    <hr>
+      <hr>
 
-    <% if user_signed_in? && donation = Donation.find_by(user_id: current_user.id, article_id: @article.id) %>
-
-    <h3>Donation</h3>
-    <p><%= donation.amount %>€</p>
-    <a href="#", class= "btn-blue-empty">Donation done</a>
-    <h5> Thank you for your donation ! </h5>
-
-    <% else %>
-
-    <div>
+      <% if user_signed_in? && donation = Donation.find_by(user_id: current_user.id, article_id: @article.id) %>
 
       <h3>Donation</h3>
-      <p>For <%= @article.user.first_name %></p>
-      <%= simple_form_for [@article, @donation] do |f| %>
-      <%= f.input :amount, placeholder: "0.10" %>
-      <%= f.submit "Donate", class: "btn-primary" %>
+      <p><%= donation.amount %>€</p>
+      <a href="#", class= "btn-blue-empty">Donation done</a>
+      <h5> Thank you for your donation ! </h5>
+
+      <% else %>
+
+      <h3> Support independent writing <i class="fab fa-studiovinari"></i></h3>
+      <%= simple_form_for [@article, @donation], :html => {:class => 'form-inline' } do |f| %>
+      <%= f.input :amount, default: "0.10", label: false, input_html: { class: 'form_light no_border donate-value' } %>
+      <%= button_tag(type: 'submit', class: "btn btn-link donate-button") do %>
+      Donate to <%= @article.user.first_name %> <i class="fa fa-heart"></i>
+      <% end %>
+      <% end %>
       <% end %>
 
     </div>
 
-    <% end %>
-
   </div>
-
-</div>
 
 </div>
