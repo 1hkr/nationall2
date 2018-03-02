@@ -5,14 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Article.destroy_all
+p 'Articles destroyed'
 Category.destroy_all
 p 'Category destroyed'
 Donation.destroy_all
 p 'Donation destroyed'
 Opinion.destroy_all
 p 'Opinion destroyed'
-Article.destroy_all
-p 'Articles destroyed'
 User.destroy_all
 p 'Users destroyed'
 Review.destroy_all
@@ -196,7 +196,7 @@ p '------------------------------Categories created-----------------------------
   {
   first_name: 'Nicholas',
   last_name: 'Utikal',
-  city: 'Amsterdam',
+  city: 'Catalonia, Spain',
   email: 'nicholas@nationall.eu',
   password: 'password',
   bio: 'India is Fashion Editor at @CultureTrip, an Editor of The Omnivore & Online @twin_magazine',
