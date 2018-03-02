@@ -12,10 +12,10 @@
             <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url(<%= article.picture %>);">
             </div>
         <% else  %>
-            <div class="card" style="background-image: url('https://img.youtube.com/vi/nZcejtAwxz4/maxresdefault.jpg');">
+            <div class="card" style="background-image: url('https://img.youtube.com/vi/<%= article.picture.last(11) %>/hqdefault.jpg');">
               <div class="video">
                 <video class="videoplay" loop preload="none">
-                  <source src="https://giant.gfycat.com/VerifiableTerrificHind.mp4" type="video/mp4">
+                  <source src="https://www.videvo.net/videvo_files/converted/2015_08/videos/NycTraffic.mp417453.mp4" type="video/mp4">
                 </video>
               </div>
             </div>
