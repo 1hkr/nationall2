@@ -151,7 +151,7 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
     marker.addListener('mouseout', function() {
       infowindow.close();
     });
-
+///
     marker.addListener('click', function() {
       window.location.href = marker.url;
     });

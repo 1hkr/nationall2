@@ -29,3 +29,6 @@ class PagesController < ApplicationController
     @markers = @markers.compact
   end
 end
+
+
+#
