@@ -12,6 +12,7 @@
 
 // for the avatar and the name next to it
 .article-profile {
+  margin-top: 50px;
   display: flex;
   font-size: 14px;
   .user-details {
@@ -26,3 +27,14 @@
   }
 }
 
+.author img {
+  width: 79px;
+}
+
+.author {
+  font-size: 30px !important;
+}
+
+.author p {
+  margin: 8px !important;
+}
