@@ -1,0 +1,75 @@
+// Form design
+.form-post {
+  background: white;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+// Checkboxes design for CATEGORIES
+.category-choices {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.category-choice {
+  background-size: cover !important;
+  height: 100px;
+  width: 200px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+  &.active {
+  color: white;
+  opacity: 1;
+  }
+}
+
+#chill {
+  background-color: yellow;
+  height: 30px;
+  width: 50px;
+  &:hover {
+    opacity: 0.3;
+    cursor: pointer;
+  }
+}
+
+#posey {
+  background-color: orange;
+  height: 30px;
+  width: 50px;
+  &:hover {
+    opacity: 0.3;
+    cursor: pointer;
+  }
+}
+
+#smart {
+  background-color: pink;
+  height: 30px;
+  width: 50px;
+  &:hover {
+    opacity: 0.3;
+    cursor: pointer;
+  }
+}
+
+#intense {
+  background-color: red;
+  height: 30px;
+  width: 50px;
+  &:hover {
+    opacity: 0.3;
+    cursor: pointer;
+  }
+}
