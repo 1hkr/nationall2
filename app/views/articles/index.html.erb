@@ -1,7 +1,7 @@
 <div class="container-fluid side-margin">
 
 
-  <% if user_signed_in? && current_user.answered === nil %>
+  <% if user_signed_in? && current_user.answered === false %>
     <div>
       <%= render 'quizz_banner' %>
     </div>

@@ -14,5 +14,29 @@ $(document).ready(function(){
     //   console.log(inputOne)
     //   console.log(inputTwo)
     // }
+    });
+  //   $('#submit').click(function(){
+  //     console.log(this)
+  //     $('.form-hide').hide();
+  // });
+});
+
+$(document).ready(function(){
+  $(".tempe-choice").click(function(){
+    $(this).toggleClass("ready");
   });
 });
+
+$("#categories-form").submit(function(event){
+  console.log("hello")
+  event.target.classList.add("hidden");
+  document.getElementById("emotion-form").classList.remove("hidden")
+});
+
+$("#emotion-form").submit(function(event){
+  console.log("hello")
+  event.target.classList.add("hidden");
+  document.getElementById("temperature-form").classList.remove("hidden")
+});
+
+
