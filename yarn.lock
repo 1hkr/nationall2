@@ -5231,6 +5231,10 @@ snapdragon@^0.8.1:
     source-map-resolve "^0.5.0"
     use "^2.0.0"
 
+snazzy-info-window@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/snazzy-info-window/-/snazzy-info-window-1.1.1.tgz#3b4da4f41c3aa6aa4ad878ecb97c3c2eb5c89b2f"
+
 sntp@1.x.x:
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/sntp/-/sntp-1.0.9.tgz#6541184cc90aeea6c6e7b35e2659082443c66198"
