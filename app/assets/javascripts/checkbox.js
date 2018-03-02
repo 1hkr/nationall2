@@ -29,11 +29,13 @@ $(document).ready(function(){
 
 $("#new_categories_pref").submit(function(event){
   document.getElementById("new_categories_pref_wrapper").classList.add("hidden")
-  document.getElementById("edit_user_2_wrapper").classList.remove("hidden")
+  document.getElementById("edit_user_wrapper").classList.remove("hidden")
 });
 
-$("#edit_user_2").submit(function(event){
-  document.getElementById("edit_user_2_wrapper").classList.add("hidden")
+var user_id = $("#edit_user_wrapper").data('user')
+
+$("#edit_user_" + user_id).submit(function(event){
+  document.getElementById("edit_user_wrapper").classList.add("hidden")
   document.getElementById("temperature-form").classList.remove("hidden")
 });
 
