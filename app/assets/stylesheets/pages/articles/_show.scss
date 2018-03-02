@@ -12,6 +12,7 @@
 
 // for the avatar and the name next to it
 .article-profile {
+  margin-top: 50px;
   display: flex;
   font-size: 14px;
   .user-details {
@@ -26,3 +27,32 @@
   }
 }
 
+.author img {
+  width: 79px;
+}
+
+.author {
+  font-size: 30px !important;
+}
+
+.author p {
+  margin: 8px !important;
+}
+
+.form-inline div { display: inline-block }
+
+.donate-value {
+  font-size: 25px;
+  text-align : center;
+  color: #4f4f54;
+  margin: -113px;
+
+}
+
+.donate-button {
+  text-align : center;
+  margin-right: auto;
+  margin-left: auto;
+  position: auto;
+  font-size: 25px;
+}

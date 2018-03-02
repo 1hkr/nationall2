@@ -1,20 +1,20 @@
 <!-- Article banner -->
 
 <% if @article.picture %>
-    <% if @article.picture.last(3) == 'jpg' || @article.picture.last(4) == 'jpeg' || @article.picture.last(3) == 'png' || @article.picture.last(3) == 'gif' %>
-        <div class="article-banner" style="background-image: url(<%= @article.picture %>);">
-        </div>
-    <% else  %>
-      <div class="article-banner">
-        <iframe id="media" src="<%= @article.picture %>" scrolling="no"></iframe>
-      </div>
-    <% end %>
+<% if @article.picture.last(3) == 'jpg' || @article.picture.last(4) == 'jpeg' || @article.picture.last(3) == 'png' || @article.picture.last(3) == 'gif' %>
+<div class="article-banner" style="background-image: url(<%= @article.picture %>);">
+</div>
+<% else  %>
+<div class="article-banner">
+  <iframe id="media" src="<%= @article.picture %>" scrolling="no"></iframe>
+</div>
+<% end %>
 <% end %>
 
 <div class="container-fluid side-margin">
   <div class="row margin-left">
 
-  <!-- LEFT SIDE -->
+    <!-- LEFT SIDE -->
     <div class="col-xs-7 col-md-7 col-sm-7">
 
       <!-- Articles informations -->
@@ -27,23 +27,23 @@
         <h1><%= @article.title %></h1>
         <h5><%= @article.subtitle %></h5>
 
-  <hr>
+        <hr>
 
 
         <h4>Summary</h4>
         <p> <%= @article.summary %></p>
       </div>
 
-  <hr>
+      <hr>
 
       <div>
         <h4>Full article</h4>
         <p><%= raw @article.content %></p>
       </div>
 
-  <hr>
+      <hr>
 
-        <!-- Rate the article-->
+      <!-- Rate the article-->
 
       <div>
         <h4>Rate the article</h4>
@@ -58,12 +58,12 @@
         </div>
       </div>
 
-  <hr>
+      <hr>
 
       <!-- List of the ratings -->
 
       <% if @reviews.exists? %>
-  <hr>
+      <hr>
       <h4>Other reviews</h4>
       <% @reviews.each do |review| %>
 
@@ -124,44 +124,44 @@
 
       <% end %>
 
-        <!-- Add an opinion -->
-        <h4>Share your opinion</h4>
+      <!-- Add an opinion -->
+      <h4>Share your opinion</h4>
 
-        <div id="simple-f">
-          <%= simple_form_for [@article, @opinion] do |f| %>
-          <%= f.input :content, placeholder: "Your opinion matters.", :input_html => { :rows => 5} %>
-          <%= f.submit "Add my opinion", class: "btn-blue" %>
-          <% end %>
-        </div>
-
-
-        <!-- List of opinions -->
-
-        <% if @opinions.exists? %>
-  <hr>
-        <h4>Other opinions</h4>
-        <% @opinions.each do |opinion| %>
-
-        <!-- Writer of the opinion -->
-
-        <div class="article-profile">
-          <div class="center">
-            <img class="card-user" src=<%= opinion.user.picture %>>
-          </div>
-          <div class="user-details">
-            <div>
-              <p><b><%= opinion.user.first_name%> <%= opinion.user.last_name %></b></p>
-            </div>
-            <div>
-              <p class="grow"> <%= opinion.user.city %></p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Content of the opinion-->
-          <p><%= opinion.content %></p>
-
+      <div id="simple-f">
+        <%= simple_form_for [@article, @opinion] do |f| %>
+        <%= f.input :content, placeholder: "Your opinion matters.", :input_html => { :rows => 5} %>
+        <%= f.submit "Add my opinion", class: "btn-blue" %>
         <% end %>
+      </div>
+
+
+      <!-- List of opinions -->
+
+      <% if @opinions.exists? %>
+      <hr>
+      <h4>Other opinions</h4>
+      <% @opinions.each do |opinion| %>
+
+      <!-- Writer of the opinion -->
+
+      <div class="article-profile">
+        <div class="center">
+          <img class="card-user" src=<%= opinion.user.picture %>>
+        </div>
+        <div class="user-details">
+          <div>
+            <p><b><%= opinion.user.first_name%> <%= opinion.user.last_name %></b></p>
+          </div>
+          <div>
+            <p class="grow"> <%= opinion.user.city %></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content of the opinion-->
+      <p><%= opinion.content %></p>
+
+      <% end %>
       <% end %>
 
 
@@ -186,29 +186,35 @@
     </div>
 
 
-  <!-- RIGHT SIDE -->
+    <!-- RIGHT SIDE -->
 
     <div class="col-xs-5 col-md-5 col-sm-5">
 
       <!-- Profile of the writer -->
       <div class="article-profile">
 
-        <div class="center">
+        <div class="center author">
           <img class="card-user" src=<%= @article.user.picture %>>
         </div>
 
         <div class="user-details">
-          <div>
+          <div class="author">
             <p> <b><%= @article.user.first_name%> <%= @article.user.last_name %></b> </p>
           </div>
-          <div>
+          <div class="author">
             <p class="grow"> <%= @article.user.city %></p>
           </div>
         </div>
 
       </div>
 
-  <hr>
+      <hr>
+
+
+      <h4>Bio</h4>
+      <p> <%= @article.user.bio %></p>
+
+      <hr>
 
       <% if user_signed_in? && donation = Donation.find_by(user_id: current_user.id, article_id: @article.id) %>
 
@@ -219,17 +225,13 @@
 
       <% else %>
 
-      <div>
-
-        <h3>Donation</h3>
-        <p>For <%= @article.user.first_name %></p>
-        <%= simple_form_for [@article, @donation] do |f| %>
-        <%= f.input :amount, placeholder: "0.10" %>
-        <%= f.submit "Donate", class: "btn-blue" %>
-        <% end %>
-
-      </div>
-
+      <h3> Support independent writing <i class="fab fa-studiovinari"></i></h3>
+      <%= simple_form_for [@article, @donation], :html => {:class => 'form-inline' } do |f| %>
+      <%= f.input :amount, default: "0.10", label: false, input_html: { class: 'form_light no_border donate-value' } %>
+      <%= button_tag(type: 'submit', class: "btn btn-link donate-button") do %>
+      Donate to <%= @article.user.first_name %> <i class="fa fa-heart"></i>
+      <% end %>
+      <% end %>
       <% end %>
 
     </div>
