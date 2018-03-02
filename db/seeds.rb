@@ -5,14 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Article.destroy_all
+p 'Articles destroyed'
 Category.destroy_all
 p 'Category destroyed'
 Donation.destroy_all
 p 'Donation destroyed'
 Opinion.destroy_all
 p 'Opinion destroyed'
-Article.destroy_all
-p 'Articles destroyed'
 User.destroy_all
 p 'Users destroyed'
 Review.destroy_all
@@ -196,7 +196,7 @@ p '------------------------------Categories created-----------------------------
   {
   first_name: 'Nicholas',
   last_name: 'Utikal',
-  city: 'Amsterdam',
+  city: 'Catalonia, Spain',
   email: 'nicholas@nationall.eu',
   password: 'password',
   bio: 'India is Fashion Editor at @CultureTrip, an Editor of The Omnivore & Online @twin_magazine',
@@ -543,7 +543,7 @@ This defeat, or “credibility issue” , can’t be fixed even by the most perf
 Sadly, this has hardly been the strategy of the Left in Europe. The Social Democrats have accommodated the ruling system to a point where they have left all credibility. While the parties to the Left never fully realised or learnt from the “historical defeat”.
 
 ",
-picture: 'https://www.youtube.com/embed/2pJnmJuYem8',
+picture: 'https://www.youtube.com/embed/RvtqPYggCV4',
 category_id: Category.find_by_name("Politics").id,
 user_id: User.find_by_first_name("Marcus").id,
 publishing_date: Date.parse("2017-09-26")
