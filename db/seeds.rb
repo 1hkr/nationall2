@@ -543,7 +543,7 @@ This defeat, or “credibility issue” , can’t be fixed even by the most perf
 Sadly, this has hardly been the strategy of the Left in Europe. The Social Democrats have accommodated the ruling system to a point where they have left all credibility. While the parties to the Left never fully realised or learnt from the “historical defeat”.
 
 ",
-picture: 'https://www.youtube.com/embed/2pJnmJuYem8',
+picture: 'https://www.youtube.com/embed/RvtqPYggCV4',
 category_id: Category.find_by_name("Politics").id,
 user_id: User.find_by_first_name("Marcus").id,
 publishing_date: Date.parse("2017-09-26")
