@@ -27,15 +27,13 @@ $(document).ready(function(){
   });
 });
 
-$("#categories-form").submit(function(event){
-  console.log("hello")
-  event.target.classList.add("hidden");
-  document.getElementById("emotion-form").classList.remove("hidden")
+$("#new_categories_pref").submit(function(event){
+  document.getElementById("new_categories_pref_wrapper").classList.add("hidden")
+  document.getElementById("edit_user_2_wrapper").classList.remove("hidden")
 });
 
-$("#emotion-form").submit(function(event){
-  console.log("hello")
-  event.target.classList.add("hidden");
+$("#edit_user_2").submit(function(event){
+  document.getElementById("edit_user_2_wrapper").classList.add("hidden")
   document.getElementById("temperature-form").classList.remove("hidden")
 });
 
