@@ -105,8 +105,6 @@ const styles = [{
         ]
     }];
 
-
-
 const mapElement = document.getElementById('map');
 
 if (mapElement) { // don't try to build a map if there's no div#map to inject in
@@ -135,11 +133,27 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
   console.log(map.markers)
 
   map.markers.forEach(function(marker) {
+
+    var contentString = '<div class="map-article">'+
+    '<h4 class="map-article-title">'+ marker.latest_article_title +'</h4>'+
+    '<h5 class="map-article-user">'+ "👤" + marker.name + " " + marker.location +'</h5>'+
+    '<p class="map-article-summary">'+ marker.latest_article_content +'</p>'+
+    '</div>'
+
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
+
+    marker.addListener('mouseover', function() {
+      infowindow.open(map, marker);
+    });
+
+    marker.addListener('mouseout', function() {
+      infowindow.close();
+    });
+
     marker.addListener('click', function() {
       window.location.href = marker.url;
     });
   });
-  // markers.addListener(marker, 'click', function() {
-  //   window.location.href = marker.url;
-  // });
 }
