@@ -1,0 +1,22 @@
+
+Test-driven Development (TDD)
+  - Write the smallest test case
+  - Run the test
+  - think why it failed
+  - write code to pass the test
+  - refactor the codes
+
+  Behavior-Driven Development (BDD)
+   - test = specifications of system behavior
+
+  RSpec
+    - Testing Library
+    - for Ruby
+    - for in-production app
+
+    Setup Code
+      mkdir spec
+
+      gem "rspec"
+      bundle install --path .bundle
+
