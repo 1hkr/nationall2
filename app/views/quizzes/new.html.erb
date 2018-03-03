@@ -37,18 +37,18 @@
  <!-- FORM FOR THE EMOTION-PREF UPDATE OF USER-->
         <div id="edit_user_wrapper" class="hidden" data-user="<%= current_user.id %>">
           <hr>
-          <h4>Which TedTalk would you go for ?</h4>
+          <h4>Which reading/TedTalk would you go for ?</h4>
 
           <%= simple_form_for current_user, remote: true, url: emotion_prefs_path, method: :patch do |f| %>
           <div class="form-group margin-bottom">
             <div class="choices">
 
               <input type="radio" class="hidden" value="1" name="user[emotion_pref]" id="user_emotion_pref_1">
-                <label for="user_emotion_pref_1" class="emotion-choice" style="background-image: url('https://www.ted.com/talks/chimamanda_adichie_the_danger_of_a_single_story?referrer=playlist-the_most_popular_talks_of_all')" style="cursor: pointer;">
+                <label for="user_emotion_pref_1" class="emotion-choice" style="background-image: url('https://images.pexels.com/photos/347135/pexels-photo-347135.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb')" style="cursor: pointer;">
                 </label>
 
               <input type="radio" class="hidden" value="2" name="user[emotion_pref]" id="user_emotion_pref_2">
-                <label for="user_emotion_pref_2" class="emotion-choice" style="background-image: url('https://www.ted.com/talks/dan_gilbert_asks_why_are_we_happy?referrer=playlist-the_most_popular_talks_of_all')" style="cursor: pointer;">
+                <label for="user_emotion_pref_2" class="emotion-choice" style="background-image: url('https://images.pexels.com/photos/846747/pexels-photo-846747.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb')" style="cursor: pointer;">
                 </label>
 
             </div>
