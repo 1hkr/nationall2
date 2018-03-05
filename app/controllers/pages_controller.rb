@@ -16,6 +16,7 @@ class PagesController < ApplicationController
           latest_article_title: user.articles.last.title,
           latest_article_content: user.articles.last.content.first(120)+"...",
           url: article_path(@article_by_user),
+          imageUrl: @article_by_user.picture,
           icon: {
             url: user.picture,
             scaledSize: {
