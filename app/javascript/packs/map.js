@@ -136,13 +136,10 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
 
     var contentString = '<div class="map-article">'+
     '<div class="map-article-image" style="background-image: url('+ marker.imageUrl +')"></div>'+
+    '<h5 class="map-article-date">'+ marker.date +'</h5>'+
     '<h4 class="map-article-title">'+ marker.latest_article_title +'</h4>'+
-    '<h5 class="map-article-user">'+ "👤" + marker.name + " " + marker.location +'</h5>'+
+    '<h5 class="map-article-user">'+ marker.name + '</h5>'+
     '</div>'
-
-    // var infowindow = new google.maps.InfoWindow({
-    //   content: contentString
-    // });
 
     var info = new SnazzyInfoWindow({
     marker: marker,
@@ -154,9 +151,9 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
       info.open(map, marker);
     });
 
-    // marker.addListener('mouseout', function() {
-    //   infowindow.close();
-    // });
+    marker.addListener('mouseout', function() {
+      info.close();
+    });
 
     marker.addListener('click', function() {
       window.location.href = marker.url;
