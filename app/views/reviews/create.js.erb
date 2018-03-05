@@ -1,18 +1,23 @@
 // app/views/reviews/create.js.erb
 // Here you generate *JavaScript* that would be executed in the browser
 function refreshForm(innerHTML) {
-  const newReviewForm = document.getElementById('new_review');
+  const newReviewForm = document.getElementById('new-review');
   newReviewForm.innerHTML = innerHTML;
+}
+
+function removeForm() {
+  const newReviewForm = document.getElementById('new-review-container');
+  newReviewForm.remove();
 }
 
 function addReview(reviewHTML) {
   const reviews = document.getElementById('reviews');
-  reviews.insertAdjacentHTML('beforeend', reviewHTML);
+  reviews.insertAdjacentHTML('afterbegin', reviewHTML);
 }
 
 <% if @review.errors.any? %>
   refreshForm('<%= j render "reviews/form", article: @article, review: @review %>');
 <% else %>
   addReview('<%= j render "reviews/show", review: @review %>');
-  refreshForm('<%= j render "reviews/form", article: @article, review: Review.new %>');
+  removeForm();
 <% end %>

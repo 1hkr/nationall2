@@ -26,6 +26,7 @@ class ReviewsController < ApplicationController
     #   # render goes to View folder by default
     #   # should render the view with specific instances
     # end
+    end
   end
 
   private
@@ -37,4 +38,5 @@ class ReviewsController < ApplicationController
   def review_params
     params.require(:review).permit(:rating, :comment, :emotion, :temperature)
   end
+
 end

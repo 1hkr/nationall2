@@ -1,0 +1,29 @@
+
+  <!-- Writer of the opinion -->
+<div class="row opinions-container">
+
+  <div class="article-profile col-xs-12 col-sm-4">
+    <div class="center">
+      <img class="card-user" src=<%= opinion.user.picture %>>
+    </div>
+    <div class="user-details">
+      <div>
+        <p><b><%= opinion.user.first_name%> <%= opinion.user.last_name %></b></p>
+      </div>
+      <div>
+        <p class="grow"> <%= opinion.user.city %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-8">
+    <div class="talk-bubble tri-right left-in">
+      <div class="talktext">
+        <p><%= opinion.content %></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+

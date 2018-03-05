@@ -1,0 +1,19 @@
+// app/views/reviews/create.js.erb
+// Here you generate *JavaScript* that would be executed in the browser
+function refreshForm(innerHTML) {
+  const newOpinionForm = document.getElementById('new-opinion');
+  newOpinionForm.innerHTML = innerHTML;
+}
+
+function addOpinion(opinionHTML) {
+  const opinions = document.getElementById('opinions');
+  opinions.insertAdjacentHTML('afterbegin', opinionHTML);
+}
+
+<% if @opinion.errors.any? %>
+  refreshForm('<%= j render "opinions/form", article: @article, opinion: @opinion %>');
+<% else %>
+  addOpinion('<%= j render "opinions/show", opinion: @opinion %>');
+  refreshForm('<%= j render "opinions/form", article: @article, opinion: Opinion.new %>');
+<% end %>
+

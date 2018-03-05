@@ -1,0 +1,6 @@
+<div id="new-opinion">
+  <%= simple_form_for [@article, @opinion], remote: true do |f| %>
+  <%= f.input :content, placeholder: "Your opinion matters.", :input_html => { :rows => 5} %>
+  <%= f.submit "Add my opinion", class: "btn-blue" %>
+  <% end %>
+</div>
