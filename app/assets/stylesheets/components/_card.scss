@@ -7,6 +7,7 @@
   overflow: hidden;
 }
 
+
 .card-container {
   margin-bottom: 30px;
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
@@ -22,8 +23,11 @@
   padding: 4px 10px 20px 20px;
   min-height: 185px;
   background: rgb(252,252,252);
+  transition-duration: 0.4s;
   &:hover {
     background: rgb(254,254,254);
+    transform: translateY(-25%);
+    transition-duration: 0.4s;
   }
 }
 
