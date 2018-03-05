@@ -7,13 +7,25 @@ class OpinionsController < ApplicationController
     @opinion.article = @article
     @opinion.user = current_user
     authorize @opinion
-
+  # WITH AJAX:
     if @opinion.save
-      redirect_to article_path(@article), notice: 'Opinion was successfully created.'
+      respond_to do |format|
+        format.html { redirect_to article_path(@article) }
+        format.js  # <-- will render `app/views/reviews/create.js.erb`
+      end
     else
-      render 'articles/show', article: @article, reviews: @reviews, opinions: @opinion, donation: @donation
+      respond_to do |format|
+        format.html { render 'articles/show' }
+        format.js  # <-- idem
+      end
     end
+    # if @opinion.save
+    #   redirect_to article_path(@article), notice: 'Opinion was successfully created.'
+    # else
+    #   render 'articles/show', article: @article, reviews: @reviews, opinions: @opinion, donation: @donation
+    # end
   end
+
 
   def edit
     authorize @opinion

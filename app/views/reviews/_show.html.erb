@@ -1,0 +1,60 @@
+
+  <div class="row ratings-line">
+      <!-- Writer of the review -->
+      <div class=" col-xs-6 col-sm-3 article-profile">
+        <div class="center">
+          <img class="card-user" src=<%= review.user.picture %>>
+        </div>
+        <div class="user-details">
+          <div>
+            <p><b><%= review.user.first_name%> <%= review.user.last_name %></b></p>
+          </div>
+          <div>
+            <p class="grow"> <%= review.user.city %></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stars of the review -->
+      <div class="col-xs-6 col-sm-3  text-center">
+        <ul class="list-inline">
+          <% review.rating.times do %>
+          <li class="list-inline-item"><i class="glyphicon glyphicon-star"></i></li>
+          <% end %>
+          <% unless review.rating == 5 %>
+          <% (5 - review.rating).times do %>
+          <li class="list-inline-item"><i class="glyphicon glyphicon-star-empty"></i></li>
+          <% end %>
+          <% end %>
+        </ul>
+      </div>
+
+      <div class="col-xs-6 col-sm-3  text-center">
+        <ul class="list-inline">
+          <% review.emotion.times do %>
+          <li class="list-inline-item"><i class="glyphicon glyphicon-heart"></i></li>
+          <% end %>
+          <% unless review.emotion == 2 %>
+          <% (2 - review.emotion).times do %>
+          <li class="list-inline-item"><i class="glyphicon glyphicon-heart-empty"></i></li>
+          <% end %>
+          <% end %>
+        </ul>
+      </div>
+
+      <div class="col-xs-6 col-sm-3">
+        <ul class="list-inline">
+          <% review.temperature.times do %>
+          <li class="list-inline-item"><i class="glyphicon glyphicon-asterisk"></i></li>
+          <% end %>
+          <% unless review.temperature == 3 %>
+          <% (3 - review.temperature).times do %>
+          <li class="list-inline-item"><i class="glyphicon glyphicon-asterisk-empty"></i></li>
+          <% end %>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+
+
+
