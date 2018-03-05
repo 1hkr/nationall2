@@ -3,13 +3,11 @@ class ArticlesController < ApplicationController
   before_action :find_article, only: [:show, :edit, :update, :destroy]
 
   def index
-    @articles = Article.all
-
-    if params[:query].present?
-      @articles = policy_scope(Article).where("title ILIKE ?", "%#{params[:query]}%")
-    else
-      @articles = policy_scope(Article).order(created_at: :desc)
-    end
+    @category = Category.find_by_name(params[:category]) if params[:category]
+    @articles = policy_scope(Article)
+    @articles = @articles.where(category_id: @category.id) if @category
+    @articles = @articles.where("title ILIKE ?", "%#{params[:query]}%") if params[:query].present?
+    @articles = @articles.order(created_at: :desc)
   end
 
   def show

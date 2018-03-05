@@ -1,6 +1,5 @@
 <div class="container-fluid side-margin">
 
-
   <% if user_signed_in? && current_user.answered === false %>
     <div>
       <%= render 'quizz_banner' %>
@@ -11,9 +10,7 @@
           <h1>NΔTIONΔLL</h1>
         </div>
       </div>
-
   <% end %>
-
 
   <div class="row margin-left">
     <% @articles.each_with_index do |article, index| %>
@@ -65,7 +62,5 @@
     <% end %>
     <% end %>
   </div>
-
 </div>
-
 
