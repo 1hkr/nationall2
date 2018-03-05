@@ -1,5 +1,6 @@
 class DonationsController < ApplicationController
   before_action :set_article
+  before_action :set_donation
 
   def create
     @donation = Donation.new(donation_params)
@@ -13,10 +14,20 @@ class DonationsController < ApplicationController
     end
   end
 
+  def destroy
+    authorize @donation
+    @donation.destroy
+    redirect_to article_path(@article), notice: 'Donation was successfully destroyed.'
+  end
+
   private
 
   def set_article
     @article = Article.find(params[:article_id])
+  end
+
+  def set_donation
+   @donation = Donation.where(article_id: @article, user_id: current_user)[0]
   end
 
   def donation_params

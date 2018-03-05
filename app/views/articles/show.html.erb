@@ -14,8 +14,60 @@
 <div class="container-fluid side-margin">
   <div class="row margin-left">
 
-    <!-- LEFT SIDE -->
-    <div class="col-xs-7 col-md-7 col-sm-7 front">
+        <!-- LEFT SIDE -->
+    <div class="col-xs-3 col-md-3 col-sm-3 card-author sticky">
+
+      <!-- Profile of the writer -->
+      <div class="article-profile">
+
+        <div class="center author">
+          <img class="card-user" src=<%= @article.user.picture %>>
+        </div>
+
+        <div class="user-details">
+          <div class="author">
+            <p> <b><%= @article.user.first_name%> <%= @article.user.last_name %></b> </p>
+          </div>
+          <div class="author">
+            <p class="grow"> <%= @article.user.city %></p>
+          </div>
+        </div>
+
+      </div>
+
+      <hr>
+
+<div class="bio">
+      <h4>Bio</h4>
+      <p> <%= @article.user.bio %></p>
+</div>
+      <hr>
+
+      <% if user_signed_in? && donation = Donation.find_by(user_id: current_user.id, article_id: @article.id) %>
+
+      <h3>Donation</h3>
+      <p><%= donation.amount %>€</p>
+      <a href="#", class= "btn-blue-empty">Donation done</a>
+      <h5> Thank you for your donation ! </h5>
+
+      <%= link_to "Delete", article_donation_path(@article), class: "btn-gray", method: :delete, data: { confirm: "Are you sure?"} %>
+
+      <% else %>
+
+      <div>
+        <h4> Support independent writing <i class="fab fa-studiovinari"></i></h4>
+        <%= simple_form_for [@article, @donation], :html => {:class => 'form-inline shadow margin-top' } do |f| %>
+        <%= f.input :amount, label: false, input_html: { class: 'form_light no_border donate-value', value: '0.10' } %>
+        <%= button_tag(type: 'submit', class: "btn btn-link donate-button") do %>
+        Donate to <%= @article.user.first_name %> <i class="fa fa-heart"></i>
+        <% end %>
+        <% end %>
+        <% end %>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="col-xs-8 col-md-8 col-sm-8 front">
 
       <!-- Article -->
       <div class="card-article">
@@ -184,58 +236,6 @@
         <%= link_to "Delete", article_path(@article), class: "btn-gray", method: :delete, data: { confirm: "Are you sure?"} %>
         <% end %>
 
-      </div>
-    </div>
-
-
-    <!-- RIGHT SIDE -->
-
-    <div class="col-xs-5 col-md-5 col-sm-5 card-author">
-
-      <!-- Profile of the writer -->
-      <div class="article-profile">
-
-        <div class="center author">
-          <img class="card-user" src=<%= @article.user.picture %>>
-        </div>
-
-        <div class="user-details">
-          <div class="author">
-            <p> <b><%= @article.user.first_name%> <%= @article.user.last_name %></b> </p>
-          </div>
-          <div class="author">
-            <p class="grow"> <%= @article.user.city %></p>
-          </div>
-        </div>
-
-      </div>
-
-      <hr>
-
-
-      <h4>Bio</h4>
-      <p> <%= @article.user.bio %></p>
-
-      <hr>
-
-      <% if user_signed_in? && donation = Donation.find_by(user_id: current_user.id, article_id: @article.id) %>
-
-      <h3>Donation</h3>
-      <p><%= donation.amount %>€</p>
-      <a href="#", class= "btn-blue-empty">Donation done</a>
-      <h5> Thank you for your donation ! </h5>
-
-      <% else %>
-
-      <div>
-        <h4> Support independent writing <i class="fab fa-studiovinari"></i></h4>
-        <%= simple_form_for [@article, @donation], :html => {:class => 'form-inline' } do |f| %>
-        <%= f.input :amount, label: false, input_html: { class: 'form_light no_border donate-value', value: '0.10' } %>
-        <%= button_tag(type: 'submit', class: "btn btn-link donate-button") do %>
-        Donate to <%= @article.user.first_name %> <i class="fa fa-heart"></i>
-        <% end %>
-        <% end %>
-        <% end %>
       </div>
     </div>
 
