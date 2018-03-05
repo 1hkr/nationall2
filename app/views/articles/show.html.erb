@@ -15,34 +15,37 @@
   <div class="row margin-left">
 
     <!-- LEFT SIDE -->
-    <div class="col-xs-7 col-md-7 col-sm-7">
+    <div class="col-xs-7 col-md-7 col-sm-7 front">
 
-      <!-- Articles informations -->
-      <div class="article-text">
-        <div class="article-details">
-          <p> <%= @article.category.name.upcase %></p>
-          <p class="top-right"><%= @article.publishing_date %></p>
+      <!-- Article -->
+      <div class="card-article">
+
+        <!-- Articles informations -->
+        <div class="article-text">
+          <div class="article-details">
+            <p> <%= @article.category.name.upcase %></p>
+            <p class="top-right"><%= @article.publishing_date %></p>
+          </div>
+
+          <h1><%= @article.title %></h1>
+          <h5><%= @article.subtitle %></h5>
+
+          <hr>
+
+
+          <h4>Summary</h4>
+          <p> <%= @article.summary %></p>
         </div>
-
-        <h1><%= @article.title %></h1>
-        <h5><%= @article.subtitle %></h5>
 
         <hr>
 
+        <div>
+          <h4>Full article</h4>
+          <p><%= raw @article.content %></p>
+        </div>
 
-        <h4>Summary</h4>
-        <p> <%= @article.summary %></p>
+        <hr>
       </div>
-
-      <hr>
-
-      <div>
-        <h4>Full article</h4>
-        <p><%= raw @article.content %></p>
-      </div>
-
-      <hr>
-
       <!-- Rate the article-->
 
       <div>
@@ -188,7 +191,7 @@
 
     <!-- RIGHT SIDE -->
 
-    <div class="col-xs-5 col-md-5 col-sm-5">
+    <div class="col-xs-5 col-md-5 col-sm-5 card-author">
 
       <!-- Profile of the writer -->
       <div class="article-profile">
@@ -225,15 +228,16 @@
 
       <% else %>
 
-      <h3> Support independent writing <i class="fab fa-studiovinari"></i></h3>
-      <%= simple_form_for [@article, @donation], :html => {:class => 'form-inline' } do |f| %>
-      <%= f.input :amount, default: "0.10", label: false, input_html: { class: 'form_light no_border donate-value' } %>
-      <%= button_tag(type: 'submit', class: "btn btn-link donate-button") do %>
-      Donate to <%= @article.user.first_name %> <i class="fa fa-heart"></i>
-      <% end %>
-      <% end %>
-      <% end %>
-
+      <div>
+        <h4> Support independent writing <i class="fab fa-studiovinari"></i></h4>
+        <%= simple_form_for [@article, @donation], :html => {:class => 'form-inline' } do |f| %>
+        <%= f.input :amount, label: false, input_html: { class: 'form_light no_border donate-value', value: '0.10' } %>
+        <%= button_tag(type: 'submit', class: "btn btn-link donate-button") do %>
+        Donate to <%= @article.user.first_name %> <i class="fa fa-heart"></i>
+        <% end %>
+        <% end %>
+        <% end %>
+      </div>
     </div>
 
   </div>
