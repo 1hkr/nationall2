@@ -1,6 +1,6 @@
 // app/javascript/packs/map.js
 import GMaps from 'gmaps/gmaps.js';
-
+import SnazzyInfoWindow from 'snazzy-info-window'
 
 const styles = [{
         "featureType": "landscape",
@@ -135,22 +135,28 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
   map.markers.forEach(function(marker) {
 
     var contentString = '<div class="map-article">'+
+    '<div class="map-article-image" style="background-image: url('+ marker.imageUrl +')"></div>'+
     '<h4 class="map-article-title">'+ marker.latest_article_title +'</h4>'+
     '<h5 class="map-article-user">'+ "👤" + marker.name + " " + marker.location +'</h5>'+
-    '<p class="map-article-summary">'+ marker.latest_article_content +'</p>'+
     '</div>'
 
-    var infowindow = new google.maps.InfoWindow({
-      content: contentString
+    // var infowindow = new google.maps.InfoWindow({
+    //   content: contentString
+    // });
+
+    var info = new SnazzyInfoWindow({
+    marker: marker,
+    content: contentString,
+    closeOnMapClick: false
     });
 
     marker.addListener('mouseover', function() {
-      infowindow.open(map, marker);
+      info.open(map, marker);
     });
 
-    marker.addListener('mouseout', function() {
-      infowindow.close();
-    });
+    // marker.addListener('mouseout', function() {
+    //   infowindow.close();
+    // });
 
     marker.addListener('click', function() {
       window.location.href = marker.url;
