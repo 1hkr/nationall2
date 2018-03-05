@@ -15,6 +15,7 @@
   <% color = params[:controller] == 'pages' && params[:action] == 'home' ? 'page-active' : '' %>
   <% color_articles = params[:controller] == 'articles' && params[:action] == 'index' ? 'page-active' : '' %>
   <%= render 'shared/navbar', color_map: color, color_articles: color_articles %>
+  <%= render 'shared/filter' %>
   <%= render 'shared/flashes' %>
   <div class="Site-content">
     <%= yield %>

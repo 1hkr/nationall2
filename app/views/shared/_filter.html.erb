@@ -1,0 +1,17 @@
+<% if current_page?('/articles') %>
+  <div class="filters">
+      <% Category.all.each do |category| %>
+    <div class="category">
+        <%= category.name %>
+    </div>
+      <% end %>
+    <div class="temperature">
+        temperature
+    </div>
+    <div class="emotion">
+      emotion
+    </div>
+  </div>
+<% end %>
+
+
