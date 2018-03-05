@@ -1,7 +1,7 @@
 
 Rails.application.routes.draw do
   resources :articles do
-    resources :donations, only: [:create]
+    resources :donations, only: [:create, :destroy]
     resources :reviews, only: [:create]
     resources :opinions, only: [:create, :update, :destroy]
   end

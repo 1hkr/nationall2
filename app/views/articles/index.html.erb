@@ -1,6 +1,5 @@
 <div class="container-fluid side-margin">
 
-
   <% if user_signed_in? && current_user.answered === false %>
     <div>
       <%= render 'quizz_banner' %>
@@ -11,50 +10,50 @@
           <h1>NΔTIONΔLL</h1>
         </div>
       </div>
-
   <% end %>
-
 
   <div class="row margin-left">
     <% @articles.each_with_index do |article, index| %>
     <%= link_to article_path(article) do %>
     <% class_name = (index % 6 == 0) || ((index - 5) % 6 == 0) ? "col-xs-12 col-sm-6 col-md-4 col-lg-6" : "col-xs-12 col-sm-6 col-md-4 col-lg-3" %>
-    <div class="<%= class_name %>">
-      <div class="card-container shadow">
-        <% if article.picture.last(3) == 'jpg' || article.picture.last(4) == 'jpeg' || article.picture.last(3) == 'png' || article.picture.last(3) == 'gif' %>
-            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url(<%= article.picture %>);">
-            </div>
-        <% else  %>
-            <div class="card" style="background-image: url('https://img.youtube.com/vi/<%= article.picture.last(11) %>/hqdefault.jpg');">
-              <div class="video">
-                <video class="videoplay" loop preload="none">
-                  <source src="https://www.videvo.net/videvo_files/converted/2015_08/videos/NycTraffic.mp417453.mp4" type="video/mp4">
-                </video>
+    <div class="card-wrapper">
+      <div class="<%= class_name %>">
+        <div class="card-container shadow">
+          <% if article.picture.last(3) == 'jpg' || article.picture.last(4) == 'jpeg' || article.picture.last(3) == 'png' || article.picture.last(3) == 'gif' %>
+              <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url(<%= article.picture %>);">
               </div>
-            </div>
-        <% end %>
-        <div class="card-text grow">
-          <div class="card-details color">
-            <p> <%= article.category.name.upcase %></p>
-            <p class="top-right"><%= article.publishing_date %></p>
-          </div>
-          <div class="card-titles color">
-            <h5><%= truncate(article.title, length: 65) %></h5>
-            <p><%= truncate(article.subtitle, length: 40) %></p>
-          </div>
-          <div class="card-profile">
-            <div class="align-v">
-            <div class="center">
-              <img class="card-user" src=<%= article.user.picture %>>
-            </div>
-            <div class="user-details color">
-              <div>
-                <p> <b><%= article.user.first_name%> <%= article.user.last_name %></b> </p>
+          <% else  %>
+              <div class="card" style="background-image: url('https://img.youtube.com/vi/<%= article.picture.last(11) %>/hqdefault.jpg');">
+                <div class="video">
+                  <video class="videoplay" loop preload="none">
+                    <source src="https://www.videvo.net/videvo_files/converted/2015_08/videos/NycTraffic.mp417453.mp4" type="video/mp4">
+                  </video>
+                </div>
               </div>
-              <div>
-                <p> <%= article.user.city %></p>
-              </div>
+          <% end %>
+          <div class="card-text grow">
+            <div class="card-details color">
+              <p> <%= article.category.name.upcase %></p>
+              <p class="top-right"><%= article.publishing_date %></p>
             </div>
+            <div class="card-titles color">
+              <h5><%= truncate(article.title, length: 65) %></h5>
+              <p><%= truncate(article.subtitle, length: 40) %></p>
+            </div>
+            <div class="card-profile">
+              <div class="align-v">
+              <div class="center">
+                <img class="card-user" src=<%= article.user.picture %>>
+              </div>
+              <div class="user-details color">
+                <div>
+                  <p> <b><%= article.user.first_name%> <%= article.user.last_name %></b> </p>
+                </div>
+                <div>
+                  <p> <%= article.user.city %></p>
+                </div>
+              </div>
+              </div>
             </div>
           </div>
         </div>
@@ -68,5 +67,4 @@
 <% content_for :after_js do %>
   <%= javascript_pack_tag "typed" %>
 <% end %>
-
 

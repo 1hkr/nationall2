@@ -19,7 +19,7 @@
     display: flex;
     flex-direction: column;
     line-height: 8px;
-    margin-left: 15px;
+    margin-left: 10px;
     margin-top: 5px;
     .grow {
       flex: 1 0 50px;
@@ -27,11 +27,25 @@
   }
 }
 
+
+.bio p {
+  font-size: 16px;
+}
+
+.sticky {
+  position: sticky;
+  top: 15%;
+}
+
+.margin-top {
+  margin-top: 25px;
+}
+
 // left part
 
 .card-article {
   box-shadow: -1px 1px 23px 0px #7b7b7b24;
-  padding: 50px;
+  padding: 70px 100px;
   margin-top: 20px;
 }
 
@@ -39,37 +53,41 @@
 
 .card-author {
   padding: 50px;
-  margin-top: 20px;
+  margin-top: 53px;
 }
 
 .author img {
-  width: 79px;
+  width: 60px;
 }
 
 .author {
-  font-size: 30px !important;
+  font-size: 19px !important;
 }
 
 .author p {
-  margin: 8px !important;
+  margin: 3px !important;
 }
 
 .form-inline div { display: inline-block }
 
 .donate-value {
-  font-size: 25px;
-  text-align : center;
+  font-size: 20px;
+  text-align : left;
   color: #4f4f54;
-  margin: -113px;
-
+  max-width: 60px;
+  padding: 0;
+  padding: 9px;
+  margin-left: 70px;
 }
 
 .donate-button {
   text-align : center;
   margin-right: auto;
   margin-left: auto;
+  padding: 4px 0px;
   position: auto;
-  font-size: 25px;
+  font-size: 18px;
+  color: $dark-gray !important;
 }
 
 .donate-button:hover {

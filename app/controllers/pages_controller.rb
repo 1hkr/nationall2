@@ -13,9 +13,11 @@ class PagesController < ApplicationController
           lng: user.longitude,
           name: user.first_name + " " + user.last_name,
           location: user.city,
+          date: @article_by_user.publishing_date,
           latest_article_title: user.articles.last.title,
           latest_article_content: user.articles.last.content.first(120)+"...",
           url: article_path(@article_by_user),
+          imageUrl: @article_by_user.picture,
           icon: {
             url: user.picture,
             scaledSize: {
