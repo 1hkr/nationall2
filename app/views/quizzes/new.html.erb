@@ -29,7 +29,7 @@
                 </div>
                </div>
 
-            <%= f.submit "Save", class: "btn-blue" %>
+            <%= f.submit "Next", class: "btn-blue" %>
             <% end %>
           </div>
         </div>
@@ -37,22 +37,29 @@
  <!-- FORM FOR THE EMOTION-PREF UPDATE OF USER-->
         <div id="edit_user_wrapper" class="hidden" data-user="<%= current_user.id %>">
           <hr>
-          <h4>Which reading/TedTalk would you go for ?</h4>
+          <h4>Which video would you go for ?</h4>
 
           <%= simple_form_for current_user, remote: true, url: emotion_prefs_path, method: :patch do |f| %>
           <div class="form-group margin-bottom">
             <div class="choices">
+              <div class="row">
 
-              <input type="radio" class="hidden" value="1" name="user[emotion_pref]" id="user_emotion_pref_1">
-                <label for="user_emotion_pref_1" class="emotion-choice" style="background-image: url('https://images.pexels.com/photos/347135/pexels-photo-347135.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb')" style="cursor: pointer;">
-                </label>
+              <div class="col-xs-6 col-sm-6">
+                <input type="radio" class="hidden" value="1" name="user[emotion_pref]" id="user_emotion_pref_1">
+                  <label for="user_emotion_pref_1" class="emotion-choice" style="background-image: url('https://pi.tedcdn.com/r/pe.tedcdn.com/images/ted/3193bc935b5aefa5d9310cecc4a78554fe0a76b2_2880x1620.jpg?')" style="cursor: pointer;">
+                  </label>
+                  <p class="text-center">Are China and the US doomed to conflict?</p>
+                </div>
 
-              <input type="radio" class="hidden" value="2" name="user[emotion_pref]" id="user_emotion_pref_2">
-                <label for="user_emotion_pref_2" class="emotion-choice" style="background-image: url('https://images.pexels.com/photos/846747/pexels-photo-846747.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb')" style="cursor: pointer;">
-                </label>
-
+              <div class="col-xs-6 col-sm-6">
+                <input type="radio" class="hidden" value="2" name="user[emotion_pref]" id="user_emotion_pref_2">
+                  <label for="user_emotion_pref_2" class="emotion-choice" style="background-image: url('https://pi.tedcdn.com/r/pe.tedcdn.com/images/ted/016a827cc0757092a0439ab2a63feca8655b6c29_1600x1200.jpg?')" style="cursor: pointer;">
+                  </label>
+                  <p class="text-center">The surprising science of happiness</p>
+                </div>
+              </div>
             </div>
-            <%= f.submit "Save", class: "btn-blue" %>
+            <%= f.submit "Next", class: "btn-blue" %>
             <% end %>
           </div>
         </div>
@@ -61,41 +68,45 @@
  <!-- FORM FOR THE TEMPERATURE-PREF UPDATE OF USER-->
         <div id="temperature-form" class="hidden">
           <hr>
-          <h4>When you debate with someone, you are more like ? </h4>
+          <h4>When you debate with someone, you are more ... ? </h4>
           <%= simple_form_for current_user, url: temperature_prefs_path, method: :patch do |f| %>
           <div class="form-group margin-bottom">
             <div class="choices">
               <div class="row">
 
-                <div class="col-xs-12 col-sm-6">
+                <div class="col-xs-6 col-sm-3">
                   <input type="radio" class="hidden" value="1" name="user[temperature_pref]" id="user_temperature_pref_1">
-                   <label for="user_temperature_pref_1" class="tempe-choice" style="background-image: url('https://cdn.bulbagarden.net/upload/c/c5/May_Bulbasaur.png')" style="cursor: pointer;">Bulbasaur
+                   <label for="user_temperature_pref_1" class="tempe-choice" style="background-image: url('https://media.giphy.com/media/AqniAO4dD28Sc/giphy.gif')" style="cursor: pointer;">
                    </label>
+                   <p class="text-center">Chill</p>
                 </div>
 
-                <div class="col-xs-12 col-sm-6">
+                <div class="col-xs-6 col-sm-3">
                    <input type="radio" class="hidden" value="2" name="user[temperature_pref]" id="user_temperature_pref_2">
-                     <label for="user_temperature_pref_2" class="tempe-choice" style="background-image: url('http://www.pokepedia.fr/images/3/39/Carapuce_de_Sacha.png')" style="cursor: pointer;">Squirtle
+                     <label for="user_temperature_pref_2" class="tempe-choice" style="background-image: url('https://media.giphy.com/media/l0HlLA99hjW5P1BIY/giphy.gif')" style="cursor: pointer;">
                      </label>
+                     <p class="text-center">Chill but doubful</p>
                 </div>
 
-                <div class="col-xs-12 col-sm-6">
+                <div class="col-xs-6 col-sm-3">
                   <input type="radio" class="hidden" value="3" name="user[temperature_pref]" id="user_temperature_pref_3">
-                    <label for="user_temperature_pref_3" class="tempe-choice" style="background-image: url('https://vignette.wikia.nocookie.net/ultimate-pokemon-fanon/images/c/c2/Reds_Charmander_Ember_PO.png/revision/latest?cb=20160514000535')" style="cursor: pointer;">Charmander
+                    <label for="user_temperature_pref_3" class="tempe-choice" style="background-image: url('https://media.giphy.com/media/htFDJG2MkJiqk/giphy.gif')" style="cursor: pointer;">
                     </label>
+                    <p class="text-center">Ready to intervene</p>
                 </div>
 
-                <div class="col-xs-12 col-sm-6">
+                <div class="col-xs-6 col-sm-3">
                   <input type="radio" class="hidden" value="4" name="user[temperature_pref]" id="user_temperature_pref_4">
-                    <label for="user_temperature_pref_4" class="tempe-choice" style="background-image: url('https://assets.vg247.com/current//2017/05/Pikachu-2-600x338.png')" style="cursor: pointer;">Pikachu
+                    <label for="user_temperature_pref_4" class="tempe-choice" style="background-image: url('https://media.giphy.com/media/7LgKUsZiSjcRO/giphy.gif')" style="cursor: pointer;">
                     </label>
+                    <p class="text-center">Pretty intense</p>
                 </div>
 
               </div>
             </div>
           </div>
 
-          <%= f.submit "Save", class: "btn-blue" %>
+          <%= f.submit "Done", class: "btn-blue" %>
           <% end %>
         </div>
       </div>
