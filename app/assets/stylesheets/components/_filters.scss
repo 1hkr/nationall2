@@ -1,9 +1,17 @@
 .filters {
   color: #1A219C;
+<<<<<<< HEAD
   height: 50px;
   width: 100vw;
   max-width:  1100px;
   font-size: 18px;
+=======
+  font-weight: ligher;
+  height: 50px;
+  width: 100vw;
+  max-width:  1100px;
+  font-size: 15px;
+>>>>>>> master
   text-align: center;
   margin:  0 auto;
   display: flex;
@@ -17,13 +25,21 @@
       margin: 10px;
       padding: 7px 9px 7px 9px;
       border-radius: 5%;
+<<<<<<< HEAD
       font-size: 16px;
+=======
+      font-size: 15px;
+>>>>>>> master
       transition: all .1s ease-in-out;
     }
     .category:hover {
       text-decoration: underline;;
       transform: scale(1.10);
+<<<<<<< HEAD
       font-size: 16px;
+=======
+      font-size: 15px;
+>>>>>>> master
 
     }
 

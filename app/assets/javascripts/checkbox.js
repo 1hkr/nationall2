@@ -1,3 +1,4 @@
+// JS to react when I select an option
 $(document).ready(function(){
   $(".category-choice").click(function(){
     $(this).toggleClass("active");
@@ -15,17 +16,23 @@ $(document).ready(function(){
     //   console.log(inputTwo)
     // }
     });
-  //   $('#submit').click(function(){
-  //     console.log(this)
-  //     $('.form-hide').hide();
-  // });
+  $(".emotion-choice").click(function(){
+    document.querySelectorAll(".emotion-choice").forEach((item)=>{
+      item.classList.remove("active")
+    });
+    $(this).toggleClass("active");
+    // document.querySelector(".emotion-choice active").classList.remove("active")
+    });
+
+  $(".tempe-choice").click(function(){
+    document.querySelectorAll(".tempe-choice").forEach((item)=>{
+      item.classList.remove("active")
+    });
+    $(this).toggleClass("active");
+    });
 });
 
-$(document).ready(function(){
-  $(".tempe-choice").click(function(){
-    $(this).toggleClass("ready");
-  });
-});
+// JS to react when I select an option
 
 $("#new_categories_pref").submit(function(event){
   document.getElementById("new_categories_pref_wrapper").classList.add("hidden")

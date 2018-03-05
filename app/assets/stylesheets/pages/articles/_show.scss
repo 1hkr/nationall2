@@ -27,6 +27,21 @@
   }
 }
 
+// left part
+
+.card-article {
+  box-shadow: -1px 1px 23px 0px #7b7b7b24;
+  padding: 50px;
+  margin-top: 20px;
+}
+
+// right part
+
+.card-author {
+  padding: 50px;
+  margin-top: 20px;
+}
+
 .author img {
   width: 79px;
 }
@@ -55,4 +70,9 @@
   margin-left: auto;
   position: auto;
   font-size: 25px;
+}
+
+.donate-button:hover {
+  color: $light-blue !important;
+  text-decoration: none !important;
 }

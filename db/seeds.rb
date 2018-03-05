@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Article.destroy_all
 p 'Articles destroyed'
+CategoriesPref.destroy_all
+p 'Categories pref destroyed'
 Category.destroy_all
 p 'Category destroyed'
 Donation.destroy_all
