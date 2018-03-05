@@ -46,11 +46,13 @@
 
       <!-- Rate the article-->
         <% unless Review.where(article: @article, user: current_user)[0] %>
-        <div id="new-review-container">
-           <hr>
+          <div id="new-review-container">
+            <hr>
             <h4>Rate the article</h4>
-          <%= render 'reviews/form', article: @article, review: @review %>
-        </div>
+            <div id="new-review">
+              <%= render 'reviews/form', article: @article, review: @review %>
+            </div>
+          </div>
       <% end %>
 
       <!-- List of the reviews -->
@@ -62,25 +64,29 @@
           <%= render 'reviews/show', article: @article, review: review %>
         <% end %>
         </div>
-      <% end %>
+        <% else %>
+          <div id="reviews"></div>
+        <% end %>
 
 
 
       <!-- Add an opinion -->
       <hr>
       <h4>Share your opinion</h4>
-      <%= render 'opinions/form', article: @article, opinion: @opinion %>
-
-
+      <div id="new-opinion">
+        <%= render 'opinions/form', article: @article, opinion: @opinion %>
+      </div>
       <!-- List of opinions -->
       <% if @opinions.exists? %>
         <hr>
         <h4>Every opinions</h4>
         <div id="opinions">
-        <% @opinions.reverse.each do |opinion| %>
-          <%= render 'opinions/show', article: @article, opinion: opinion %>
-        <% end %>
+          <% @opinions.reverse.each do |opinion| %>
+            <%= render 'opinions/show', article: @article, opinion: opinion %>
+          <% end %>
         </div>
+      <% else %>
+        <div id="opinions"></div>
       <% end %>
 
 

@@ -63,7 +63,10 @@
     <% end %>
     <% end %>
   </div>
-
 </div>
+
+<% content_for :after_js do %>
+  <%= javascript_pack_tag "typed" %>
+<% end %>
 
 

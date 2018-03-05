@@ -5,3 +5,4 @@ var typed = new Typed('#typed-strings', {
   typeSpeed: 45,
   showCursor: false
 });
+
