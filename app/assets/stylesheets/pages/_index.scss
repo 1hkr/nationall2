@@ -66,9 +66,11 @@ body {
 // section titles
 .index-titles {
   margin: 15px 0;
+  display: flex;
+  justify-content: center;
 }
 
-.index-titles h1 {
+.index-titles a {
   text-align: center;
   font-family: arial !important;
   font-weight: 900 !important;
