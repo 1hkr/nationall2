@@ -65,6 +65,8 @@
 </div>
 
 <% content_for :after_js do %>
-  <%= javascript_pack_tag "typed" %>
+  <% if user_signed_in? && current_user.answered === false %>
+    <%= javascript_pack_tag "typed" %>
+  <% end %>
 <% end %>
 

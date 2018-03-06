@@ -53,7 +53,7 @@
     <% else %>
       <div>
         <h4> Support independent writing <i class="fab fa-studiovinari"></i></h4>
-        <%= simple_form_for [@article, @donation], :html => {:class => 'shadow margin-top' } do |f| %>
+        <%= simple_form_for [@article, @donation], :html => {:class => 'shadow margin-top padding' } do |f| %>
         <div class="align-v align-h">
         <%= f.input :amount, label: false, input_html: { class: 'form_light no_border donate-value', value: '0.10' } %>
         <p id='euro'> €</p>
