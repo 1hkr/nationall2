@@ -32,9 +32,13 @@
   font-size: 16px;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .sticky {
   position: sticky;
-  top: 15%;
+  top: 1px;
 }
 
 .margin-top {
@@ -53,7 +57,12 @@
 
 .card-author {
   padding: 50px;
-  margin-top: 53px;
+  margin-top: 105px;
+}
+
+.card-author-container {
+  position: sticky;
+  padding: 0;
 }
 
 .author img {
@@ -70,24 +79,31 @@
 
 .form-inline div { display: inline-block }
 
+#euro {
+  margin:0 5px 12.5px;
+  color: $dark-gray;
+}
+
 .donate-value {
   font-size: 20px;
-  text-align : left;
+  text-align : center;
   color: #4f4f54;
   max-width: 60px;
   padding: 0;
-  padding: 9px;
   margin-left: 70px;
+  border: 1px solid #cecaca !important;
+  height: 29px;
 }
 
 .donate-button {
-  text-align : center;
   margin-right: auto;
   margin-left: auto;
-  padding: 4px 0px;
+  padding: 0;
   position: auto;
   font-size: 18px;
   color: $dark-gray !important;
+  display: flex;
+  align-items: center;
 }
 
 .donate-button:hover {

@@ -15,7 +15,8 @@
   <div class="row margin-left">
 
         <!-- LEFT SIDE -->
-    <div class="col-xs-3 col-md-3 col-sm-3 card-author sticky">
+    <div class="col-xs-3 col-md-3 col-sm-3 sticky card-author-container">
+      <div class="card-author">
 
       <!-- Profile of the writer -->
       <div class="article-profile">
@@ -37,33 +38,33 @@
 
       <hr>
 
-<div class="bio">
+    <div class="bio">
       <h4>Bio</h4>
       <p> <%= @article.user.bio %></p>
-</div>
+    </div>
       <hr>
 
-      <% if user_signed_in? && donation = Donation.find_by(user_id: current_user.id, article_id: @article.id) %>
-
-      <h3>Donation</h3>
-      <p><%= donation.amount %>€</p>
-      <a href="#", class= "btn-blue-empty">Donation done</a>
-      <h5> Thank you for your donation ! </h5>
-
+    <% if user_signed_in? && donation = Donation.find_by(user_id: current_user.id, article_id: @article.id) %>
+    <div>
+      <h4> Thank you for your support ! </h4>
       <%= link_to "Delete", article_donation_path(@article), class: "btn-gray", method: :delete, data: { confirm: "Are you sure?"} %>
+    </div>
 
-      <% else %>
-
+    <% else %>
       <div>
         <h4> Support independent writing <i class="fab fa-studiovinari"></i></h4>
-        <%= simple_form_for [@article, @donation], :html => {:class => 'form-inline shadow margin-top' } do |f| %>
+        <%= simple_form_for [@article, @donation], :html => {:class => 'shadow margin-top padding' } do |f| %>
+        <div class="align-v align-h">
         <%= f.input :amount, label: false, input_html: { class: 'form_light no_border donate-value', value: '0.10' } %>
+        <p id='euro'> €</p>
+        </div>
         <%= button_tag(type: 'submit', class: "btn btn-link donate-button") do %>
         Donate to <%= @article.user.first_name %> <i class="fa fa-heart"></i>
         <% end %>
         <% end %>
         <% end %>
       </div>
+    </div>
     </div>
 
     <!-- RIGHT SIDE -->

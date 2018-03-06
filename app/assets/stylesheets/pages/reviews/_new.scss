@@ -1,0 +1,23 @@
+.smileys {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.smiley {
+  background-size: cover !important;
+  height: 80px;
+  width: 80px;
+  border-radius: 1px;
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+    box-shadow: -1px 1px 23px 0px #7b7b7b24;
+  }
+  &.active {
+  font-weight: bolder;
+  opacity: 1;
+  box-shadow: -1px 1px 23px 0px #7b7b7b24;
+  }
+}
