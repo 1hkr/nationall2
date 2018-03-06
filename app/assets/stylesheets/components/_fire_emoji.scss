@@ -1,0 +1,38 @@
+.br-theme-fontawesome-fire .br-widget {
+  height: 28px;
+  white-space: nowrap;
+}
+.br-theme-fontawesome-fire .br-widget a {
+  font: normal normal normal 20px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+  margin-right: 2px;
+}
+.br-theme-fontawesome-fire .br-widget a:after {
+  content: '\f06d';
+  color: #d2d2d2;
+}
+.br-theme-fontawesome-fire .br-widget a.br-active:after {
+  color: #B74E46;
+}
+.br-theme-fontawesome-fire .br-widget a.br-selected:after {
+  color: #B74E46;
+}
+.br-theme-fontawesome-fire .br-widget .br-current-rating {
+  display: none;
+}
+.br-theme-fontawesome-fire .br-readonly a {
+  cursor: default;
+}
+@media print {
+  .br-theme-fontawesome-fire .br-widget a:after {
+    content: '\f06d';
+    color: black;
+  }
+  .br-theme-fontawesome-fire .br-widget a.br-active:after,
+  .br-theme-fontawesome-fire .br-widget a.br-selected:after {
+    content: '\f06d';
+    color: black;
+  }
+}

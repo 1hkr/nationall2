@@ -2,3 +2,15 @@
   margin-bottom: 20px;
   margin-top: 20px;
 }
+
+.center-ratings {
+  display: flex;
+  justify-content:center;
+}
+
+.display-smiley {
+  background-size: cover !important;
+  height: 80px;
+  width: 80px;
+  border-radius: 1px;
+}
