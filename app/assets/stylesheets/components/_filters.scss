@@ -1,37 +1,23 @@
 .filters {
-  color: #1A219C;
-  font-weight: ligher;
-  height: 50px;
-  width: 100vw;
-  max-width:  1100px;
-  font-size: 15px;
-  text-align: center;
-  margin:  0 auto;
-  display: flex;
-  align-items: center;
-  justify-content:  space-around;
-  border-radius: 10%;
+    height: 32px;
+    width: 950px;
+    font-size: 14px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid #0000000f;
+    margin-bottom: 24px;
+    align-items: center;
 
-    .category {
-      box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-      margin: 10px;
-      padding: 7px 9px 7px 9px;
-      border-radius: 5%;
-      font-size: 16px;
-      transition: all .1s ease-in-out;
-    }
-    .category:hover {
-      text-decoration: underline;;
-      transform: scale(1.10);
-      font-size: 16px;
+    #category a {
+      color: #092e778a;
+      &:hover {
+        color: #03359a;
+      }
     }
 
-    .temperature {
-      box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-      margin: 10px;
-    }
-    .emotion {
-      box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-      margin: 10px;
+    #temperature #emotion {
+      font-size: 16px;
     }
 }
+

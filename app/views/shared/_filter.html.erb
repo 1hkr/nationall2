@@ -1,16 +1,16 @@
 <% if current_page?('/articles') %>
   <div class="filters">
       <% Category.all.each do |category| %>
-    <div class="category">
+    <div id="category">
         <%= link_to category.name, articles_path(category: category.name) %>
     </div>
       <% end %>
-    <div class="temperature">
-        temperature
-    </div>
-    <div class="emotion">
-      emotion
-    </div>
+      <div id="temperature">
+        🔥
+      </div>
+      <div id="emotion">
+        😀
+      </div>
   </div>
 <% end %>
 

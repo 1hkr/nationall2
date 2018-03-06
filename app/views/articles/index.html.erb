@@ -1,5 +1,4 @@
 <div class="container-fluid side-margin">
-
   <% if user_signed_in? && current_user.answered === false %>
     <div>
       <%= render 'quizz_banner' %>
@@ -10,6 +9,7 @@
           <h1>NΔTIONΔLL</h1>
         </div>
       </div>
+    <%= render 'shared/filter' %>
   <% end %>
 
   <div class="row margin-left">
