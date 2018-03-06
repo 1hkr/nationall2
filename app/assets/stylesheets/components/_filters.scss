@@ -1,7 +1,7 @@
 .filters {
     height: 32px;
     width: 950px;
-    font-size: 14px;
+    font-size: 16px;
     margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
@@ -10,8 +10,11 @@
     align-items: center;
 
     #category a {
-      color: #092e778a;
-      &:hover {
+      color: #99999c;
+      &:focus{
+        color: #03359a;
+      }
+      &:active {
         color: #03359a;
       }
     }

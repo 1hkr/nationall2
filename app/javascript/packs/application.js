@@ -10,3 +10,7 @@
 
 import './rating';
 import './temperature';
+import { triggerCardSticky } from './card_sticky';
+
+
+triggerCardSticky();
