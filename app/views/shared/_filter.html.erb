@@ -2,15 +2,29 @@
   <div class="filters">
       <% Category.all.each do |category| %>
     <div id="category">
-        <%= link_to category.name, articles_path(category: category.name) %>
+      <%= link_to category.name, articles_path(category: category.name) %>
     </div>
       <% end %>
-      <div id="temperature">
-        🔥
+    <div id="temperature">
+      <div class="dropdown">
+        <button class="dropbtn-fire fab fa-gripfire"></button>
+        <div class="dropdown-content">
+          <a><%= link_to "🔥🔥🔥🔥", articles_path(avg_temperature: 4) %></a>
+          <a><%= link_to "🔥🔥🔥", articles_path(avg_temperature: 3) %></a>
+          <a><%= link_to "🔥🔥", articles_path(avg_temperature: 2) %></a>
+          <a><%= link_to "🔥", articles_path(avg_temperature: 1) %></a>
+        </div>
       </div>
-      <div id="emotion">
-        😀
+    </div>
+    <div id="emotion">
+      <div class="dropdown">
+        <button class="dropbtn-emotion far fa-smile"></button>
+        <div class="dropdown-content">
+          <a><%= link_to "😋", articles_path(avg_emotion: 2) %></a>
+          <a><%= link_to "😢", articles_path(avg_emotion: 1) %></a>
+        </div>
       </div>
+    </div>
   </div>
 <% end %>
 
