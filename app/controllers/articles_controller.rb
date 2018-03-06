@@ -3,10 +3,6 @@ class ArticlesController < ApplicationController
   before_action :find_article, only: [:show, :edit, :update, :destroy]
 
   def index
-    # @avg_temperature = params[:avg_temperature] if params[:avg_temperature]
-    # @avg_emotion = params[:avg_emotion] if params[:avg_emotion]
-
-
     filter_cat = params[:category]
     filter_temp = params[:avg_temperature]
     filter_emo = params[:avg_emotion]
