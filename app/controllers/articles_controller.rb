@@ -3,10 +3,15 @@ class ArticlesController < ApplicationController
   before_action :find_article, only: [:show, :edit, :update, :destroy]
 
   def index
-    @category = Category.find_by_name(params[:category]) if params[:category]
+    filter_cat = params[:category]
+    filter_temp = params[:avg_temperature]
+    filter_emo = params[:avg_emotion]
+
+    @category = Category.find_by_name(params[:category]) if filter_cat
     @articles = policy_scope(Article)
     @articles = @articles.where(category_id: @category.id) if @category
-    @articles = @articles.where(avg_rating: @avg_rating) if @avg_rating
+    @articles = @articles.where("avg_temperature > ? AND avg_temperature < ?", filter_temp.to_i - 0.5, filter_temp.to_i + 0.4 ) if filter_temp
+    @articles = @articles.where("avg_emotion > ? AND avg_emotion < ?", filter_emo.to_i - 0.5, filter_emo.to_i + 0.4 ) if filter_emo
     @articles = @articles.where("title iLIKE ?", "%#{params[:query]}%") if params[:query].present?
     @articles = @articles.order(created_at: :desc)
   end
@@ -29,7 +34,6 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     @article.user = current_user
     authorize @article
-.emot
     if @article.save
       redirect_to articles_path, notice: 'Article was successfully created.'
     else
