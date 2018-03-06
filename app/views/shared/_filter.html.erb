@@ -2,17 +2,18 @@
   <div class="filters">
       <% Category.all.each do |category| %>
     <div id="category">
-      <%= link_to category.name, articles_path(category: category.name) %>
+      <%= link_to category.name, articles_path(category: category.name, avg_temperature: params[:avg_temperature], avg_emotion: params[:avg_emotion]) %>
     </div>
       <% end %>
+
     <div id="temperature">
       <div class="dropdown">
         <button class="dropbtn-fire fab fa-gripfire"></button>
         <div class="dropdown-content">
-          <a><%= link_to "🔥🔥🔥🔥", articles_path(avg_temperature: 4) %></a>
-          <a><%= link_to "🔥🔥🔥", articles_path(avg_temperature: 3) %></a>
-          <a><%= link_to "🔥🔥", articles_path(avg_temperature: 2) %></a>
-          <a><%= link_to "🔥", articles_path(avg_temperature: 1) %></a>
+          <a><%= link_to "🔥🔥🔥🔥", articles_path(avg_temperature: 4, category: params[:category], avg_emotion: params[:avg_emotion]) %></a>
+          <a><%= link_to "🔥🔥🔥", articles_path(avg_temperature: 3, category: params[:category], avg_emotion: params[:avg_emotion]) %></a>
+          <a><%= link_to "🔥🔥", articles_path(avg_temperature: 2, category: params[:category], avg_emotion: params[:avg_emotion]) %></a>
+          <a><%= link_to "🔥", articles_path(avg_temperature: 1, category: params[:category], avg_emotion: params[:avg_emotion]) %></a>
         </div>
       </div>
     </div>
@@ -20,8 +21,8 @@
       <div class="dropdown">
         <button class="dropbtn-emotion far fa-smile"></button>
         <div class="dropdown-content">
-          <a><%= link_to "😋", articles_path(avg_emotion: 2) %></a>
-          <a><%= link_to "😢", articles_path(avg_emotion: 1) %></a>
+          <a><%= link_to "😋", articles_path(avg_emotion: 2, category: params[:category], avg_temperature: params[:avg_temperature]) %></a>
+          <a><%= link_to "😢", articles_path(avg_emotion: 1, category: params[:category], avg_temperature: params[:avg_temperature]) %></a>
         </div>
       </div>
     </div>
