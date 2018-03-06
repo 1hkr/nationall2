@@ -9,3 +9,4 @@
 
 
 import './rating';
+import './temperature';

@@ -1,6 +1,37 @@
-<%= simple_form_for [article, review], remote: true do |f| %>
-  <%= f.input :rating, collection: 1..5, input_html: { class: 'ratings-jquery' } %>
-  <%= f.input :emotion, collection: 1..2 %>
-  <%= f.input :temperature, collection: 1..4 %>
-  <%= f.submit "Add my ratings", class: "btn-blue" %>
-<% end %>
+<div class="row">
+  <%= simple_form_for [article, review], remote: true do |f| %>
+    <div class="col-xs-6 col-sm-4">
+    <%= f.input :rating, collection: 1..5, input_html: { class: 'ratings-jquery' } %>
+    </div>
+
+<!--   <%= f.input :emotion, collection: 1..2, as: :radio_buttons %> -->
+    <div class="col-xs-6 col-sm-4">
+      <div>
+        <label class="control-label radio_buttons required"><abbr title="required">*</abbr> Emotion</label>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <input type="radio" class="" value="1" name="review[emotion]" id="review_emotion_1">
+          <label for="review_emotion_1" class="smiley" style="cursor: pointer;">
+          </label>
+        <p class="text-center">Sad</p>
+      </div>
+
+      <div class="col-xs-12 col-sm-6">
+        <input type="radio" class="" value="2" name="review[emotion]" id="review_emotion_2">
+          <label for="review_emotion_2" class="smiley" style="background-image: url('https://media.giphy.com/media/l0HlLA99hjW5P1BIY/giphy.gif')" style="cursor: pointer;">
+          </label>
+        <p class="text-center">Happy</p>
+      </div>
+    </div>
+
+    <div class="col-xs-6 col-sm-4">
+      <%= f.input :temperature, collection: 1..4, input_html: { class: 'temperature-jquery' } %>
+    </div>
+
+  </div>
+
+  <div>
+    <%= f.submit "Add my ratings", class: "btn-blue" %>
+  </div>
+  <% end %>
+
