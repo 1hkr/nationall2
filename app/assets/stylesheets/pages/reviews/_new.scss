@@ -1,4 +1,18 @@
+.br-theme-fontawesome-stars .br-widget a:after {
+  font-size: 40px;
+}
+
+.ratings-container {
+  display: flex;
+  align-items: center;
+  height: 80px
+}
+
 .smileys {
+
+}
+
+.smiley {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,13 +25,59 @@
   border-radius: 1px;
   opacity: 0.5;
   &:hover {
-    opacity: 1;
+    opacity: 0.9;
     cursor: pointer;
-    box-shadow: -1px 1px 23px 0px #7b7b7b24;
   }
   &.active {
-  font-weight: bolder;
-  opacity: 1;
-  box-shadow: -1px 1px 23px 0px #7b7b7b24;
+      opacity: 1;
+    label {
+      opacity: 1;
+    }
   }
 }
+
+.review_temperature {
+  // [data-rating-text] {
+  //   background: linear-gradient(to right, #85D8CE, #085078) !important;
+  //   -webkit-background-clip: text;
+  //   -webkit-text-fill-color: transparent;
+  // }
+  .br-theme-bars-movie .br-widget .br-current-rating {
+    color: #b20a2c !important;
+    opacity: 0.5;
+
+  }
+  .br-theme-bars-movie .br-widget a {
+    margin: 0px !important;
+  }
+
+  [data-rating-text="Chill"] {
+    background-color: #eeceb3 !important;
+    opacity: 0.5;
+
+  }
+
+  [data-rating-text="Calm"] {
+    background-color: #e0a996 !important;
+    opacity: 0.5;
+  }
+
+  [data-rating-text="Pretty intense"] {
+    background-color: #cb6862 !important;
+    opacity: 0.5;
+  }
+
+  [data-rating-text="Intense"] {
+    background-color: #b20a2c !important;
+    opacity: 0.5;
+  }
+
+  [data-rating-text] + .br-active {
+    opacity: 1;
+  }
+
+  [data-rating-text] + .br-selected {
+    opacity: 1;
+  }
+}
+
