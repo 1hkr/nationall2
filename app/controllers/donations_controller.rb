@@ -27,7 +27,6 @@ class DonationsController < ApplicationController
   end
 
   def set_donation
-   @donation = Donation.where(article_id: @article, user_id: current_user)[0]
   end
 
   def donation_params
