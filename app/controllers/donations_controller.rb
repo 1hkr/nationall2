@@ -1,6 +1,6 @@
 class DonationsController < ApplicationController
   before_action :set_article
-  before_action :set_donation
+  before_action :set_donation, only: [:destroy]
 
   def create
     @donation = Donation.new(donation_params)
@@ -27,6 +27,7 @@ class DonationsController < ApplicationController
   end
 
   def set_donation
+    @donation = Donation.where(article_id:params[:article_id], user_id:current_user)[0]
   end
 
   def donation_params
