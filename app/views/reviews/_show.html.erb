@@ -16,40 +16,37 @@
       </div>
 
       <!-- Stars of the review -->
-      <div class="col-xs-6 col-sm-3  text-center">
+      <div class="col-xs-6 col-sm-3 center-ratings">
         <ul class="list-inline">
           <% review.rating.times do %>
-          <li class="list-inline-item"><i class="glyphicon glyphicon-star"></i></li>
+          <li class="list-inline-item"><i class="fas fa-star" style="color:#EDB867"></i></li>
           <% end %>
           <% unless review.rating == 5 %>
           <% (5 - review.rating).times do %>
-          <li class="list-inline-item"><i class="glyphicon glyphicon-star-empty"></i></li>
+          <li class="list-inline-item "><i class="fas fa-star" style="color:#d2d2d2"></i></li>
           <% end %>
           <% end %>
         </ul>
       </div>
 
-      <div class="col-xs-6 col-sm-3  text-center">
-        <ul class="list-inline">
-          <% review.emotion.times do %>
-          <li class="list-inline-item"><i class="glyphicon glyphicon-heart"></i></li>
+      <div class="col-xs-6 col-sm-3 center-ratings">
+
+          <% if review.emotion == 1 %>
+            <div class="display-smiley" style="background-image: url(<%= asset_path 'sad_smiley.png' %>); width:30px; height: 30px;">
+            </div>
+            <% else %>
+            <div class="display-smiley" style="background-image: url(<%= asset_path 'yay_smiley.png' %>); width:30px; height: 30px;"></div>
           <% end %>
-          <% unless review.emotion == 2 %>
-          <% (2 - review.emotion).times do %>
-          <li class="list-inline-item"><i class="glyphicon glyphicon-heart-empty"></i></li>
-          <% end %>
-          <% end %>
-        </ul>
       </div>
 
-      <div class="col-xs-6 col-sm-3">
+      <div class="col-xs-6 col-sm-3 center-ratings">
         <ul class="list-inline">
           <% review.temperature.times do %>
-          <li class="list-inline-item"><i class="glyphicon glyphicon-asterisk"></i></li>
+          <li class="list-inline-item"><i class="fas fa-fire" style="color:#B74E46"></i></li>
           <% end %>
-          <% unless review.temperature == 3 %>
-          <% (3 - review.temperature).times do %>
-          <li class="list-inline-item"><i class="glyphicon glyphicon-asterisk-empty"></i></li>
+          <% unless review.temperature == 4 %>
+          <% (4 - review.temperature).times do %>
+          <li class="list-inline-item"><i class="fas fa-fire" style="color:#d2d2d2"></i></li>
           <% end %>
           <% end %>
         </ul>

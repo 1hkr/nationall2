@@ -9,13 +9,9 @@
 }
 
 .smileys {
-
-}
-
-.smiley {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
 }
 
 .smiley {
@@ -37,11 +33,6 @@
 }
 
 .review_temperature {
-  // [data-rating-text] {
-  //   background: linear-gradient(to right, #85D8CE, #085078) !important;
-  //   -webkit-background-clip: text;
-  //   -webkit-text-fill-color: transparent;
-  // }
   .br-theme-bars-movie .br-widget .br-current-rating {
     color: #b20a2c !important;
     opacity: 0.5;
