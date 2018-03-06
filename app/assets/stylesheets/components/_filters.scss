@@ -11,10 +11,7 @@
 
     #category a {
       color: #99999c;
-      &:focus{
-        color: #03359a;
-      }
-      &:active {
+      &:hover{
         color: #03359a;
       }
     }
