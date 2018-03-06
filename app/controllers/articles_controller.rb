@@ -6,11 +6,16 @@ class ArticlesController < ApplicationController
     # @avg_temperature = params[:avg_temperature] if params[:avg_temperature]
     # @avg_emotion = params[:avg_emotion] if params[:avg_emotion]
 
-    @category = Category.find_by_name(params[:category]) if params[:category]
+
+    filter_cat = params[:category]
+    filter_temp = params[:avg_temperature]
+    filter_emo = params[:avg_emotion]
+
+    @category = Category.find_by_name(params[:category]) if filter_cat
     @articles = policy_scope(Article)
     @articles = @articles.where(category_id: @category.id) if @category
-    @articles = @articles.where(avg_temperature: params[:avg_temperature]) if params[:avg_temperature]
-    @articles = @articles.where(avg_emotion: params[:avg_emotion]) if params[:avg_emotion]
+    @articles = @articles.where("avg_temperature > ? AND avg_temperature < ?", filter_temp.to_i - 0.5, filter_temp.to_i + 0.4 ) if filter_temp
+    @articles = @articles.where("avg_emotion > ? AND avg_emotion < ?", filter_emo.to_i - 0.5, filter_emo.to_i + 0.4 ) if filter_emo
     @articles = @articles.where("title iLIKE ?", "%#{params[:query]}%") if params[:query].present?
     @articles = @articles.order(created_at: :desc)
   end
