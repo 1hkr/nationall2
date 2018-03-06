@@ -32,9 +32,13 @@
   font-size: 16px;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .sticky {
   position: sticky;
-  top: 5%;
+  top: 10px;
 }
 
 .margin-top {
@@ -53,7 +57,12 @@
 
 .card-author {
   padding: 50px;
-  margin-top: 53px;
+  margin-top: 105px;
+}
+
+.card-author-container {
+  position: sticky;
+  padding: 0;
 }
 
 .author img {
