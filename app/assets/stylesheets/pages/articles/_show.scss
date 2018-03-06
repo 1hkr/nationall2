@@ -20,13 +20,104 @@
     flex-direction: column;
     line-height: 8px;
     margin-left: 10px;
-    margin-top: 5px;
     .grow {
       flex: 1 0 50px;
     }
   }
 }
 
+// confirmation animation
+.container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-left: 50px;
+  margin-top: 24px;
+
+  #Layer_1 {
+    margin-left: -50px;
+    margin-bottom: 16px;
+    width: 30px;
+    left: 14px;
+    top: 19px;
+    stroke-dasharray: 30;
+    stroke-dashoffset: 30;
+
+    &.on {
+      animation: check .5s;
+      animation-delay: 1.2s;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  #Layer_2 {
+    width: 60px;
+    stroke-dasharray: 121;
+    stroke-dashoffset: 121;
+    transform: rotate(270deg);
+
+    &.on {
+      animation: circle 1.4s;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+    }
+  }
+  &:hover {
+    #Layer_1 {
+      animation: check-reverse .4s;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+    }
+    #Layer_2 {
+      stroke-dashoffset: 0;
+      animation: circle-reverse .8s;
+      animation-delay: .3s;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+@keyframes circle {
+  0% {
+    stroke-dashoffset: 121;
+    transform: rotate(90deg);
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes circle-reverse {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 121;
+    transform: rotate(410deg);
+  }
+}
+
+@keyframes check {
+  0% {
+    stroke-dashoffset: 30;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes check-reverse {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 30;
+  }
+}
+
+// Bio
 
 .bio p {
   font-size: 16px;
