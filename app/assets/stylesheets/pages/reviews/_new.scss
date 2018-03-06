@@ -1,4 +1,18 @@
+.br-theme-fontawesome-stars .br-widget a:after {
+  font-size: 40px;
+}
+
+.ratings-container {
+  display: flex;
+  align-items: center;
+  height: 80px
+}
+
 .smileys {
+
+}
+
+.smiley {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7,17 +21,42 @@
 .smiley {
   background-size: cover !important;
   height: 80px;
-  width: 80px;
+  width: 110px;
   border-radius: 1px;
   opacity: 0.5;
   &:hover {
     opacity: 1;
     cursor: pointer;
-    box-shadow: -1px 1px 23px 0px #7b7b7b24;
   }
   &.active {
   font-weight: bolder;
   opacity: 1;
-  box-shadow: -1px 1px 23px 0px #7b7b7b24;
   }
 }
+
+.review_temperature {
+  [data-rating-text="Chill"] {
+    background-color: blue !important;
+  }
+
+  [data-rating-text="Calm"] {
+    background-color: green !important;
+  }
+
+  [data-rating-text="Pretty intense"] {
+    background-color: orange !important;
+  }
+
+  [data-rating-text="Intense"] {
+    background-color: red !important;
+  }
+
+  [data-rating-text] + .br-active {
+    background-color: orange !important;
+  }
+
+  [data-rating-text] + .br-selected {
+    background-color: $green !important;
+  }
+}
+

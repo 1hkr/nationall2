@@ -1,29 +1,36 @@
 <div class="row">
   <%= simple_form_for [article, review], remote: true do |f| %>
-    <div class="col-xs-6 col-sm-4">
-    <%= f.input :rating, collection: 1..5, input_html: { class: 'ratings-jquery' } %>
+    <div class="col-xs-6 col-sm-4 ratings-container ">
+    <%= f.input :rating, collection: 1..5, label:false, input_html: { class: 'ratings-jquery' } %>
     </div>
 
-<!--   <%= f.input :emotion, collection: 1..2, as: :radio_buttons %> -->
-    <div class="col-xs-6 col-sm-4">
-      <div>
-        <label class="control-label radio_buttons required"><abbr title="required">*</abbr> Emotion</label>
-      </div>
-      <div class="col-xs-12 col-sm-6 smileys">
+    <div class="col-xs-6 col-sm-4 smileys">
+      <div class="col-xs-12 col-sm-6 smiley">
         <input type="radio" class="hidden" value="1" name="review[emotion]" id="review_emotion_1">
-          <label for="review_emotion_1" class="smiley" style="background-image: url('https://ichef.bbci.co.uk/news/624/cpsprodpb/4870/production/_86044581_facebookemoticonsap.jpg')" style="cursor: pointer;">
+          <label for="review_emotion_1" class="smiley" style="background-image: url(<%= asset_path 'sad_smiley.png' %>)" style="cursor: pointer;">
           </label>
       </div>
 
-      <div class="col-xs-12 col-sm-6 smileys">
+      <div class="col-xs-12 col-sm-6 smiley">
         <input type="radio" class="hidden" value="2" name="review[emotion]" id="review_emotion_2">
-          <label for="review_emotion_2" class="smiley" style="background-image: url('https://ichef-1.bbci.co.uk/news/624/cpsprodpb/17C40/production/_86044379_facebookemoticonsap.jpg')" style="cursor: pointer;">
+          <label for="review_emotion_2" class="smiley" style="background-image: url(<%= asset_path 'yay_smiley.png' %>)" style="cursor: pointer;">
           </label>
       </div>
     </div>
 
-    <div class="col-xs-6 col-sm-4">
-      <%= f.input :temperature, collection: 1..4, input_html: { class: 'temperature-jquery' } %>
+    <div class="col-xs-6 col-sm-4 ratings-container ">
+<!--       <%= f.input :temperature, collection: 1..4, label:false, input_html: { class: 'temperature-jquery' } %> -->
+      <div class="form-group select required review_temperature">
+        <div class="br-wrapper br-theme-bars-movie">
+          <select class="form-control select required temperature-jquery" name="review[temperature]" id="review_temperature" style="display: none;">
+            <option value=""></option>
+            <option value="1" id="blue">Chill</option>
+            <option value="2" id="clear-blue">Calm</option>
+            <option value="3" id="orange">Pretty intense</option>
+            <option value="4" id="red">Intense</option>
+          </select>
+        </div>
+      </div>
     </div>
 
   </div>
