@@ -73,7 +73,6 @@
 
       <!-- Article -->
       <div class="card-article">
-
         <!-- Articles informations -->
         <div class="article-text">
           <div class="article-details">
@@ -98,126 +97,50 @@
           <p><%= raw @article.content %></p>
         </div>
       </div>
-      <hr>
+
       <!-- Rate the article-->
+        <% unless Review.where(article: @article, user: current_user)[0] %>
+          <div id="new-review-container">
+            <hr>
+            <h4>Rate the article</h4>
+            <div id="new-review">
+              <%= render 'reviews/form', article: @article, review: @review %>
+            </div>
+          </div>
+      <% end %>
 
-      <div>
-        <h4>Rate the article</h4>
-
-        <div id="simple-f">
-          <%= simple_form_for [@article, @review] do |f| %>
-          <%= f.input :rating, collection: 1..5 %>
-          <%= f.input :emotion, collection: 1..2 %>
-          <%= f.input :temperature, collection: 1..4 %>
-          <%= f.submit "Add my ratings", class: "btn-blue" %>
-          <% end %>
-        </div>
-      </div>
-
-      <hr>
-
-      <!-- List of the ratings -->
-
+      <!-- List of the reviews -->
       <% if @reviews.exists? %>
-      <hr>
-      <h4>Other reviews</h4>
-      <% @reviews.each do |review| %>
-
-      <!-- Writer of the review -->
-
-      <div class="article-profile">
-        <div class="center">
-          <img class="card-user" src=<%= review.user.picture %>>
+        <hr>
+        <h4>Every reviews</h4>
+        <div id="reviews">
+        <% @reviews.reverse.each do |review| %>
+          <%= render 'reviews/show', article: @article, review: review %>
+        <% end %>
         </div>
-        <div class="user-details">
-          <div>
-            <p><b><%= review.user.first_name%> <%= review.user.last_name %></b></p>
-          </div>
-          <div>
-            <p class="grow"> <%= review.user.city %></p>
-          </div>
-        </div>
-      </div>
+        <% else %>
+          <div id="reviews"></div>
+        <% end %>
 
-      <!-- Stars of the review -->
 
-      <ul class="list-inline">
-        <% review.rating.times do %>
-        <li class="list-inline-item"><i class="glyphicon glyphicon-star"></i></li>
-        <% end %>
-        <% unless review.rating == 5 %>
-        <% (5 - review.rating).times do %>
-        <li class="list-inline-item"><i class="glyphicon glyphicon-star-empty"></i></li>
-        <% end %>
-        <% end %>
-      </ul>
-
-      <ul class="list-inline">
-        <% review.emotion.times do %>
-        <li class="list-inline-item"><i class="glyphicon glyphicon-heart"></i></li>
-        <% end %>
-        <% unless review.emotion == 2 %>
-        <% (2 - review.emotion).times do %>
-        <li class="list-inline-item"><i class="glyphicon glyphicon-heart-empty"></i></li>
-        <% end %>
-        <% end %>
-      </ul>
-
-      <ul class="list-inline">
-        <% review.temperature.times do %>
-        <li class="list-inline-item"><i class="glyphicon glyphicon-asterisk"></i></li>
-        <% end %>
-        <% unless review.temperature == 3 %>
-        <% (3 - review.temperature).times do %>
-        <li class="list-inline-item"><i class="glyphicon glyphicon-asterisk-empty"></i></li>
-        <% end %>
-        <% end %>
-      </ul>
-
-      <hr>
-
-      <% end %>
-
-      <% end %>
 
       <!-- Add an opinion -->
-      <h4>Share your opinion</h4>
-
-      <div id="simple-f">
-        <%= simple_form_for [@article, @opinion] do |f| %>
-        <%= f.input :content, placeholder: "Your opinion matters.", :input_html => { :rows => 5} %>
-        <%= f.submit "Add my opinion", class: "btn-blue" %>
-        <% end %>
-      </div>
-
-
-      <!-- List of opinions -->
-
-      <% if @opinions.exists? %>
       <hr>
-      <h4>Other opinions</h4>
-      <% @opinions.each do |opinion| %>
-
-      <!-- Writer of the opinion -->
-
-      <div class="article-profile">
-        <div class="center">
-          <img class="card-user" src=<%= opinion.user.picture %>>
-        </div>
-        <div class="user-details">
-          <div>
-            <p><b><%= opinion.user.first_name%> <%= opinion.user.last_name %></b></p>
-          </div>
-          <div>
-            <p class="grow"> <%= opinion.user.city %></p>
-          </div>
-        </div>
+      <h4>Share your opinion</h4>
+      <div id="new-opinion">
+        <%= render 'opinions/form', article: @article, opinion: @opinion %>
       </div>
-
-      <!-- Content of the opinion-->
-      <p><%= opinion.content %></p>
-
-      <% end %>
+      <!-- List of opinions -->
+      <% if @opinions.exists? %>
+        <hr>
+        <h4>Every opinions</h4>
+        <div id="opinions">
+          <% @opinions.reverse.each do |opinion| %>
+            <%= render 'opinions/show', article: @article, opinion: opinion %>
+          <% end %>
+        </div>
+      <% else %>
+        <div id="opinions"></div>
       <% end %>
 
 

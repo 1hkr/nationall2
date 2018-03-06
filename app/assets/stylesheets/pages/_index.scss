@@ -4,6 +4,8 @@
 @import "articles/_index_article";
 @import "articles/_new";
 @import "quizzes/_new";
+@import "reviews/_show";
+@import "opinions/_show";
 
 
 // The margin on the side for every pages
@@ -45,7 +47,6 @@ body {
 // main shadow to use
 .shadow {
   box-shadow: -1px 1px 23px 0px #7b7b7b24;
-  padding: 20px;
 }
 
 .front {

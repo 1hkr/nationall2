@@ -4,12 +4,49 @@
   height: 100vh;
 }
 
-.gmnoprint img {
-  border-radius: 50%;
+.map-article-date {
+  height: 20px;
+  width: 291px;
+  padding: 4px 7px 7px 7px;
+  font-size: 12px;
+  margin-bottom: 1px;
+  color: #65656b;
 }
 
 .map-article-title {
+  height: 40px;
+  width: 291px;
+  padding: 4px 7px 7px 7px;
+  margin-top: 0.5px;
+  margin-bottom: 0px;
+  font-size: 16px;
   font-weight: bold;
-  background-color: #125099;
-  color: white;
+  color: #1A219C;
 }
+
+.map-article-image {
+  height: 80px;
+  width: 291px;
+  background-position: center;
+  background-size: cover !important;
+}
+
+.map-article-user {
+  height: 20px;
+  width: 291px;
+  padding: 7px 7px 7px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #65656b;
+}
+
+.map-article-location {
+  height: 20px;
+  width: 291px;
+  padding: 7px 7px 7px 7px;
+  font-size: 12px;
+  color: #65656b;
+  font-size: 12px;
+  color: #65656b;
+}
+

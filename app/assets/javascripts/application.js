@@ -6,4 +6,3 @@
 //= require author_card_sticky
 //= require_tree .
 //= require media
-

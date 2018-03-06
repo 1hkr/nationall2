@@ -38,14 +38,12 @@
 
 .emotion-choice {
   background-size: cover !important;
+  background-position: center;
   height: 200px;
-  width: 300px;
+  width: 100%;
   margin-bottom: 10px;
   margin-right: 20px;
   border-radius: 1px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
   opacity: 0.5;
   &:hover {
     opacity: 1;
@@ -63,9 +61,6 @@
   width: 200px;
   margin-bottom: 10px;
   border-radius: 1px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
   opacity: 0.5;
   &:hover {
     opacity: 1;
