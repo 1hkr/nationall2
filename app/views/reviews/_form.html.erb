@@ -1,26 +1,53 @@
 <div class="row">
   <%= simple_form_for [article, review], remote: true do |f| %>
-    <div class="col-xs-6 col-sm-4 ratings-container ">
-    <%= f.input :rating, collection: 1..5, label:false, input_html: { class: 'ratings-jquery' } %>
-    </div>
-
-    <div class="col-xs-6 col-sm-4">
-      <div class="col-xs-12 col-sm-6 smiley">
-        <input type="radio" class="hidden" value="1" name="review[emotion]" id="review_emotion_1">
-          <label for="review_emotion_1" class="smiley" style="background-image: url(<%= asset_path 'sad_smiley.png' %>); width:50px; height: 50px;" style="cursor: pointer;">
-          </label>
-      </div>
-
-      <div class="col-xs-12 col-sm-6 smiley">
-        <input type="radio" class="hidden" value="2" name="review[emotion]" id="review_emotion_2">
-          <label for="review_emotion_2" class="smiley" style="background-image: url(<%= asset_path 'yay_smiley.png' %>); width:50px; height: 50px;" style="cursor: pointer;">
-          </label>
+    <div class="col-xs-6 col-sm-4 ">
+      <div class="flex-container">
+        <div>
+          <%= f.input :rating, collection: 1..5, label:false, input_html: { class: 'ratings-jquery' } %>
+        </div>
+        <div class="explanation">
+          <div>
+            <p>Bad</p>
+          </div>
+          <div>
+            <p>Amazing</p>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="col-xs-6 col-sm-4 ratings-container ">
-<!--       <%= f.input :temperature, collection: 1..4, label:false, input_html: { class: 'temperature-jquery' } %> -->
-      <div class="form-group select required review_temperature">
+    <div class="col-xs-6 col-sm-4 ">
+      <div class="flex-container">
+        <div>
+          <div class="col-xs-12 col-sm-6 smiley">
+            <input type="radio" class="hidden" value="1" name="review[emotion]" id="review_emotion_1">
+              <label for="review_emotion_1" class="smiley" style="background-image: url(<%= asset_path 'sad_smiley.png' %>); width:50px; height: 50px;" style="cursor: pointer;">
+              </label>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 smiley">
+            <input type="radio" class="hidden" value="2" name="review[emotion]" id="review_emotion_2">
+              <label for="review_emotion_2" class="smiley" style="background-image: url(<%= asset_path 'yay_smiley.png' %>); width:50px; height: 50px;" style="cursor: pointer;">
+              </label>
+          </div>
+        </div>
+
+        <div class="explanation">
+          <div>
+            <p>Sad</p>
+          </div>
+          <div>
+            <p>Happy</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-xs-6 col-sm-4 ">
+      <div class="flex-container">
+        <%= f.input :temperature, collection: 1..4, label:false, input_html: { class: 'temperature-jquery' } %>
+<!--       <div class="form-group select required review_temperature">
         <div class="br-wrapper br-theme-bars-movie">
           <select class="form-control select required temperature-jquery" name="review[temperature]" id="review_temperature" style="display: none;">
             <option value=""></option>
@@ -29,7 +56,17 @@
             <option value="3" >Pretty intense</option>
             <option value="4" >Intense</option>
           </select>
+        </div> -->
+
+        <div class="explanation">
+          <div>
+            <p>chill</p>
+          </div>
+          <div>
+            <p>intense</p>
+          </div>
         </div>
+
       </div>
     </div>
 

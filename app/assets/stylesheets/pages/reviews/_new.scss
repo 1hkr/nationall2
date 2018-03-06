@@ -1,12 +1,27 @@
 .br-theme-fontawesome-stars .br-widget a:after {
   font-size: 40px;
+  margin-right: 8px;
 }
 
-.ratings-container {
-  display: flex;
-  align-items: center;
-  height: 80px
+.br-theme-fontawesome-fire .br-widget a:after {
+  font-size: 40px;
+  margin-right: 10px;
 }
+// .ratings-container {
+//   display: flex;
+//   justify-content: space-between;
+// }
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+// .ratings-container {
+//   display: flex;
+//   align-items: center;
+//   height: 80px;
+// }
 
 .smileys {
   display: flex;
@@ -32,43 +47,52 @@
   }
 }
 
-.review_temperature {
-  .br-theme-bars-movie .br-widget .br-current-rating {
-    color: #b20a2c !important;
-    opacity: 0.5;
-
-  }
-  .br-theme-bars-movie .br-widget a {
-    margin: 0px !important;
-  }
-
-  [data-rating-text="Chill"] {
-    background-color: #eeceb3 !important;
-    opacity: 0.5;
-
-  }
-
-  [data-rating-text="Calm"] {
-    background-color: #e0a996 !important;
-    opacity: 0.5;
-  }
-
-  [data-rating-text="Pretty intense"] {
-    background-color: #cb6862 !important;
-    opacity: 0.5;
-  }
-
-  [data-rating-text="Intense"] {
-    background-color: #b20a2c !important;
-    opacity: 0.5;
-  }
-
-  [data-rating-text] + .br-active {
-    opacity: 1;
-  }
-
-  [data-rating-text] + .br-selected {
-    opacity: 1;
-  }
+.explanation {
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #d2d2d2;
+  margin-top:15px;
 }
+
+// .review_temperature {
+//   .br-theme-bars-movie .br-widget .br-current-rating {
+//     color: #b20a2c !important;
+//     opacity: 0.5;
+
+//   }
+//   .br-theme-bars-movie .br-widget a {
+//     margin: 0px !important;
+//   }
+
+//   [data-rating-text="Chill"] {
+//     background-color: #eeceb3 !important;
+//     opacity: 0.5;
+
+//   }
+
+//   [data-rating-text="Calm"] {
+//     background-color: #e0a996 !important;
+//     opacity: 0.5;
+//   }
+
+//   [data-rating-text="Pretty intense"] {
+//     background-color: #cb6862 !important;
+//     opacity: 0.5;
+//   }
+
+//   [data-rating-text="Intense"] {
+//     background-color: #b20a2c !important;
+//     opacity: 0.5;
+//   }
+
+//   [data-rating-text] + .br-active {
+//     opacity: 1;
+//   }
+
+//   [data-rating-text] + .br-selected {
+//     opacity: 1;
+//   }
+// }
 

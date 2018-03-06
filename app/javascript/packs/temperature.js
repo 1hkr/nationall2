@@ -1,8 +1,8 @@
 import { barrating } from 'jquery-bar-rating';
 
 $('.temperature-jquery').barrating({
-  theme: 'bars-movie'
+  theme: 'fontawesome-fire'
 });
 
-import 'jquery-bar-rating/dist/themes/bars-movie.css';
+// import 'jquery-bar-rating/dist/themes/bars-movie.css';
 
