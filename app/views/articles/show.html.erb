@@ -75,6 +75,8 @@
       </div>
     </div>
 
+
+
     <!-- RIGHT SIDE -->
     <div class="col-xs-8 col-md-8 col-sm-8 front">
 
@@ -118,48 +120,64 @@
       </div>
 
       <!-- Rate the article-->
-      <% unless Review.where(article: @article, user: current_user)[0] %>
-      <div id="new-review-container">
-        <hr>
-        <h4>Rate the article</h4>
-        <div id="new-review">
-          <%= render 'reviews/form', article: @article, review: @review %>
-        </div>
-      </div>
+      <% if user_signed_in? %>
+        <% unless Review.where(article: @article, user: current_user)[0] %>
+            <hr>
+            <h4>Rate the article</h4>
+          <div id="new-review-container">
+            <div id="new-review">
+              <%= render 'reviews/form', article: @article, review: @review %>
+            </div>
+          </div>
+        <% end %>
       <% end %>
 
       <!-- List of the reviews -->
       <% if @reviews.exists? %>
-      <hr>
-      <h4>Every reviews</h4>
-      <div id="reviews">
-        <% @reviews.reverse.each do |review| %>
-        <%= render 'reviews/show', article: @article, review: review %>
-        <% end %>
-      </div>
+        <hr>
+        <h4>Every reviews</h4>
+        <div id="reviews">
+          <% @reviews.reverse.each do |review| %>
+          <%= render 'reviews/show', article: @article, review: review %>
+          <% end %>
+        </div>
       <% else %>
         <div id="reviews"></div>
       <% end %>
 
+      <% if @reviews.exists? && user_signed_in? == false%>
+        <div class="link-on-right">
+          <%= link_to "Sign in and rate this article", new_user_session_path %>
+        </div>
+      <% end %>
 
 
       <!-- Add an opinion -->
-      <hr>
-      <h4>Share your opinion</h4>
-      <div id="new-opinion">
-        <%= render 'opinions/form', article: @article, opinion: @opinion %>
-      </div>
+      <% if user_signed_in? %>
+        <hr>
+        <h4>Share your opinion</h4>
+        <div id="new-opinion">
+          <%= render 'opinions/form', article: @article, opinion: @opinion %>
+        </div>
+      <% end %>
+
       <!-- List of opinions -->
       <% if @opinions.exists? %>
-      <hr>
-      <h4>Every opinions</h4>
-      <div id="opinions">
-        <% @opinions.reverse.each do |opinion| %>
-        <%= render 'opinions/show', article: @article, opinion: opinion %>
-        <% end %>
-      </div>
+        <hr>
+        <h4>Every opinions</h4>
+        <div id="opinions">
+          <% @opinions.reverse.each do |opinion| %>
+          <%= render 'opinions/show', article: @article, opinion: opinion %>
+          <% end %>
+        </div>
       <% else %>
-      <div id="opinions"></div>
+        <div id="opinions"></div>
+      <% end %>
+
+      <% if @opinions.exists? && user_signed_in? == false%>
+        <div class="link-on-right">
+          <%= link_to "Sign in and leave your opinion", new_user_session_path %>
+        </div>
       <% end %>
 
 

@@ -13,4 +13,14 @@
   height: 80px;
   width: 80px;
   border-radius: 1px;
+  margin-right: 10px;
+}
+.opacity {
+  opacity: 0.55;
+}
+
+.list-inline > li {
+    display: inline-block;
+    padding-left: 3px;
+    padding-right: 3px;
 }

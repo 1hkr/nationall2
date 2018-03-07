@@ -136,12 +136,17 @@
   margin-top: 25px;
 }
 
-// left part
+// Left part
 
 .card-article {
   box-shadow: -1px 1px 23px 0px #7b7b7b24;
   padding: 70px 100px;
   margin-top: 20px;
+}
+
+.link-on-right {
+    display: flex;
+    justify-content: flex-end;
 }
 
 // right part
