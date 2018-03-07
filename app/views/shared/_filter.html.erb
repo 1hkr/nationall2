@@ -6,17 +6,6 @@
     </div>
       <% end %>
 
-    <div id="temperature">
-      <div class="dropdown">
-        <button class="dropbtn-fire fab fa-gripfire"></button>
-        <div class="dropdown-content">
-          <a><%= link_to "🔥🔥🔥🔥", articles_path(avg_temperature: 4, category: params[:category], avg_emotion: params[:avg_emotion]) %></a>
-          <a><%= link_to "🔥🔥🔥", articles_path(avg_temperature: 3, category: params[:category], avg_emotion: params[:avg_emotion]) %></a>
-          <a><%= link_to "🔥🔥", articles_path(avg_temperature: 2, category: params[:category], avg_emotion: params[:avg_emotion]) %></a>
-          <a><%= link_to "🔥", articles_path(avg_temperature: 1, category: params[:category], avg_emotion: params[:avg_emotion]) %></a>
-        </div>
-      </div>
-    </div>
     <div id="emotion">
       <div class="dropdown">
         <button class="dropbtn-emotion far fa-smile"></button>
@@ -26,6 +15,31 @@
         </div>
       </div>
     </div>
+
+      <div id="temperature">
+        <div class="dropdown">
+          <button class="dropbtn-fire fab fa-gripfire"></button>
+          <div class="dropdown-content">
+            <a><%= link_to "🔥", articles_path(avg_temperature: 1, category: params[:category], avg_emotion: params[:avg_emotion]), { class: 'temperature-jquery' }  %></a>
+            <a><%= link_to "🔥🔥", articles_path(avg_temperature: 2, category: params[:category], avg_emotion: params[:avg_emotion]), { class: 'temperature-jquery' }  %></a>
+            <a><%= link_to "🔥🔥🔥", articles_path(avg_temperature: 3, category: params[:category], avg_emotion: params[:avg_emotion]), { class: 'temperature-jquery' }  %></a>
+            <a><%= link_to "🔥🔥🔥🔥", articles_path(avg_temperature: 4, category: params[:category], avg_emotion: params[:avg_emotion]), { class: 'temperature-jquery' } %></a>
+          </div>
+        </div>
+      </div>
+
+<!--     <div id="temperature">
+      <div class="dropdown">
+        <button class="dropbtn-fire fab fa-gripfire"></button>
+        <div class="dropdown-content">
+          <a><%= link_to "🔥🔥🔥🔥", articles_path(avg_temperature: 4, category: params[:category], avg_emotion: params[:avg_emotion]) %></a>
+          <a><%= link_to "🔥🔥🔥", articles_path(avg_temperature: 3, category: params[:category], avg_emotion: params[:avg_emotion]) %></a>
+          <a><%= link_to "🔥🔥", articles_path(avg_temperature: 2, category: params[:category], avg_emotion: params[:avg_emotion]) %></a>
+          <a><%= link_to "🔥", articles_path(avg_temperature: 1, category: params[:category], avg_emotion: params[:avg_emotion]) %></a>
+        </div>
+      </div>
+    </div> -->
+
   </div>
 <% end %>
 
