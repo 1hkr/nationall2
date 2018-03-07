@@ -87,16 +87,18 @@
           <div class="article-details">
             <p> <%= @article.category.name.upcase %></p>
         <!-- Average Rating -->
-        <ul class="list-inline top-right">
-          <% @avg_rating.times do %>
-            <li class="list-inline-item"><i class="fas fa-star" style="color:#EDB867"></i></li>
-          <% end %>
-          <% unless @avg_rating == 5 %>
-            <% (5 - @avg_rating).times do %>
-              <li class="list-inline-item "><i class="fas fa-star" style="color:#d2d2d2"></i></li>
+        <% if @avg_rating %>
+          <ul class="list-inline top-right">
+            <% @avg_rating.times do %>
+              <li class="list-inline-item"><i class="fas fa-star" style="color:#EDB867"></i></li>
             <% end %>
-          <% end %>
-        </ul>
+            <% unless @avg_rating == 5 %>
+              <% (5 - @avg_rating).times do %>
+                <li class="list-inline-item "><i class="fas fa-star" style="color:#d2d2d2"></i></li>
+              <% end %>
+            <% end %>
+          </ul>
+        <% end %>
 
           </div>
 
