@@ -17,7 +17,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @avg_rating = @article.avg_rating
+    @avg_rating = @article.avg_rating.to_i
     @donation = Donation.new
     @opinion = Opinion.new
     @opinions = Opinion.where(article: @article)
