@@ -110,9 +110,9 @@
       <!-- Rate the article-->
       <% if user_signed_in? %>
         <% unless Review.where(article: @article, user: current_user)[0] %>
-          <div id="new-review-container">
             <hr>
             <h4>Rate the article</h4>
+          <div id="new-review-container">
             <div id="new-review">
               <%= render 'reviews/form', article: @article, review: @review %>
             </div>
