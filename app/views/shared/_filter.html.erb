@@ -6,25 +6,55 @@
     </div>
       <% end %>
 
-    <div id="emotion">
+    <!-- <div id="emotion">
       <div class="dropdown">
         <button class="dropbtn-emotion far fa-smile"></button>
         <div class="dropdown-content">
-          <a><%= link_to "😋", articles_path(avg_emotion: 2, category: params[:category], avg_temperature: params[:avg_temperature]) %></a>
+         <%= form_tag articles_path, class: 'fire-form', method: :get do %>
+            <%= hidden_field_tag :category, params[:category] %>
+            <%= hidden_field_tag :avg_temperature, params[:avg_temperature] %>
+            <%= select_tag :avg_emotion, options_for_select([["😢", 1], ["😋", 2]]), onchange: 'changeEventHandler(event)' %>
+
+
+            <input type="radio" class="hidden" value="1" name="review[emotion]" id="review_emotion_1">
+              <label for="review_emotion_1" class="smiley" style="background-image: url(<%= asset_path 'sad_smiley.png' %>); width:50px; height: 50px;" style="cursor: pointer;">
+              </label>
+            <input type="radio" class="hidden" value="2" name="review[emotion]" id="review_emotion_2">
+              <label for="review_emotion_2" class="smiley" style="background-image: url(<%= asset_path 'yay_smiley.png' %>); width:50px; height: 50px;" style="cursor: pointer;">
+              </label>
+
+
+              <select name="avg_emotion" id="avg_emotion" class="smiley" onchange="changeEventHandler(event)" style="display: none;">
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
+
+
+          <% end %>
+        </div>
+      </div>
+    </div> -->
+
+<div id="emotion">
+      <div class="dropdown">
+        <button class="dropbtn-emotion">🤔</button>
+        <div class="dropdown-content">
           <a><%= link_to "😢", articles_path(avg_emotion: 1, category: params[:category], avg_temperature: params[:avg_temperature]) %></a>
+          <a><%= link_to "😊", articles_path(avg_emotion: 2, category: params[:category], avg_temperature: params[:avg_temperature])%></a>
         </div>
       </div>
     </div>
 
       <div id="temperature">
         <div class="dropdown">
-          <button class="dropbtn-fire fab fa-gripfire"></button>
+          <button class="dropbtn-fire" style="font-size:25px ; margin-bottom:31px">
+            <%= icon("fas", "fire") %>
+          </button>
           <div class="dropdown-content">
-            <%= form_tag articles_path, method: :get do %>
+            <%= form_tag articles_path, class: 'fire-form', method: :get do %>
               <%= hidden_field_tag :category, params[:category] %>
               <%= hidden_field_tag :avg_emotion, params[:avg_emotion] %>
-              <%= select_tag :temperature, options_for_select(1..4), class: 'temperature-jquery' %>
-              <%= submit_tag "hello" %>
+              <%= select_tag :avg_temperature, options_for_select(1..4), class: 'temperature-jquery', onchange: 'changeEventHandler(event)' %>
             <% end %>
           </div>
         </div>
