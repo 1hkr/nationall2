@@ -1,12 +1,12 @@
 
 var playersrc = document.getElementById('player').src
 
-playersrc.hover ( hoverVideo, hideVideo );
+playersrc.hover ( playVideo, pauseVideo );
 
-function hoverVideo(e) {
+function playVideo(e) {
   this.get(0).play();
 }
 
-function hideVideo(e) {
-  this.get(0).play();
+function pauseVideo(e) {
+  this.get(0).pause();
 }
