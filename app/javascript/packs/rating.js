@@ -5,5 +5,3 @@ $('.ratings-jquery').barrating({
 });
 
 import 'jquery-bar-rating/dist/themes/fontawesome-stars.css';
-
-
