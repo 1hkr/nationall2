@@ -19,12 +19,12 @@
       <div class="col-xs-6 col-sm-3 center-ratings">
         <ul class="list-inline">
           <% review.rating.times do %>
-          <li class="list-inline-item"><i class="fas fa-star" style="color:#EDB867"></i></li>
+            <li class="list-inline-item"><i class="fas fa-star" style="color:#EDB867"></i></li>
           <% end %>
           <% unless review.rating == 5 %>
-          <% (5 - review.rating).times do %>
-          <li class="list-inline-item "><i class="fas fa-star" style="color:#d2d2d2"></i></li>
-          <% end %>
+            <% (5 - review.rating).times do %>
+              <li class="list-inline-item "><i class="fas fa-star" style="color:#d2d2d2"></i></li>
+            <% end %>
           <% end %>
         </ul>
       </div>
@@ -42,12 +42,12 @@
       <div class="col-xs-6 col-sm-3 center-ratings">
         <ul class="list-inline">
           <% review.temperature.times do %>
-          <li class="list-inline-item"><i class="fas fa-fire" style="color:#B74E46"></i></li>
+            <li class="list-inline-item"><i class="fas fa-fire" style="color:#B74E46"></i></li>
           <% end %>
           <% unless review.temperature == 4 %>
-          <% (4 - review.temperature).times do %>
-          <li class="list-inline-item"><i class="fas fa-fire" style="color:#d2d2d2"></i></li>
-          <% end %>
+            <% (4 - review.temperature).times do %>
+              <li class="list-inline-item"><i class="fas fa-fire" style="color:#d2d2d2"></i></li>
+            <% end %>
           <% end %>
         </ul>
       </div>

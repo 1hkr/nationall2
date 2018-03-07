@@ -84,11 +84,23 @@
         <div class="article-text">
           <div class="article-details">
             <p> <%= @article.category.name.upcase %></p>
-            <p class="top-right"><%= @article.publishing_date %></p>
+        <!-- Average Rating -->
+        <ul class="list-inline top-right">
+          <% @avg_rating.times do %>
+            <li class="list-inline-item"><i class="fas fa-star" style="color:#EDB867"></i></li>
+          <% end %>
+          <% unless @avg_rating == 5 %>
+            <% (5 - @avg_rating).times do %>
+              <li class="list-inline-item "><i class="fas fa-star" style="color:#d2d2d2"></i></li>
+            <% end %>
+          <% end %>
+        </ul>
+
           </div>
 
           <h1><%= @article.title %></h1>
           <h5><%= @article.subtitle %></h5>
+          <p ><%= @article.publishing_date %></p>
 
           <hr>
 
@@ -126,7 +138,7 @@
         <% end %>
       </div>
       <% else %>
-      <div id="reviews"></div>
+        <div id="reviews"></div>
       <% end %>
 
 
