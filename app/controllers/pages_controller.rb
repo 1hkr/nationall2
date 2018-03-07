@@ -9,8 +9,8 @@ class PagesController < ApplicationController
       @article_by_user = user.articles.last
       if @article_by_user
         {
-          lat: user.latitude,
-          lng: user.longitude,
+          lat: user.latitude + rand(-0.5..0.5).round(6),
+          lng: user.longitude + rand(-0.5..0.5).round(6),
           name: user.first_name + " " + user.last_name,
           location: user.city,
           date: @article_by_user.publishing_date,
