@@ -29,16 +29,20 @@
         </ul>
       </div>
 
+      <!-- Emotions of the review -->
       <div class="col-xs-6 col-sm-3 center-ratings">
 
           <% if review.emotion == 1 %>
-            <div class="display-smiley" style="background-image: url(<%= asset_path 'sad_smiley.png' %>); width:30px; height: 30px;">
-            </div>
+            <div class="display-smiley" style="background-image: url(<%= asset_path 'sad_smiley.png' %>); width:30px; height: 30px;"></div>
+            <div class="display-smiley opacity" style="background-image: url(<%= asset_path 'yay_smiley.png' %>); width:30px; height: 30px;"></div>
+
             <% else %>
+            <div class="display-smiley opacity" style="background-image: url(<%= asset_path 'sad_smiley.png' %>); width:30px; height: 30px;"></div>
             <div class="display-smiley" style="background-image: url(<%= asset_path 'yay_smiley.png' %>); width:30px; height: 30px;"></div>
           <% end %>
       </div>
 
+      <!-- Temperature of the review -->
       <div class="col-xs-6 col-sm-3 center-ratings">
         <ul class="list-inline">
           <% review.temperature.times do %>
