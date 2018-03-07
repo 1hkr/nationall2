@@ -180,7 +180,7 @@ p '------------------------------Categories created-----------------------------
   city: 'Athens, Greece',
   email: 'india@nationall.eu',
   password: 'allnations',
-  bio: 'A contributor to titles including Vogue, the Guardian, KEIN, Rollacoaster, Wonderland and Twin magazine, India Doyle joined Culture Trip to help launch their fashion section for the EMEA region, where she focussed on giving emerging designers across the globe a platform to reach international audiences. Now based between London and Greece, she is one of Culture Trip\'s Greek contributors and covers cultural life in Athens.',
+  bio: 'A contributor to titles including Vogue, the Guardian, KEIN, Rollacoaster, Wonderland and Twin magazine, India Doyle joined Culture Trip to help launch their fashion section for the EMEA region, where she focussed on giving emerging designers across the globe a platform to reach international audiences.',
   picture: 'https://0.gravatar.com/avatar/01b7471f0d81534d1ff50e5627a6ec16?s=144&d=https://cdn.theculturetrip.com/logo/logo50.png&r=g',
   emotion_pref: 1,
   temperature_pref: 4
