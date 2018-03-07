@@ -1,37 +1,12 @@
 
-// function hoverVideo(e) {
-//     $('video', this).get(0).play();
-// }
+var playersrc = document.getElementById('player').src
+
+playersrc.hover ( hoverVideo, hideVideo );
+
+function hoverVideo(e) {
+  this.get(0).play();
+}
 
 function hideVideo(e) {
-    e.target.pause();
+  this.get(0).play();
 }
-
-function playVideo(e) {
-  console.log("hello")
-    e.target.play();
-}
-
-var videoplay = $(".videoplay");
-
-// console.log(videoplay)
-
-// var playPromise = videoplay.play();
-
-
-
-
-var figure = videoplay.hover( playVideo, hideVideo );
-
-// if (playPromise !== undefined) {
-//   playPromise.then(_ => {
-//     // Automatic playback started!
-//     // Show playing UI.
-//   })
-//   .catch(error => {
-//     // Auto-play was prevented
-//     // Show paused UI.
-//   });
-// }
-
-
