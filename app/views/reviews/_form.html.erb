@@ -1,6 +1,6 @@
 <div class="row">
   <%= simple_form_for [article, review], remote: true do |f| %>
-    <div class="col-xs-6 col-sm-4 ">
+    <div class="col-xs-6 col-sm-4 star-box ">
       <div class="flex-container">
         <div>
           <%= f.input :rating, collection: 1..5, label:false, input_html: { class: 'ratings-jquery' } %>
@@ -9,14 +9,14 @@
           <div>
             <p>Bad</p>
           </div>
-          <div>
+          <div id="rating-max">
             <p>Amazing</p>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="col-xs-6 col-sm-4 ">
+    <div class="col-xs-6 col-sm-4 smiley-box">
       <div class="flex-container">
         <div>
           <div class="col-xs-12 col-sm-6 smiley">
@@ -33,10 +33,10 @@
         </div>
 
         <div class="explanation">
-          <div>
+          <div id="emotion-min">
             <p>Sad</p>
           </div>
-          <div>
+          <div id="emotion-max">
             <p>Happy</p>
           </div>
         </div>
@@ -44,7 +44,7 @@
       </div>
     </div>
 
-    <div class="col-xs-6 col-sm-4 ">
+    <div class="col-xs-6 col-sm-4 fire-box">
       <div class="flex-container">
         <%= f.input :temperature, collection: 1..4, label:false, input_html: { class: 'temperature-jquery' } %>
 <!--       <div class="form-group select required review_temperature">
@@ -62,7 +62,7 @@
           <div>
             <p>chill</p>
           </div>
-          <div>
+          <div id="tempe-max">
             <p>intense</p>
           </div>
         </div>
