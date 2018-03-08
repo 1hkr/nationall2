@@ -1,113 +1,118 @@
 <div class="container-fluid side-margin">
   <div class="row margin-left">
     <div class="col-xs-12 col-sm-6 col-lg-8 col-sm-offset-3 col-lg-offset-2 align-h bottomize space-between margin-bottom">
-      <div class="form-post">
-        <h1>Quizz</h1>
+      <!-- Article -->
+      <div class="card-article">
+        <!-- Articles informations -->
+        <div class="article-text">
+
+          <h1>Take our quizz</h1>
 
 
 
- <!-- FORM FOR THE CATEGORIES-->
-        <div id="new_categories_pref_wrapper">
-          <hr>
-          <h4>What subjects do you like to read about ?</h4>
-          <%= simple_form_for @categories_pref, remote: true do |f| %>
+   <!-- FORM FOR THE CATEGORIES-->
+          <div id="new_categories_pref_wrapper">
+            <hr>
+            <h4>What subjects do you like to read about ?</h4>
+            <%= simple_form_for @categories_pref, remote: true do |f| %>
 
+              <div class="form-group margin-bottom">
+                <div class="choices">
+                  <div class="row">
+                  <% Category.all.each do |category| %>
+                    <div class="col-xs-12 col-sm-4">
+
+                        <input type="checkbox" class="hidden" value="<%= category.id %>" name="categories_pref[category_id][]" id="categories_pref_category_id_<%= category.id %>">
+
+                          <label for="categories_pref_category_id_<%= category.id %>" class="category-choice" style="background-image: url('<%= category.picture %>')" style="cursor: pointer;">
+                            <%= category.name %>
+                          </label>
+
+                    </div>
+                      <% end %>
+                  </div>
+                 </div>
+
+              <%= f.submit "Next", class: "btn-blue" %>
+              <% end %>
+            </div>
+          </div>
+
+   <!-- FORM FOR THE EMOTION-PREF UPDATE OF USER-->
+          <div id="edit_user_wrapper" class="hidden" data-user="<%= current_user.id %>">
+            <hr>
+            <h4>Which video would you go for ?</h4>
+
+            <%= simple_form_for current_user, remote: true, url: emotion_prefs_path, method: :patch do |f| %>
             <div class="form-group margin-bottom">
               <div class="choices">
                 <div class="row">
-                <% Category.all.each do |category| %>
-                  <div class="col-xs-12 col-sm-4">
 
-                      <input type="checkbox" class="hidden" value="<%= category.id %>" name="categories_pref[category_id][]" id="categories_pref_category_id_<%= category.id %>">
-
-                        <label for="categories_pref_category_id_<%= category.id %>" class="category-choice" style="background-image: url('<%= category.picture %>')" style="cursor: pointer;">
-                          <%= category.name %>
-                        </label>
-
+                <div class="col-xs-6 col-sm-6">
+                  <input type="radio" class="hidden" value="1" name="user[emotion_pref]" id="user_emotion_pref_1">
+                    <label for="user_emotion_pref_1" class="emotion-choice" style="background-image: url('https://pi.tedcdn.com/r/pe.tedcdn.com/images/ted/3193bc935b5aefa5d9310cecc4a78554fe0a76b2_2880x1620.jpg?')" style="cursor: pointer;">
+                    </label>
+                    <p class="text-center">Are China and the US doomed to conflict?</p>
                   </div>
-                    <% end %>
-                </div>
-               </div>
 
-            <%= f.submit "Next", class: "btn-blue" %>
-            <% end %>
-          </div>
-        </div>
-
- <!-- FORM FOR THE EMOTION-PREF UPDATE OF USER-->
-        <div id="edit_user_wrapper" class="hidden" data-user="<%= current_user.id %>">
-          <hr>
-          <h4>Which video would you go for ?</h4>
-
-          <%= simple_form_for current_user, remote: true, url: emotion_prefs_path, method: :patch do |f| %>
-          <div class="form-group margin-bottom">
-            <div class="choices">
-              <div class="row">
-
-              <div class="col-xs-6 col-sm-6">
-                <input type="radio" class="hidden" value="1" name="user[emotion_pref]" id="user_emotion_pref_1">
-                  <label for="user_emotion_pref_1" class="emotion-choice" style="background-image: url('https://pi.tedcdn.com/r/pe.tedcdn.com/images/ted/3193bc935b5aefa5d9310cecc4a78554fe0a76b2_2880x1620.jpg?')" style="cursor: pointer;">
-                  </label>
-                  <p class="text-center">Are China and the US doomed to conflict?</p>
-                </div>
-
-              <div class="col-xs-6 col-sm-6">
-                <input type="radio" class="hidden" value="2" name="user[emotion_pref]" id="user_emotion_pref_2">
-                  <label for="user_emotion_pref_2" class="emotion-choice" style="background-image: url('https://pi.tedcdn.com/r/pe.tedcdn.com/images/ted/016a827cc0757092a0439ab2a63feca8655b6c29_1600x1200.jpg?')" style="cursor: pointer;">
-                  </label>
-                  <p class="text-center">The surprising science of happiness</p>
+                <div class="col-xs-6 col-sm-6">
+                  <input type="radio" class="hidden" value="2" name="user[emotion_pref]" id="user_emotion_pref_2">
+                    <label for="user_emotion_pref_2" class="emotion-choice" style="background-image: url('https://pi.tedcdn.com/r/pe.tedcdn.com/images/ted/016a827cc0757092a0439ab2a63feca8655b6c29_1600x1200.jpg?')" style="cursor: pointer;">
+                    </label>
+                    <p class="text-center">The surprising science of happiness</p>
+                  </div>
                 </div>
               </div>
+              <%= f.submit "Next", class: "btn-blue" %>
+              <% end %>
             </div>
-            <%= f.submit "Next", class: "btn-blue" %>
-            <% end %>
           </div>
-        </div>
 
 
- <!-- FORM FOR THE TEMPERATURE-PREF UPDATE OF USER-->
-        <div id="temperature-form" class="hidden">
-          <hr>
-          <h4>When you debate with someone, you are more ... ? </h4>
-          <%= simple_form_for current_user, url: temperature_prefs_path, method: :patch do |f| %>
-          <div class="form-group margin-bottom">
-            <div class="choices">
-              <div class="row">
+   <!-- FORM FOR THE TEMPERATURE-PREF UPDATE OF USER-->
+          <div id="temperature-form" class="hidden">
+            <hr>
+            <h4>When you debate with someone, you are more ... ? </h4>
+            <%= simple_form_for current_user, url: temperature_prefs_path, method: :patch do |f| %>
+            <div class="form-group margin-bottom">
+              <div class="choices">
+                <div class="row">
 
-                <div class="col-xs-6 col-sm-3">
-                  <input type="radio" class="hidden" value="1" name="user[temperature_pref]" id="user_temperature_pref_1">
-                   <label for="user_temperature_pref_1" class="tempe-choice" style="background-image: url('https://media.giphy.com/media/AqniAO4dD28Sc/giphy.gif')" style="cursor: pointer;">
-                   </label>
-                   <p class="text-center">Chill</p>
-                </div>
-
-                <div class="col-xs-6 col-sm-3">
-                   <input type="radio" class="hidden" value="2" name="user[temperature_pref]" id="user_temperature_pref_2">
-                     <label for="user_temperature_pref_2" class="tempe-choice" style="background-image: url('https://media.giphy.com/media/l0HlLA99hjW5P1BIY/giphy.gif')" style="cursor: pointer;">
+                  <div class="col-xs-6 col-sm-3">
+                    <input type="radio" class="hidden" value="1" name="user[temperature_pref]" id="user_temperature_pref_1">
+                     <label for="user_temperature_pref_1" class="tempe-choice" style="background-image: url('https://media.giphy.com/media/AqniAO4dD28Sc/giphy.gif')" style="cursor: pointer;">
                      </label>
-                     <p class="text-center">Chill but doubful</p>
-                </div>
+                     <p class="text-center">Chill</p>
+                  </div>
 
-                <div class="col-xs-6 col-sm-3">
-                  <input type="radio" class="hidden" value="3" name="user[temperature_pref]" id="user_temperature_pref_3">
-                    <label for="user_temperature_pref_3" class="tempe-choice" style="background-image: url('https://media.giphy.com/media/htFDJG2MkJiqk/giphy.gif')" style="cursor: pointer;">
-                    </label>
-                    <p class="text-center">Ready to intervene</p>
-                </div>
+                  <div class="col-xs-6 col-sm-3">
+                     <input type="radio" class="hidden" value="2" name="user[temperature_pref]" id="user_temperature_pref_2">
+                       <label for="user_temperature_pref_2" class="tempe-choice" style="background-image: url('https://media.giphy.com/media/l0HlLA99hjW5P1BIY/giphy.gif')" style="cursor: pointer;">
+                       </label>
+                       <p class="text-center">Chill but doubful</p>
+                  </div>
 
-                <div class="col-xs-6 col-sm-3">
-                  <input type="radio" class="hidden" value="4" name="user[temperature_pref]" id="user_temperature_pref_4">
-                    <label for="user_temperature_pref_4" class="tempe-choice" style="background-image: url('https://media.giphy.com/media/7LgKUsZiSjcRO/giphy.gif')" style="cursor: pointer;">
-                    </label>
-                    <p class="text-center">Pretty intense</p>
-                </div>
+                  <div class="col-xs-6 col-sm-3">
+                    <input type="radio" class="hidden" value="3" name="user[temperature_pref]" id="user_temperature_pref_3">
+                      <label for="user_temperature_pref_3" class="tempe-choice" style="background-image: url('https://media.giphy.com/media/htFDJG2MkJiqk/giphy.gif')" style="cursor: pointer;">
+                      </label>
+                      <p class="text-center">Ready to intervene</p>
+                  </div>
 
+                  <div class="col-xs-6 col-sm-3">
+                    <input type="radio" class="hidden" value="4" name="user[temperature_pref]" id="user_temperature_pref_4">
+                      <label for="user_temperature_pref_4" class="tempe-choice" style="background-image: url('https://media.giphy.com/media/7LgKUsZiSjcRO/giphy.gif')" style="cursor: pointer;">
+                      </label>
+                      <p class="text-center">Pretty intense</p>
+                  </div>
+
+                </div>
               </div>
             </div>
-          </div>
 
-          <%= f.submit "Done", class: "btn-blue" %>
-          <% end %>
+            <%= f.submit "Done", class: "btn-blue" %>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>

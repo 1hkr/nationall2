@@ -1,7 +1,7 @@
 
 <div class="talk-bubble tri-right left-in shadow margin-bottom-15">
   <%= simple_form_for [article, opinion], remote: true do |f| %>
-  <%= f.input :content, placeholder: "Your opinion matters!", label: false, input_html: { class: 'form_light no_border talktext' } %>
+  <%= f.input :content, placeholder: "Your opinion matters !", label: false, input_html: { class: 'form_light no_border talktext' } %>
 </div>
   <%= f.submit "Add my opinion", class: "btn-blue" %>
   <% end %>
