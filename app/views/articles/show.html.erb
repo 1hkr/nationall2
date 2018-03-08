@@ -59,17 +59,17 @@
         </div>
 
         <% else %>
-        <div>
-          <h4> Support independent writing <i class="fab fa-studiovinari"></i></h4>
+        <div class="donate-form">
           <%= simple_form_for [@article, @donation], :html => {:class => 'shadow margin-top padding' } do |f| %>
           <div class="align-v align-h">
             <%= f.input :amount, label: false, input_html: { class: 'form_light no_border donate-value', value: '0.10' } %>
             <p id='euro'> €</p>
           </div>
           <%= button_tag(type: 'submit', class: "btn btn-link donate-button") do %>
-          Donate to <%= @article.user.first_name %> <i class="fa fa-heart"></i>
+          Donate to <%= @article.user.first_name %>
           <% end %>
           <% end %>
+          <h4> Support independent writing</h4>
         </div>
         <% end %>
       </div>

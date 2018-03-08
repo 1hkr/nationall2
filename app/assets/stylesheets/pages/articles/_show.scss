@@ -142,6 +142,7 @@
   box-shadow: -1px 1px 23px 0px #7b7b7b24;
   padding: 70px 100px;
   margin-top: 20px;
+  width:100%;
 }
 
 .link-on-right {
@@ -180,6 +181,11 @@
   color: $dark-gray;
 }
 
+.donate-form h4{
+  text-align: center;
+  font-size: 16px;
+}
+
 .donate-value {
   font-size: 20px;
   text-align : center;
@@ -206,3 +212,5 @@
   color: $light-blue !important;
   text-decoration: none !important;
 }
+
+
