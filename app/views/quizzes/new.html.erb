@@ -50,16 +50,16 @@
 
                 <div class="col-xs-6 col-sm-6">
                   <input type="radio" class="hidden" value="1" name="user[emotion_pref]" id="user_emotion_pref_1">
-                    <label for="user_emotion_pref_1" class="emotion-choice" style="background-image: url('https://pi.tedcdn.com/r/pe.tedcdn.com/images/ted/3193bc935b5aefa5d9310cecc4a78554fe0a76b2_2880x1620.jpg?')" style="cursor: pointer;">
+                    <label for="user_emotion_pref_1" class="emotion-choice" style="background-image: url('https://pi.tedcdn.com/r/pe.tedcdn.com/images/ted/3193bc935b5aefa5d9310cecc4a78554fe0a76b2_2880x1620.jpg?')" style="cursor: pointer;">Are China and the US doomed to conflict?
                     </label>
-                    <p class="text-center">Are China and the US doomed to conflict?</p>
+                    <!--   <p class="text-center">Are China and the US doomed to conflict?</p>-->
                   </div>
 
                 <div class="col-xs-6 col-sm-6">
                   <input type="radio" class="hidden" value="2" name="user[emotion_pref]" id="user_emotion_pref_2">
-                    <label for="user_emotion_pref_2" class="emotion-choice" style="background-image: url('https://pi.tedcdn.com/r/pe.tedcdn.com/images/ted/016a827cc0757092a0439ab2a63feca8655b6c29_1600x1200.jpg?')" style="cursor: pointer;">
+                    <label for="user_emotion_pref_2" class="emotion-choice" style="background-image: url('https://pi.tedcdn.com/r/pe.tedcdn.com/images/ted/016a827cc0757092a0439ab2a63feca8655b6c29_1600x1200.jpg?')" style="cursor: pointer;">The surprising science of happiness
                     </label>
-                    <p class="text-center">The surprising science of happiness</p>
+                    <!--   <p class="text-center">The surprising science of happiness</p> -->
                   </div>
                 </div>
               </div>
@@ -72,7 +72,7 @@
    <!-- FORM FOR THE TEMPERATURE-PREF UPDATE OF USER-->
           <div id="temperature-form" class="hidden">
             <hr>
-            <h4>When you debate with someone, you are more ... ? </h4>
+            <h4>What kind of debate fo you like? </h4>
             <%= simple_form_for current_user, url: temperature_prefs_path, method: :patch do |f| %>
             <div class="form-group margin-bottom">
               <div class="choices">
@@ -80,30 +80,30 @@
 
                   <div class="col-xs-6 col-sm-3">
                     <input type="radio" class="hidden" value="1" name="user[temperature_pref]" id="user_temperature_pref_1">
-                     <label for="user_temperature_pref_1" class="tempe-choice" style="background-image: url('https://media.giphy.com/media/AqniAO4dD28Sc/giphy.gif')" style="cursor: pointer;">
+                     <label for="user_temperature_pref_1" class="tempe-choice" style="background-image: url('https://media.giphy.com/media/AqniAO4dD28Sc/giphy.gif')" style="cursor: pointer;">Chill
                      </label>
-                     <p class="text-center">Chill</p>
+                     <!--  <p class="text-center">Chill</p> -->
                   </div>
 
                   <div class="col-xs-6 col-sm-3">
                      <input type="radio" class="hidden" value="2" name="user[temperature_pref]" id="user_temperature_pref_2">
-                       <label for="user_temperature_pref_2" class="tempe-choice" style="background-image: url('https://media.giphy.com/media/l0HlLA99hjW5P1BIY/giphy.gif')" style="cursor: pointer;">
+                       <label for="user_temperature_pref_2" class="tempe-choice" style="background-image: url('https://media.giphy.com/media/l0HlLA99hjW5P1BIY/giphy.gif')" style="cursor: pointer;">Chill but doubful
                        </label>
-                       <p class="text-center">Chill but doubful</p>
+                       <!--<p class="text-center">Chill but doubful</p>-->
                   </div>
 
                   <div class="col-xs-6 col-sm-3">
                     <input type="radio" class="hidden" value="3" name="user[temperature_pref]" id="user_temperature_pref_3">
-                      <label for="user_temperature_pref_3" class="tempe-choice" style="background-image: url('https://media.giphy.com/media/htFDJG2MkJiqk/giphy.gif')" style="cursor: pointer;">
+                      <label for="user_temperature_pref_3" class="tempe-choice" style="background-image: url('https://media.giphy.com/media/htFDJG2MkJiqk/giphy.gif')" style="cursor: pointer;">Quite intense
                       </label>
-                      <p class="text-center">Ready to intervene</p>
+                      <!--<p class="text-center">Ready to intervene</p>-->
                   </div>
 
                   <div class="col-xs-6 col-sm-3">
                     <input type="radio" class="hidden" value="4" name="user[temperature_pref]" id="user_temperature_pref_4">
-                      <label for="user_temperature_pref_4" class="tempe-choice" style="background-image: url('https://media.giphy.com/media/7LgKUsZiSjcRO/giphy.gif')" style="cursor: pointer;">
+                      <label for="user_temperature_pref_4" class="tempe-choice" style="background-image: url('https://media.giphy.com/media/7LgKUsZiSjcRO/giphy.gif')" style="cursor: pointer;">Pretty intense
                       </label>
-                      <p class="text-center">Pretty intense</p>
+                      <!--<p class="text-center">Pretty intense</p>-->
                   </div>
 
                 </div>
