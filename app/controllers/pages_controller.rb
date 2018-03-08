@@ -8,6 +8,7 @@ class PagesController < ApplicationController
     @markers = @users.map do |user|
       @article_by_user = user.articles.last
       if @article_by_user
+        image_url = @article_by_user.picture.include?("youtube.com")? "https://img.youtube.com/vi/#{@article_by_user.picture.last(11)}/hqdefault.jpg" : @article_by_user.picture
         {
           lat: user.latitude,
           lng: user.longitude,
@@ -17,7 +18,7 @@ class PagesController < ApplicationController
           latest_article_title: user.articles.last.title,
           latest_article_content: user.articles.last.content.first(120)+"...",
           url: article_path(@article_by_user),
-          imageUrl: @article_by_user.picture,
+          imageUrl: image_url,
           icon: {
             url: user.picture,
             scaledSize: {

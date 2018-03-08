@@ -71,18 +71,29 @@ p '------------------------------Categories created-----------------------------
   email: 'anna@nationall.eu',
   password: 'allnations',
   bio: 'Becoming a journalist in @UPFBarcelona. Specialized in Politics. Working for Nationall. Collaborations in @elpuntavui, @beteve, @VilaWeb i @beteve91fm.',
-  picture: 'https://cdn-images-1.medium.com/fit/c/200/200/0*t-c5HhQLunv11cqO.jpg',
+  picture: 'https://image.ibb.co/dULoL7/image.gif',
+  emotion_pref: 1,
+  temperature_pref: 3
+  },
+  {
+  first_name: 'Fernando',
+  last_name: 'Betancor',
+  city: 'Sarragossa, Spain',
+  email: 'fernando@nationall.eu',
+  password: 'allnations',
+  bio: 'Expert in politics',
+  picture: 'https://image.ibb.co/eo417n/image21.gif',
   emotion_pref: 1,
   temperature_pref: 3
   },
   {
   first_name: 'Lena',
   last_name: 'Carlson',
-  city: 'Copenhagen, Netherlands',
+  city: 'Amsterdam, Netherlands',
   email: 'lena@nationall.eu',
   password: 'allnations',
   bio: 'Content creator & social media consultant based in Copenhagen.',
-  picture: 'https://cdn-images-1.medium.com/fit/c/100/100/1*0lqXgKTGf7mb-vAzJjCumQ.png',
+  picture: 'https://image.ibb.co/mHfkYS/iage20.gif',
   emotion_pref: 1,
   temperature_pref: 3
   },
@@ -93,7 +104,7 @@ p '------------------------------Categories created-----------------------------
   email: 'mariona@nationall.eu',
   password: 'allnations',
   bio: 'Becoming a journalist in @UPFBarcelona. Specialized in Politics. Working for Nationall. Collaborations in @elpuntavui, @beteve, @VilaWeb i @beteve91fm.',
-  picture: 'https://cdn-images-1.medium.com/fit/c/100/100/1*_ZvMrEJnFkBl_C6HUNGRkQ.jpeg',
+  picture: 'https://image.ibb.co/kmFf07/image3.gif',
   emotion_pref: 1,
   temperature_pref: 4
   },
@@ -104,7 +115,7 @@ p '------------------------------Categories created-----------------------------
   email: 'taka@nationall.eu',
   password: 'allnations',
   bio: 'Corporate consultant for well being and care in the workplace',
-  picture: 'https://avatars1.githubusercontent.com/u/31583151?s=460&v=4',
+  picture: 'https://image.ibb.co/icW3L7/image4.gif',
   emotion_pref: 1,
   temperature_pref: 3
   },
@@ -115,7 +126,7 @@ p '------------------------------Categories created-----------------------------
   email: 'ruairi@nationall.eu',
   password: 'allnations',
   bio: 'Irish; Interested in Politics, Technology & Culture; Believer in Open Societies & Markets; Bibliophile; Hibs Fan',
-  picture: 'https://cdn-images-1.medium.com/fit/c/200/200/1*U8uDC_YGSt2sIwalVJm-CA.jpeg',
+  picture: 'https://image.ibb.co/eJ4OL7/image2.gif',
   emotion_pref: 1,
   temperature_pref: 3
   },
@@ -126,7 +137,7 @@ p '------------------------------Categories created-----------------------------
   email: 'jaan@nationall.eu',
   password: 'allnations',
   bio: 'Software developer, music producer, amateur photographer and all the other things I find interesting at a time.',
-  picture: 'https://cdn-images-1.medium.com/fit/c/200/200/1*SBVHLWYuusq0tbCJvGkjhA.jpeg',
+  picture: 'https://image.ibb.co/khkkYS/image6.gif',
   emotion_pref: 1,
   temperature_pref: 3
   },
@@ -137,7 +148,7 @@ p '------------------------------Categories created-----------------------------
   email: 'david@nationall.eu',
   password: 'allnations',
   bio: 'UX Designer, Warsaw, Poland',
-  picture: 'https://cdn-images-1.medium.com/fit/c/200/200/1*2y2CM3Eaql3-ueKecbEWuA.jpeg',
+  picture: 'https://image.ibb.co/hWMg7n/image7.gif',
   emotion_pref: 1,
   temperature_pref: 3
   },
@@ -148,7 +159,7 @@ p '------------------------------Categories created-----------------------------
   email: 'ania@nationall.eu',
   password: 'allnations',
   bio: 'Image Consultant living in Brooklyn, New York',
-  picture: 'https://pbs.twimg.com/profile_images/750215158/chicago_400x400.jpg',
+  picture: 'https://image.ibb.co/nuTiL7/image8.gif',
   emotion_pref: 1,
   temperature_pref: 3
   },
@@ -159,7 +170,7 @@ p '------------------------------Categories created-----------------------------
   email: 'martin@nationall.eu',
   password: 'allnations',
   bio: 'Independent thoughts on politics, economics, and other current events',
-  picture: 'https://cdn-images-1.medium.com/fit/c/200/200/1*IhlAFAsaccCEC3xWHkBweQ.jpeg',
+  picture: 'https://image.ibb.co/dRyTnn/image9.gif',
   emotion_pref: 1,
   temperature_pref: 3
   },
@@ -170,18 +181,18 @@ p '------------------------------Categories created-----------------------------
   email: 'vero@nationall.eu',
   password: 'allnations',
   bio: 'A dietetics passionate dentist.',
-  picture: 'https://cdn-images-1.medium.com/fit/c/200/200/1*xrXkSYm69PaRNKA9eLxzGA.jpeg',
+  picture: 'https://image.ibb.co/dNCcf7/image13.gif',
   emotion_pref: 1,
   temperature_pref: 2
   },
    {
   first_name: 'James',
   last_name: 'Holland',
-  city: 'Brussels, Belgium',
+  city: 'Copenhagen, Denmark',
   email: 'james@nationall.eu',
   password: 'allnations',
   bio: 'EU & Foreign Policy Geek. Rational optimist. Blockchain enthusiast. Franco-Belgo-Brit. Former @DanielJHannan advisor.',
-  picture: 'https://cdn-images-1.medium.com/fit/c/200/200/1*QeDIXcibvhUs_0DfXUkIJg.jpeg',
+  picture: 'https://image.ibb.co/gzqkYS/image14.gif',
   emotion_pref: 1,
   temperature_pref: 2
   },
@@ -192,7 +203,7 @@ p '------------------------------Categories created-----------------------------
   email: 'alex@nationall.eu',
   password: 'allnations',
   bio: 'Founder of Nationall. I\'m also found of flowers.',
-  picture: 'https://avatars1.githubusercontent.com/u/35156075?s=400&v=4',
+  picture: 'https://image.ibb.co/jeKOL7/image12.gif',
   emotion_pref: 1,
   temperature_pref: 4
   },
@@ -203,7 +214,7 @@ p '------------------------------Categories created-----------------------------
   email: 'india@nationall.eu',
   password: 'allnations',
   bio: 'A contributor to titles including Vogue, the Guardian, KEIN, Rollacoaster, Wonderland and Twin magazine, India Doyle joined Culture Trip to help launch their fashion section for the EMEA region, where she focussed on giving emerging designers across the globe a platform to reach international audiences.',
-  picture: 'https://0.gravatar.com/avatar/01b7471f0d81534d1ff50e5627a6ec16?s=144&d=https://cdn.theculturetrip.com/logo/logo50.png&r=g',
+  picture: 'https://image.ibb.co/dqYTnn/image11.gif',
   emotion_pref: 1,
   temperature_pref: 4
   },
@@ -214,7 +225,7 @@ p '------------------------------Categories created-----------------------------
   email: 'lucas@nationall.eu',
   password: 'allnations',
   bio: 'Percussionist in Vienna, regularly with: Vienna Philharmonic, Vienna state and popular opera, the Vienna Tonkünstler orchestra…Member of Louie’s Cage Percussion.',
-  picture: 'https://cdn-images-1.medium.com/fit/c/200/200/1*UrPaUI5gJR9SoA80oP6CHA.jpeg',
+  picture: 'https://image.ibb.co/f0BESn/imgae10.gif',
   emotion_pref: 2,
   temperature_pref: 2
   },
@@ -225,7 +236,7 @@ p '------------------------------Categories created-----------------------------
   email: 'peter@nationall.eu',
   password: 'allnations',
   bio: 'Activist & Web Consultant — http://petterjoelson.com',
-  picture: 'https://cdn-images-1.medium.com/fit/c/200/200/1*c4_gKU_HFaW5_MGK_BUiGA.jpeg',
+  picture: 'https://image.ibb.co/cAmHDS/image15.gif',
   emotion_pref: 2,
   temperature_pref: 3
   },
@@ -236,7 +247,7 @@ p '------------------------------Categories created-----------------------------
   email: 'lorene@nationall.eu',
   password: 'allnations',
   bio: 'BUSINESS WOMAAAAAAN',
-  picture: 'https://avatars1.githubusercontent.com/u/33373707?s=460&v=4',
+  picture: 'https://image.ibb.co/gRxeSn/image16.gif',
   emotion_pref: 2,
   temperature_pref: 3
   },
@@ -247,7 +258,7 @@ p '------------------------------Categories created-----------------------------
   email: 'john@nationall.eu',
   password: 'allnations',
   bio: 'European & Latin American History, Minority/Endangered Languages, Ethnography, Culture - www.istoria.life',
-  picture: 'https://cdn-images-1.medium.com/fit/c/200/200/1*6HjfQtMbu6JX_IT_QOFPjg.jpeg',
+  picture: 'https://image.ibb.co/eOFYnn/image17.gif',
   emotion_pref: 2,
   temperature_pref: 1
   },
@@ -258,7 +269,7 @@ p '------------------------------Categories created-----------------------------
   email: 'eric@nationall.eu',
   password: 'allnations',
   bio: 'Blockchain advocate',
-  picture: 'https://cdn-images-1.medium.com/fit/c/200/200/1*o_WrAV3fhevasmF-_1hzaQ.jpeg',
+  picture: 'https://image.ibb.co/jmOa07/image18.gif',
   emotion_pref: 1,
   temperature_pref: 1
   }])
@@ -307,7 +318,7 @@ user_id: User.find_by_first_name("John").id,
 publishing_date: Date.parse("2017-10-09")
 },
 {
-title: "Is Brussels courting the idea of reversing the referendum result?",
+title: "Is Brussels courting the idea of reversing the refere...",
 subtitle: "Swaying Brexit ",
 summary: "As Britain tumbles out of Europe, it is sadly fitting that an enterprise we once helped to prop up should also be disappearing over the horizon.",
 content: "<p></p><p>Michel Barnier’s decision to meet with a trio of elite Remainers today is ill-advised and the latest in a series of affronts directed at the British government. </p><p><br></p><p>The meeting — with former Lib Dem leader Nick Clegg, former Conservative Chancellor Ken Clarke and the Labour peer Lord Adonis — has lead to accusations that the three politicians are trying to undermine the Brexit process — a move that could further delay progress in negotiations. </p><p><br></p><p>Mr Barnier’s decision to welcome the men could also deepen divisions in the UK’s negotiating stance — something Brussels has been complaining about since negotiations began. </p><p><br></p><p>EU officials defended the decision, saying that Mr Barnier’s ‘door was always open for people who want to speak to him and his team across the political spectrum and from all walks of life.</p><p><br></p><p>But holding this meeting with three vocal critics of the vote to leave the EU comes quick on the heels of a number of other questionable moves made by the EU Commission in recent months that have undermined Prime Minster Theresa May’s government. </p><p><br></p><p>During the third round of negotiations in Brussels this August, a meeting and photo opportunity between Mr Juncker and former Labour Prime Minister Tony Blair was organised in the same building that negotiations were taking place. </p><p><br></p><p>Then, two week ago, hours before May was to meet with her 27 counterparts at a crucial EU Council in Brussels, Jeremy Corbyn was given a standing ovation by the EU socialist grouping in the European Parliament after meeting with Mr Barnier for the second time in a matter of months. </p><p><br></p><p>Mr Barnier has also met with Shadow Brexit Secretary Keir Starmer twice and held meetings with the leaders of the UK’s devolved Welsh and Scottish assemblies. </p><p><br></p><p>The British government was then left flabbergasted when a damaging account of a dinner in Number 10 between Mr Juncker and Mrs May was released to the German newspaper FAZ. </p><p><br></p><p>Then — to add insult to injury — comments on a second confidential discussions held in Brussels on 16 November between the pair were again leaked to the same newspaper. </p><p><br></p><p>There is a growing belief in London — as well as other European capitals — that Juncker’s inner circle is actively trying to undermine the British government in order to weaken their hand in negotiations with Brussels. </p><p><br></p><p>A senior Berlin source told The Times shortly after this second leak that ‘Angela Merkel is furious at these reports. It is known that she has lost patience with the British Conservatives but the last thing she wants is for Theresa May to be replaced in the middle of the Brexit negotiations.</p><p><br></p><p>The UK could excuse one, or two, such slip-ups. </p><p><br></p><p>But in the EU capital, where manners and appearances are everything, these thinly-veiled attempts to weaken the UK government at a time of such instability on both sides of the Channel is dangerous. </p><p><br></p><p>The Telegraph’s Brussels correspondent, James Crisp, has now reported that the trio also met with EU Financial Affairs Commissioner Pierre Moscovici this afternoon. </p><p><br></p><p>I doubt much detail will be divulged from today’s meetings — the British PM wasn’t invited, after all. </p><p><br></p><p>But it will be interesting to watch what manoeuvres the three Remainers and their close political allies will now carry out in the days to come.</p><p></p>",
@@ -481,6 +492,21 @@ p 'Creating Opinions'
   content: 'This article is so inspiring but lacks details.',
   user_id: User.find_by_first_name("Peter").id,
   article_id: Article.first.id
+  },
+  {
+  content: 'This all referendum was a mistake.',
+  user_id: User.find_by_first_name("Peter").id,
+  article_id: Article.find_by_title("The Story of a Collaborative Referendum").id
+  },
+  {
+  content: 'Has this organisation been inspired by anyone else in history?',
+  user_id: User.find_by_first_name("Mariona").id,
+  article_id: Article.find_by_title("The Story of a Collaborative Referendum").id
+  },
+  {
+  content: "This article is super interesting but I'd love more details!",
+  user_id: User.find_by_first_name("Anna").id,
+  article_id: Article.find_by_title("The Story of a Collaborative Referendum").id
   }])
 
 p opinions
@@ -520,22 +546,22 @@ p 'Creating Reviews'
         {
     rating: 1,
     user_id: User.find_by_first_name("Lucas").id,
-    article_id: Article.find_by_title("Why is the Left losing in Germany?").id,
-    emotion: 1,
+    article_id: Article.find_by_title("The Story of a Collaborative Referendum").id,
+    emotion: 2,
     temperature: 2
     },
         {
     rating: 5,
     user_id: User.find_by_first_name("Anna").id,
     article_id: Article.find_by_title("Greece’s Odyssey for Sustainable Fashion").id,
-    emotion: 1,
+    emotion: 2,
     temperature: 2
     },
     {
     rating: 3,
     user_id: User.find_by_first_name("Mariona").id,
     article_id: Article.find_by_title("A ridiculous way to create 135 art pieces in one weekend.").id,
-    emotion: 1,
+    emotion: 2,
     temperature: 2
     },
         {
@@ -556,7 +582,7 @@ p 'Creating Reviews'
     rating: 4,
     user_id: User.find_by_first_name("John").id,
     article_id: Article.find_by_title("Police violence in Catalonia").id,
-    emotion: 2,
+    emotion: 1,
     temperature: 4
     }])
 
