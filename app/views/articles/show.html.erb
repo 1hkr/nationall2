@@ -88,7 +88,7 @@
             <p> <%= @article.category.name.upcase %></p>
         <!-- Average Rating -->
         <% if @avg_rating %>
-          <ul class="list-inline top-right">
+          <ul class="list-inline show-star-top-right">
             <% @avg_rating.times do %>
               <li class="list-inline-item"><i class="fas fa-star" style="color:#EDB867"></i></li>
             <% end %>
