@@ -547,21 +547,21 @@ p 'Creating Reviews'
     rating: 1,
     user_id: User.find_by_first_name("Lucas").id,
     article_id: Article.find_by_title("The Story of a Collaborative Referendum").id,
-    emotion: 1,
+    emotion: 2,
     temperature: 2
     },
         {
     rating: 5,
     user_id: User.find_by_first_name("Anna").id,
     article_id: Article.find_by_title("Greece’s Odyssey for Sustainable Fashion").id,
-    emotion: 1,
+    emotion: 2,
     temperature: 2
     },
     {
     rating: 3,
     user_id: User.find_by_first_name("Mariona").id,
     article_id: Article.find_by_title("A ridiculous way to create 135 art pieces in one weekend.").id,
-    emotion: 1,
+    emotion: 2,
     temperature: 2
     },
         {
@@ -582,7 +582,7 @@ p 'Creating Reviews'
     rating: 4,
     user_id: User.find_by_first_name("John").id,
     article_id: Article.find_by_title("Police violence in Catalonia").id,
-    emotion: 2,
+    emotion: 1,
     temperature: 4
     }])
 
