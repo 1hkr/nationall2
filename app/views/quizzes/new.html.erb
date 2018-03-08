@@ -6,9 +6,10 @@
         <!-- Articles informations -->
         <div class="article-text">
           <div class="row">
-            <div class="col-xs-12 col-sm-6 col-lg-8 col-sm-offset-3 col-lg-offset-2 align-h bottomize space-between" id="quizz-title">
-            <h1>Take our quizz</h1>
-            <h2 class="link_thin"><%= link_to 'Back', articles_path %></h2>
+            <div class="col-xs-12 col-sm-6 col-lg-8 col-sm-offset-3 col-lg-offset-2" id="quizz-title">
+            <h3>Quizz Nationall</h3>
+            <p>Customize your feed</p>
+
             </div>
           </div>
 
@@ -36,8 +37,9 @@
                       <% end %>
                   </div>
                  </div>
-
-              <%= f.submit "Next >", class: "btn-blue" %>
+              <div class="left-btn">
+                <%= f.submit "Next >", class: "btn-blue" %>
+              </div>
               <% end %>
             </div>
           </div>
@@ -92,7 +94,10 @@
                   </div>-->
                 </div>
               </div>
-              <%= f.submit "Next >", class: "btn btn-blue" %>
+              <div class="left-btn">
+                <%= f.submit "Next >", class: "btn btn-blue" %>
+              </div>
+
               <% end %>
             </div>
           </div>
@@ -139,7 +144,10 @@
               </div>
             </div>
 
-            <%= f.submit "Done >", class: "btn-blue" %>
+            <div class="left-btn">
+              <%= f.submit "Done >", class: "btn-blue" %>
+            </div>
+
             <% end %>
           </div>
         </div>
