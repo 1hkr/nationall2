@@ -42,7 +42,6 @@
           <h4>Bio</h4>
           <p> <%= @article.user.bio %></p>
         </div>
-        <hr>
 
         <% if user_signed_in? && donation = Donation.find_by(user_id: current_user.id, article_id: @article.id) %>
         <div>
@@ -83,7 +82,7 @@
             <p> <%= @article.category.name.upcase %></p>
         <!-- Average Rating -->
         <% if @avg_rating %>
-          <ul class="list-inline top-right">
+          <ul class="list-inline show-star-top-right">
             <% @avg_rating.times do %>
               <li class="list-inline-item"><i class="fas fa-star" style="color:#EDB867"></i></li>
             <% end %>

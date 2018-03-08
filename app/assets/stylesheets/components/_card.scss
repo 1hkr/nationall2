@@ -4,11 +4,13 @@
   background-size: cover !important;
   background-position: center;
   color: white;
+  background: rgb(252,252,252);
   overflow: hidden;
 }
 
 .card-container {
   margin-bottom: 30px;
+  background: rgb(252,252,252);
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
 }
 
@@ -23,6 +25,7 @@
   min-height: 185px;
   background: rgb(252,252,252);
   transition-duration: 0.4s;
+
   &:hover {
     transform: translateY(-25%);
     transition-duration: 0.4s;
@@ -31,6 +34,13 @@
 
 .top-right {
   margin-top: 3px;
+  position: absolute;
+  right: 10px;
+  top: 0px;
+}
+
+.show-star-top-right {
+  margin-top: -1px;
   position: absolute;
   right: 10px;
   top: 0px;
