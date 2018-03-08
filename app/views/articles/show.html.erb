@@ -67,7 +67,7 @@
           </div>
           <% end %>
           <h4> Support independent writing</h4>
-          <%= button_tag(type: 'submit', class: "btn-blue") do %>
+          <%= button_tag(type: 'submit', class: "btn-blue-border") do %>
           Donate to <%= @article.user.first_name %>
           <% end %>
         </div>
@@ -190,11 +190,11 @@
       <div class="buttons">
 
         <% if policy(@article).edit? %>
-        <%= link_to "Edit", edit_article_path(@article), class: "btn-gray" %>
+        <%= link_to "Edit", edit_article_path(@article), class: "btn-blue-border" %>
         <% end %>
 
         <% if policy(@article).destroy? %>
-        <%= link_to "Delete", article_path(@article), class: "btn-gray", method: :delete, data: { confirm: "Are you sure?"} %>
+        <%= link_to "Delete", article_path(@article), class: "btn-blue-border", method: :delete, data: { confirm: "Are you sure?"} %>
         <% end %>
 
       </div>
