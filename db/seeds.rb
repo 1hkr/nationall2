@@ -287,7 +287,7 @@ picture: 'https://cdn-images-1.medium.com/max/1600/1*1Kjxg36-D3pOVMgu8H2TCA.jpeg
 category_id: Category.find_by_name("Business & Tech").id,
 user_id: User.find_by_first_name("Anna").id,
 publishing_date: Date.parse("2017-11-13"),
-avg_rating: 3
+avg_rating: 4
 },
 {
   title: "On the chase of abandoned buildings and autumn colours.",
@@ -309,7 +309,7 @@ content: "<p></p><p>Today, you can barely understand what’s really going on in
   category_id: Category.find_by_name("Politics").id,
   user_id: User.find_by_first_name("Eric").id,
   publishing_date: Date.parse("2017-11-08"),
-avg_rating: 3
+avg_rating: 5
 },
 {
 title: "A Forgotten Greece: The Pomakochoria",
@@ -320,7 +320,7 @@ picture: 'https://cdn-images-1.medium.com/max/2000/1*NTaK3agsNiPvJ2San_3FQQ.jpeg
 category_id: Category.find_by_name("Politics").id,
 user_id: User.find_by_first_name("John").id,
 publishing_date: Date.parse("2017-10-09"),
-avg_rating: 3
+avg_rating: 4
 },
 {
 title: "Brussels: the idea of reversing the referendum",
@@ -331,7 +331,7 @@ picture: 'https://cdn-images-1.medium.com/max/1600/1*nxJF8P4hUJuw2WQzuN7Ryg.jpeg
 category_id: Category.find_by_name("Politics").id,
 user_id: User.find_by_first_name("James").id,
 publishing_date: Date.parse("2017-10-30"),
-avg_rating: 3
+avg_rating: 2
 },
 {
 title: "Running out of steam",
@@ -342,7 +342,7 @@ picture: 'https://cdn-images-1.medium.com/max/1600/1*CJiJoeaquCUD0i5BwM6dWA.jpeg
 category_id: Category.find_by_name("Europe").id,
 user_id: User.find_by_first_name("Takahiko").id,
 publishing_date: Date.parse("2017-10-30"),
-avg_rating: 3
+avg_rating: 2
 },
 {
 title: "E. Macron’s plans to break nations’ borders.",
@@ -353,7 +353,7 @@ picture: 'https://cdn-images-1.medium.com/max/2000/1*17DLR3Zxj76Pg7zEQ2dKqQ.jpeg
 category_id: Category.find_by_name("Politics").id,
 user_id: User.find_by_first_name("Alexandre").id,
 publishing_date: Date.parse("2017-10-03"),
-avg_rating: 3
+avg_rating: 5
 },
 {
 title: "Austrian recipe: Kaiserschmarn",
@@ -386,7 +386,7 @@ picture: 'https://cdn-images-1.medium.com/max/2000/1*TPH5ymetBU1yr3-umomeXA.jpeg
 category_id: Category.find_by_name("Europe").id,
 user_id: User.find_by_first_name("Ruairi").id,
 publishing_date: Date.parse("2017-10-04"),
-avg_rating: 3
+avg_rating: 4
 },
 {
 title: "Bank Account to open in Europe for freelancers",
@@ -397,7 +397,7 @@ picture: 'https://cdn-images-1.medium.com/max/1600/1*Q5ghbFepbFoFco5awQT21w.jpeg
 category_id: Category.find_by_name("Europe").id,
 user_id: User.find_by_first_name("Lorène").id,
 publishing_date: Date.parse("2017-10-04"),
-avg_rating: 3
+avg_rating: 4
 },
 {
 title: "Here's how to take drugs",
@@ -408,7 +408,7 @@ picture: 'https://cdn-images-1.medium.com/max/1000/1*P25knMhItPn-X1MrcizlAw.jpeg
 category_id: Category.find_by_name("Lifestyle").id,
 user_id: User.find_by_first_name("Lena").id,
 publishing_date: Date.parse("2017-10-04"),
-avg_rating: 3
+avg_rating: 5
 },
 {
 title: "Theresa May’s Pivotal Florence Speech",
@@ -419,7 +419,7 @@ picture: 'https://cdn-images-1.medium.com/max/1600/1*uiMOmu_iM0Ut17txHNzd1A.jpeg
 category_id: Category.find_by_name("Politics").id,
 user_id: User.find_by_first_name("Martin").id,
 publishing_date: Date.parse("2017-06-19"),
-avg_rating: 3
+avg_rating: 2
 },
 {
 title: "NEWS TO BREAK BORDERS",
@@ -441,7 +441,7 @@ picture: 'https://cdn-images-1.medium.com/max/2000/1*mCAeFNv4Z4tVo7sHeHroog.jpeg
 category_id: Category.find_by_name("Fashion").id,
 user_id: User.find_by_first_name("India").id,
 publishing_date: Date.parse("2017-05-08"),
-avg_rating: 3
+avg_rating: 5
 },
 {
 title: "Why is the Left losing in Germany?",
@@ -453,7 +453,7 @@ picture: 'https://www.youtube.com/embed/RvtqPYggCV4',
 category_id: Category.find_by_name("Politics").id,
 user_id: User.find_by_first_name("Peter").id,
 publishing_date: Date.parse("2017-09-26"),
-avg_rating: 3
+avg_rating: 2
 },
 {
   title: "Food for health #5",
@@ -464,10 +464,10 @@ picture: 'https://cdn-images-1.medium.com/max/2000/1*UffYrLHKuVvwSrWSZWYKyQ.jpeg
 category_id: Category.find_by_name("Business & Tech").id,
 user_id: User.find_by_first_name("Véronique").id,
 publishing_date: Date.parse("2017-09-26"),
-avg_rating: 3
+avg_rating: 5
 },
 {
-  title: "How to create 135 art pieces in one weekend.",
+  title: "How to create 135 art pieces in one weekend",
   subtitle: "From garage doors to art pieces.",
   summary: "Himalajska (himalayan) street in Warsaw, Poland is a short (slightly less than 1 km long) street which has nothing to offer but a shitload of garages. My friend @bartekchlebek told me about the place. He and his girlfriend stumbled upon it while urban hiking. He invited me for a similar hike and was excited to go there again. When we finally went I understood why. What is really fascinating about this place that is that almost each garage door is painted in a different color.",
   content: "<p></p><p>Himalajska (himalayan) street in Warsaw, Poland is a short (slightly less than 1 km long) street which has nothing to offer but a shitload of garages. My friend&nbsp;<a href='https://twitter.com/bartekchlebek' target='_blank' style='color: inherit;'>@bartekchlebek</a>&nbsp;told me about the place. He and his girlfriend stumbled upon it while urban hiking. He invited me for a similar hike and was excited to go there again. When we finally went I understood why. What is really fascinating about this place that is that almost each garage door is painted in a different color.</p><p><br></p><p>Each owner chose the color he liked. There was clearly no collective effort to keep any visual consistency. It’s rather a beauty contest.</p><p>It’s also super clear which garages are used and which are not. Some of them are neat, others clearly neglected.</p><p>I didn’t do any extensive research of the history of this place, but found out that it is somehow connected to&nbsp;<a href='https://en.wikipedia.org/wiki/Warsaw_Babice_Airport' target='_blank' style='color: inherit;'>Babice Airport</a>&nbsp;that lays nearby and has it’s military past.</p><p><br></p><h3>Photoshoot</h3><p>I became inspired by the rich palette of these otherwise identical objects. I was struck by the idea to photograph each of the garage door and use them as large pixels. The idea was to write a computer program that will sort the colors and produce transition.</p><p><br></p><p>I visited the place 3 times during a weekend to take photos. Not that it took so much time. I just didn't’ want any harsh shadows on the garage doors, so went there in different times of the day to compare the lighting. I also went to shoot some closeups and details.</p><p><br></p><p>In the end I photographed 135 garages, which is not even a half of what’s there. I didn’t want to use garages with wooden doors. Also some metal door garages are positioned in a way that always produces harsh shadows.&nbsp;</p><p><br></p><p>Anyways… the easy part was over. Now was the time to write a program.</p><p><br></p><p>By the way… I’m not a software developer. I decided to learn Action Script 3 and gained some proficiency literally moments before the technology died. I still use Flash to build some tools for my personal projects.</p><p><br></p><h3>Sorting colors</h3><p>I put my photos aside and started figuring out color sorting. I didn’t realise the complexity of the problem. I found a&nbsp;<a href='http://www.alanzucconi.com/2015/09/30/colour-sorting/' target='_blank' style='color: inherit;'>great article</a>&nbsp;about it by Alan Zucconi. I did not analyse the Python examples, but the article gave me a good theoretical base to start with my own experiments.</p><p><br></p><p>At the same moment I realised that ages ago I’ve researched the way Magic Wand in photoshop works and shared it on the user group. I knew I could use that knowledge to produce my algorithm for sorting.</p><p><br></p><p>What Magic wand does is select the area of pixels which colors are similar to a sampled pixel. The similarity of selected colors is described by a Tolerance property.</p><p><br></p><p>I googled for my post describing the maths behind that tool and found it. It was posted in May 2005.</p><p>I learned that the difference in color value is measured for each channel.</p><p><br></p><pre spellcheck='false'>var dR:int = r0 - r1
@@ -479,7 +479,7 @@ picture: 'https://cdn-images-1.medium.com/max/2000/1*pMzb_tx7Tm8WJoBBDHoMQw.jpeg
 category_id: Category.find_by_name("Arts").id,
 user_id: User.find_by_first_name("Dawid").id,
 publishing_date: Date.parse("2017-09-26"),
-avg_rating: 3
+avg_rating: 4
 },
 {
   title: "Police violence in Catalonia",
@@ -580,7 +580,7 @@ p 'Creating Reviews'
     {
     rating: 3,
     user_id: User.find_by_first_name("Mariona").id,
-    article_id: Article.find_by_title("A ridiculous way to create 135 art pieces in one weekend.").id,
+    article_id: Article.find_by_title("How to create 135 art pieces in one weekend").id,
     emotion: 2,
     temperature: 2
     },
