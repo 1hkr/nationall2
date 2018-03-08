@@ -2,6 +2,27 @@
   margin-top: 0px;
 }
 
+#quizz-title {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  h3 {
+    background: linear-gradient(to right, #85D8CE, #085078);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 0px;
+  }
+  p {
+    background: linear-gradient(to right, #85D8CE, #085078);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.left-btn {
+  display: flex;
+  justify-content: flex-end;
+}
 // Checkboxes design for CATEGORIES
 .choices {
   display: flex;
