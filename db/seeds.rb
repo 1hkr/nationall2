@@ -71,7 +71,7 @@ p '------------------------------Categories created-----------------------------
   email: 'anna@nationall.eu',
   password: 'allnations',
   bio: 'Becoming a journalist in @UPFBarcelona. Specialized in Politics. Working for Nationall. Collaborations in @elpuntavui, @beteve, @VilaWeb i @beteve91fm.',
-  picture: 'https://cdn-images-1.medium.com/fit/c/200/200/0*t-c5HhQLunv11cqO.jpg',
+  picture: 'https://image.ibb.co/dULoL7/image.gif',
   emotion_pref: 1,
   temperature_pref: 3
   },
@@ -82,7 +82,7 @@ p '------------------------------Categories created-----------------------------
   email: 'fernando@nationall.eu',
   password: 'allnations',
   bio: 'Expert in politics',
-  picture: 'https://cdn-images-1.medium.com/fit/c/200/200/0*fdqXwxB_5lnqUhVG.jpeg',
+  picture: 'https://image.ibb.co/eo417n/image21.gif',
   emotion_pref: 1,
   temperature_pref: 3
   },
@@ -93,7 +93,7 @@ p '------------------------------Categories created-----------------------------
   email: 'lena@nationall.eu',
   password: 'allnations',
   bio: 'Content creator & social media consultant based in Copenhagen.',
-  picture: 'https://cdn-images-1.medium.com/fit/c/100/100/1*0lqXgKTGf7mb-vAzJjCumQ.png',
+  picture: 'https://image.ibb.co/mHfkYS/iage20.gif',
   emotion_pref: 1,
   temperature_pref: 3
   },
@@ -104,7 +104,7 @@ p '------------------------------Categories created-----------------------------
   email: 'mariona@nationall.eu',
   password: 'allnations',
   bio: 'Becoming a journalist in @UPFBarcelona. Specialized in Politics. Working for Nationall. Collaborations in @elpuntavui, @beteve, @VilaWeb i @beteve91fm.',
-  picture: 'https://cdn-images-1.medium.com/fit/c/100/100/1*_ZvMrEJnFkBl_C6HUNGRkQ.jpeg',
+  picture: 'https://image.ibb.co/kmFf07/image3.gif',
   emotion_pref: 1,
   temperature_pref: 4
   },
@@ -115,7 +115,7 @@ p '------------------------------Categories created-----------------------------
   email: 'taka@nationall.eu',
   password: 'allnations',
   bio: 'Corporate consultant for well being and care in the workplace',
-  picture: 'https://avatars1.githubusercontent.com/u/31583151?s=460&v=4',
+  picture: 'https://image.ibb.co/icW3L7/image4.gif',
   emotion_pref: 1,
   temperature_pref: 3
   },
@@ -126,7 +126,7 @@ p '------------------------------Categories created-----------------------------
   email: 'ruairi@nationall.eu',
   password: 'allnations',
   bio: 'Irish; Interested in Politics, Technology & Culture; Believer in Open Societies & Markets; Bibliophile; Hibs Fan',
-  picture: 'https://cdn-images-1.medium.com/fit/c/200/200/1*U8uDC_YGSt2sIwalVJm-CA.jpeg',
+  picture: 'https://image.ibb.co/eJ4OL7/image2.gif',
   emotion_pref: 1,
   temperature_pref: 3
   },
@@ -137,7 +137,7 @@ p '------------------------------Categories created-----------------------------
   email: 'jaan@nationall.eu',
   password: 'allnations',
   bio: 'Software developer, music producer, amateur photographer and all the other things I find interesting at a time.',
-  picture: 'https://cdn-images-1.medium.com/fit/c/200/200/1*SBVHLWYuusq0tbCJvGkjhA.jpeg',
+  picture: 'https://image.ibb.co/khkkYS/image6.gif',
   emotion_pref: 1,
   temperature_pref: 3
   },
@@ -148,7 +148,7 @@ p '------------------------------Categories created-----------------------------
   email: 'david@nationall.eu',
   password: 'allnations',
   bio: 'UX Designer, Warsaw, Poland',
-  picture: 'https://cdn-images-1.medium.com/fit/c/200/200/1*2y2CM3Eaql3-ueKecbEWuA.jpeg',
+  picture: 'https://image.ibb.co/hWMg7n/image7.gif',
   emotion_pref: 1,
   temperature_pref: 3
   },
@@ -159,7 +159,7 @@ p '------------------------------Categories created-----------------------------
   email: 'ania@nationall.eu',
   password: 'allnations',
   bio: 'Image Consultant living in Brooklyn, New York',
-  picture: 'https://pbs.twimg.com/profile_images/750215158/chicago_400x400.jpg',
+  picture: 'https://image.ibb.co/nuTiL7/image8.gif',
   emotion_pref: 1,
   temperature_pref: 3
   },
@@ -170,7 +170,7 @@ p '------------------------------Categories created-----------------------------
   email: 'martin@nationall.eu',
   password: 'allnations',
   bio: 'Independent thoughts on politics, economics, and other current events',
-  picture: 'https://cdn-images-1.medium.com/fit/c/200/200/1*IhlAFAsaccCEC3xWHkBweQ.jpeg',
+  picture: 'https://image.ibb.co/dRyTnn/image9.gif',
   emotion_pref: 1,
   temperature_pref: 3
   },
@@ -181,7 +181,7 @@ p '------------------------------Categories created-----------------------------
   email: 'vero@nationall.eu',
   password: 'allnations',
   bio: 'A dietetics passionate dentist.',
-  picture: 'https://cdn-images-1.medium.com/fit/c/200/200/1*xrXkSYm69PaRNKA9eLxzGA.jpeg',
+  picture: 'https://image.ibb.co/dNCcf7/image13.gif',
   emotion_pref: 1,
   temperature_pref: 2
   },
@@ -192,7 +192,7 @@ p '------------------------------Categories created-----------------------------
   email: 'james@nationall.eu',
   password: 'allnations',
   bio: 'EU & Foreign Policy Geek. Rational optimist. Blockchain enthusiast. Franco-Belgo-Brit. Former @DanielJHannan advisor.',
-  picture: 'https://cdn-images-1.medium.com/fit/c/200/200/1*QeDIXcibvhUs_0DfXUkIJg.jpeg',
+  picture: 'https://image.ibb.co/f0BESn/imgae10.gif',
   emotion_pref: 1,
   temperature_pref: 2
   },
@@ -203,7 +203,7 @@ p '------------------------------Categories created-----------------------------
   email: 'alex@nationall.eu',
   password: 'allnations',
   bio: 'Founder of Nationall. I\'m also found of flowers.',
-  picture: 'https://avatars1.githubusercontent.com/u/35156075?s=400&v=4',
+  picture: 'https://image.ibb.co/jeKOL7/image12.gif',
   emotion_pref: 1,
   temperature_pref: 4
   },
@@ -214,7 +214,7 @@ p '------------------------------Categories created-----------------------------
   email: 'india@nationall.eu',
   password: 'allnations',
   bio: 'A contributor to titles including Vogue, the Guardian, KEIN, Rollacoaster, Wonderland and Twin magazine, India Doyle joined Culture Trip to help launch their fashion section for the EMEA region, where she focussed on giving emerging designers across the globe a platform to reach international audiences.',
-  picture: 'https://0.gravatar.com/avatar/01b7471f0d81534d1ff50e5627a6ec16?s=144&d=https://cdn.theculturetrip.com/logo/logo50.png&r=g',
+  picture: 'https://image.ibb.co/dqYTnn/image11.gif',
   emotion_pref: 1,
   temperature_pref: 4
   },
@@ -225,7 +225,7 @@ p '------------------------------Categories created-----------------------------
   email: 'lucas@nationall.eu',
   password: 'allnations',
   bio: 'Percussionist in Vienna, regularly with: Vienna Philharmonic, Vienna state and popular opera, the Vienna Tonkünstler orchestra…Member of Louie’s Cage Percussion.',
-  picture: 'https://cdn-images-1.medium.com/fit/c/200/200/1*UrPaUI5gJR9SoA80oP6CHA.jpeg',
+  picture: 'https://image.ibb.co/gzqkYS/image14.gif',
   emotion_pref: 2,
   temperature_pref: 2
   },
@@ -236,7 +236,7 @@ p '------------------------------Categories created-----------------------------
   email: 'peter@nationall.eu',
   password: 'allnations',
   bio: 'Activist & Web Consultant — http://petterjoelson.com',
-  picture: 'https://cdn-images-1.medium.com/fit/c/200/200/1*c4_gKU_HFaW5_MGK_BUiGA.jpeg',
+  picture: 'https://image.ibb.co/cAmHDS/image15.gif',
   emotion_pref: 2,
   temperature_pref: 3
   },
@@ -247,7 +247,7 @@ p '------------------------------Categories created-----------------------------
   email: 'lorene@nationall.eu',
   password: 'allnations',
   bio: 'BUSINESS WOMAAAAAAN',
-  picture: 'https://avatars1.githubusercontent.com/u/33373707?s=460&v=4',
+  picture: 'https://image.ibb.co/gRxeSn/image16.gif',
   emotion_pref: 2,
   temperature_pref: 3
   },
@@ -258,7 +258,7 @@ p '------------------------------Categories created-----------------------------
   email: 'john@nationall.eu',
   password: 'allnations',
   bio: 'European & Latin American History, Minority/Endangered Languages, Ethnography, Culture - www.istoria.life',
-  picture: 'https://cdn-images-1.medium.com/fit/c/200/200/1*6HjfQtMbu6JX_IT_QOFPjg.jpeg',
+  picture: 'https://image.ibb.co/eOFYnn/image17.gif',
   emotion_pref: 2,
   temperature_pref: 1
   },
@@ -269,7 +269,7 @@ p '------------------------------Categories created-----------------------------
   email: 'eric@nationall.eu',
   password: 'allnations',
   bio: 'Blockchain advocate',
-  picture: 'https://cdn-images-1.medium.com/fit/c/200/200/1*o_WrAV3fhevasmF-_1hzaQ.jpeg',
+  picture: 'https://image.ibb.co/jmOa07/image18.gif',
   emotion_pref: 1,
   temperature_pref: 1
   }])
