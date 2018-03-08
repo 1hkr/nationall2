@@ -13,6 +13,9 @@ function removeForm() {
 function addReview(reviewHTML) {
   const reviews = document.getElementById('reviews');
   reviews.insertAdjacentHTML('afterbegin', reviewHTML);
+  if ('<%= @article.reviews.count %>' == 1) {
+    reviews.insertAdjacentHTML('afterbegin', "<hr><h4>Your review</h4>")
+  };
 }
 
 <% if @review.errors.any? %>

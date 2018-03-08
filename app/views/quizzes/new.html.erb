@@ -5,9 +5,12 @@
       <div class="card-article">
         <!-- Articles informations -->
         <div class="article-text">
-
-          <h1>Take our quizz</h1>
-
+          <div class="row">
+      <div class="col-xs-12 col-sm-6 col-lg-8 col-sm-offset-3 col-lg-offset-2 align-h bottomize space-between" id="quizz-title">
+        <h1>Take our quizz</h1>
+        <h2 class="link_thin"><%= link_to 'Back', articles_path %></h2>
+      </div>
+    </div>
 
 
    <!-- FORM FOR THE CATEGORIES-->
@@ -33,7 +36,7 @@
                   </div>
                  </div>
 
-              <%= f.submit "Next", class: "btn-blue" %>
+              <%= f.submit "Next >", class: "btn-blue" %>
               <% end %>
             </div>
           </div>
@@ -63,7 +66,7 @@
                   </div>
                 </div>
               </div>
-              <%= f.submit "Next", class: "btn-blue" %>
+              <%= f.submit "Next >", class: "btn btn-blue" %>
               <% end %>
             </div>
           </div>

@@ -157,7 +157,7 @@
       <!-- Add an opinion -->
       <% if user_signed_in? %>
         <hr>
-        <h4>Share your opinion</h4>
+        <h4>Share your opinion ></h4>
         <div id="new-opinion">
           <%= render 'opinions/form', article: @article, opinion: @opinion %>
         </div>
@@ -185,10 +185,6 @@
 
 
       <!-- End buttons -->
-
-      <div class="buttons">
-        <%= link_to "Back", articles_path, class: "btn-gray" %>
-      </div>
 
       <div class="buttons">
 
