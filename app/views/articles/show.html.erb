@@ -124,9 +124,9 @@
       <!-- Rate the article-->
       <% if user_signed_in? %>
         <% unless Review.where(article: @article, user: current_user)[0] %>
+          <div id="new-review-container">
             <hr>
             <h4>Rate the article</h4>
-          <div id="new-review-container">
             <div id="new-review">
               <%= render 'reviews/form', article: @article, review: @review %>
             </div>
@@ -137,7 +137,7 @@
       <!-- List of the reviews -->
       <% if @reviews.exists? %>
         <hr>
-        <h4>Every reviews</h4>
+        <h4>All reviews</h4>
         <div id="reviews">
           <% @reviews.reverse.each do |review| %>
           <%= render 'reviews/show', article: @article, review: review %>
@@ -157,7 +157,7 @@
       <!-- Add an opinion -->
       <% if user_signed_in? %>
         <hr>
-        <h4>Share your opinion</h4>
+        <h4>Share your opinion ></h4>
         <div id="new-opinion">
           <%= render 'opinions/form', article: @article, opinion: @opinion %>
         </div>
@@ -166,7 +166,7 @@
       <!-- List of opinions -->
       <% if @opinions.exists? %>
         <hr>
-        <h4>Every opinions</h4>
+        <h4>All opinions</h4>
         <div id="opinions">
           <% @opinions.reverse.each do |opinion| %>
           <%= render 'opinions/show', article: @article, opinion: opinion %>
@@ -185,10 +185,6 @@
 
 
       <!-- End buttons -->
-
-      <div class="buttons">
-        <%= link_to "Back", articles_path, class: "btn-gray" %>
-      </div>
 
       <div class="buttons">
 

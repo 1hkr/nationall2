@@ -1,8 +1,5 @@
-// Form design
-.form-post {
-  background: white;
-  padding: 20px;
-  border-radius: 5px;
+.article-text h1 {
+  margin-top: 0px;
 }
 
 // Checkboxes design for CATEGORIES
@@ -19,7 +16,7 @@
   height: 120px;
   width: 220px;
   margin-bottom: 10px;
-  border-radius: 1px;
+  border-radius: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,7 +40,10 @@
   width: 100%;
   margin-bottom: 10px;
   margin-right: 20px;
-  border-radius: 1px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  text-align:center;
   opacity: 0.5;
   &:hover {
     opacity: 1;
@@ -51,6 +51,7 @@
     box-shadow: -1px 1px 23px 0px #7b7b7b24;
   }
   &.active {
+  color: white;
   opacity: 1;
   box-shadow: -1px 1px 23px 0px #7b7b7b24;
   }
@@ -60,7 +61,11 @@
   height: 150px;
   width: 200px;
   margin-bottom: 10px;
-  border-radius: 1px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align:center;
   opacity: 0.5;
   &:hover {
     opacity: 1;
@@ -68,7 +73,7 @@
     box-shadow: -1px 1px 23px 0px #7b7b7b24;
   }
   &.active {
-  font-weight: bolder;
+  color: white;
   opacity: 1;
   box-shadow: -1px 1px 23px 0px #7b7b7b24;
   }
