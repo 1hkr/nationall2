@@ -1,5 +1,5 @@
 meta_product_name: "Nationall"
 meta_title: "Nationall - News to break borders"
 meta_description: "Nationall is a European newspaper written by locals"
-meta_image: "https://ibb.co/d0AcDS"                       # should exist in `app/assets/images/`
+meta_image: "meta_image.jpg"                       # should exist in `app/assets/images/`
 twitter_account: "@_Nationall"
