@@ -192,7 +192,7 @@ p '------------------------------Categories created-----------------------------
   email: 'james@nationall.eu',
   password: 'allnations',
   bio: 'EU & Foreign Policy Geek. Rational optimist. Blockchain enthusiast. Franco-Belgo-Brit. Former @DanielJHannan advisor.',
-  picture: 'https://image.ibb.co/f0BESn/imgae10.gif',
+  picture: 'https://image.ibb.co/gzqkYS/image14.gif',
   emotion_pref: 1,
   temperature_pref: 2
   },
@@ -225,7 +225,7 @@ p '------------------------------Categories created-----------------------------
   email: 'lucas@nationall.eu',
   password: 'allnations',
   bio: 'Percussionist in Vienna, regularly with: Vienna Philharmonic, Vienna state and popular opera, the Vienna Tonkünstler orchestra…Member of Louie’s Cage Percussion.',
-  picture: 'https://image.ibb.co/gzqkYS/image14.gif',
+  picture: 'https://image.ibb.co/f0BESn/imgae10.gif',
   emotion_pref: 2,
   temperature_pref: 2
   },
