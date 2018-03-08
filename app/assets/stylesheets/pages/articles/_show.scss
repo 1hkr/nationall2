@@ -179,6 +179,18 @@
 #euro {
   margin:0 5px 12.5px;
   color: $dark-gray;
+  padding-bottom: 6px;
+}
+
+.middle {
+  justify-content:  center;
+  font-size: 22px;
+  margin-bottom: -10px;
+}
+.donate-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .donate-form h4{
@@ -190,11 +202,11 @@
   font-size: 20px;
   text-align : center;
   color: #4f4f54;
-  max-width: 60px;
+  max-width: 49px;
   padding: 0;
-  margin-left: 70px;
-  border: 1px solid #cecaca !important;
+  border-bottom: 1px solid #cecaca !important;
   height: 29px;
+  font-size: 22px !important;
 }
 
 .donate-button {

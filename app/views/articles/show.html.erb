@@ -60,18 +60,19 @@
 
         <% else %>
         <div class="donate-form">
-          <%= simple_form_for [@article, @donation], :html => {:class => 'shadow margin-top padding' } do |f| %>
-          <div class="align-v align-h">
-            <%= f.input :amount, label: false, input_html: { class: 'form_light no_border donate-value', value: '0.10' } %>
+          <%= simple_form_for [@article, @donation] do |f| %>
+          <div class="align-v align-h middle">
             <p id='euro'> €</p>
+            <%= f.input :amount, label: false, input_html: { class: 'form_light no_border donate-value', value: '0.10' } %>
           </div>
-          <%= button_tag(type: 'submit', class: "btn btn-link donate-button") do %>
-          Donate to <%= @article.user.first_name %>
-          <% end %>
           <% end %>
           <h4> Support independent writing</h4>
+          <%= button_tag(type: 'submit', class: "btn-blue") do %>
+          Donate to <%= @article.user.first_name %>
+          <% end %>
         </div>
         <% end %>
+          <hr>
       </div>
     </div>
 
