@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <%= favicon_link_tag 'favicon.ico' %>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:title" content="Nationall" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="news.nationall.eu" />
+  <meta property="og:image" content="https://ibb.co/d0AcDS" />
+  <meta property="og:description" content="News to break borders" />
   <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans" rel="stylesheet">
-  <link rel="icon" href="<%= image_path("logo_blue.png") %>" type="image/png"/>
   <title>Nationall - Become European</title>
   <%= csrf_meta_tags %>
   <%= action_cable_meta_tag %>
@@ -16,20 +21,19 @@
   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
   <!--  -->
 </head>
-<body class="Site" >
-  <% color = params[:controller] == 'pages' && params[:action] == 'home' ? 'page-active' : '' %>
-  <% color_articles = params[:controller] == 'articles' && params[:action] == 'index' ? 'page-active' : '' %>
-  <%= render 'shared/navbar', color_map: color, color_articles: color_articles %>
-  <%= render 'shared/flashes' %>
-  <div class="Site-content">
-    <%= yield %>
-  </div>
-  <%= render 'shared/footer' %>
-  <%= javascript_include_tag 'application' %>
-  <%= javascript_pack_tag 'application' %>
-  <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
-  <%= javascript_pack_tag "snazzy-info-window" %>
-  <%= javascript_pack_tag "map" %>
-  <%= yield(:after_js) %>
+<% color = params[:controller] == 'pages' && params[:action] == 'home' ? 'page-active' : '' %>
+<% color_articles = params[:controller] == 'articles' && params[:action] == 'index' ? 'page-active' : '' %>
+<%= render 'shared/navbar', color_map: color, color_articles: color_articles %>
+<%= render 'shared/flashes' %>
+<div class="Site-content">
+  <%= yield %>
+</div>
+<%= render 'shared/footer' %>
+<%= javascript_include_tag 'application' %>
+<%= javascript_pack_tag 'application' %>
+<%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
+<%= javascript_pack_tag "snazzy-info-window" %>
+<%= javascript_pack_tag "map" %>
+<%= yield(:after_js) %>
 </body>
 </html>
