@@ -3,6 +3,9 @@
 .article-text {
   position: relative;
   padding: 2px 5px 0px 0px;
+  p {
+    font-size: 14px;
+  }
 }
 
 // for the size of the category and date
@@ -63,20 +66,20 @@
       animation-fill-mode: forwards;
     }
   }
-  &:hover {
-    #Layer_1 {
-      animation: check-reverse .4s;
-      -webkit-animation-fill-mode: forwards;
-      animation-fill-mode: forwards;
-    }
-    #Layer_2 {
-      stroke-dashoffset: 0;
-      animation: circle-reverse .8s;
-      animation-delay: .3s;
-      -webkit-animation-fill-mode: forwards;
-      animation-fill-mode: forwards;
-    }
-  }
+//  &:hover {
+//    #Layer_1 {
+//      animation: check-reverse .4s;
+//      -webkit-animation-fill-mode: forwards;
+//      animation-fill-mode: forwards;
+//    }
+//    #Layer_2 {
+//      stroke-dashoffset: 0;
+//      animation: circle-reverse .8s;
+//      animation-delay: .3s;
+//      -webkit-animation-fill-mode: forwards;
+//      animation-fill-mode: forwards;
+//    }
+//  }
 }
 
 @keyframes circle {
@@ -187,13 +190,13 @@
   font-size: 22px;
   margin-bottom: -10px;
 }
-.donate-form {
+#donate-form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.donate-form h4{
+#donate-form h4{
   text-align: center;
   font-size: 16px;
 }

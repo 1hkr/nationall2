@@ -7,12 +7,19 @@ class DonationsController < ApplicationController
     @donation.article = @article
     @donation.user = current_user
     authorize @donation
+
     if @donation.save
-      redirect_to article_path(@article)
-    else
-      render 'articles/show'
+      respond_to do |format|
+        format.html { redirect_to article_path(@article) }
+        format.js  # <-- will render `app/views/reviews/create.js.erb`
+      end
+      else
+        respond_to do |format|
+          format.html { render 'articles/show' }
+          format.js  # <-- idem
+        end
+      end
     end
-  end
 
   def destroy
     authorize @donation
