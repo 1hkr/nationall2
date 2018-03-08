@@ -46,33 +46,27 @@
 
         <% if user_signed_in? && donation = Donation.find_by(user_id: current_user.id, article_id: @article.id) %>
         <div>
-          <h4> Thank you for your support <i class="fa fa-heart"></i></h4>
-          <div>
-            <div class="container">
-              <svg id="Layer_2" class="on" viewBox="0 0 50 50"><defs><style>.cls-1{fill:none;stroke:#ddd;stroke-miterlimit:10;stroke-width:1px;}</style></defs><circle class="cls-1" cx="25" cy="25" r="19.27"/></svg>
-
-              <svg id="Layer_1" class="on" viewBox="0 0 24 19"><defs><style>.cls-2{fill:none;stroke:lightgreen;stroke-miterlimit:10;stroke-width:3px;}</style></defs>
-                <polyline class="cls-2" points="2.09 9.56 8.3 15.77 22.19 1.87"/>
-              </svg>
-            </div>
-          </div>
+          <%= render 'articles/donation' %>
         </div>
 
         <% else %>
-        <div class="donate-form">
-          <%= simple_form_for [@article, @donation] do |f| %>
-          <div class="align-v align-h middle">
-            <p id='euro'> €</p>
-            <%= f.input :amount, label: false, input_html: { class: 'form_light no_border donate-value', value: '0.10' } %>
-          </div>
-          <% end %>
-          <h4> Support independent writing</h4>
-          <%= button_tag(type: 'submit', class: "btn-blue-border") do %>
-          Donate to <%= @article.user.first_name %>
-          <% end %>
+        <div id="form-donation">
+          <%= simple_form_for [@article, @donation], remote: true do |f| %>
+            <div id="donate-form">
+              <div class="align-v align-h middle">
+                <p id='euro'> €</p>
+                <%= f.input :amount, label: false, input_html: { class: 'form_light no_border donate-value', value: '0.10' } %>
+              </div>
+              <h4> Support independent writing</h4>
+              <%= button_tag(type: 'submit', class: "btn-blue-border") do %>
+                Donate to <%= @article.user.first_name %>
+              <% end %>
+            </div>
+            <% end %>
         </div>
-        <% end %>
+
           <hr>
+        <% end %>
       </div>
     </div>
 
