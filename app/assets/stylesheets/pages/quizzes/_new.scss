@@ -28,10 +28,21 @@
 // Checkboxes design for CATEGORIES
 .choices {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   margin: 20px 0;
+  .smiley {
+    width: 160px;
+    height: 110px;
+    margin-top: 15px;
+  }
+  #emotion-min {
+    margin-left: 50px;
+  }
+  #emotion-max {
+    margin-right: 73px;
+  }
 }
 
 .category-choice {
