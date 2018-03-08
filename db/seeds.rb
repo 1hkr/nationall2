@@ -181,7 +181,7 @@ p '------------------------------Categories created-----------------------------
   email: 'vero@nationall.eu',
   password: 'allnations',
   bio: 'A dietetics passionate dentist.',
-  picture: 'https://image.ibb.co/dNCcf7/image13.gif',
+  picture: 'https://image.ibb.co/f0BESn/imgae10.gif',
   emotion_pref: 1,
   temperature_pref: 2
   },
@@ -192,7 +192,7 @@ p '------------------------------Categories created-----------------------------
   email: 'james@nationall.eu',
   password: 'allnations',
   bio: 'EU & Foreign Policy Geek. Rational optimist. Blockchain enthusiast. Franco-Belgo-Brit. Former @DanielJHannan advisor.',
-  picture: 'https://image.ibb.co/gzqkYS/image14.gif',
+  picture: 'https://image.ibb.co/dqYTnn/image11.gif',
   emotion_pref: 1,
   temperature_pref: 2
   },
@@ -214,7 +214,7 @@ p '------------------------------Categories created-----------------------------
   email: 'india@nationall.eu',
   password: 'allnations',
   bio: 'A contributor to titles including Vogue, the Guardian, KEIN, Rollacoaster, Wonderland and Twin magazine, India Doyle joined Culture Trip to help launch their fashion section for the EMEA region, where she focussed on giving emerging designers across the globe a platform to reach international audiences.',
-  picture: 'https://image.ibb.co/dqYTnn/image11.gif',
+  picture: 'https://image.ibb.co/dNCcf7/image13.gif',
   emotion_pref: 1,
   temperature_pref: 4
   },
@@ -225,7 +225,8 @@ p '------------------------------Categories created-----------------------------
   email: 'lucas@nationall.eu',
   password: 'allnations',
   bio: 'Percussionist in Vienna, regularly with: Vienna Philharmonic, Vienna state and popular opera, the Vienna Tonkünstler orchestra…Member of Louie’s Cage Percussion.',
-  picture: 'https://image.ibb.co/f0BESn/imgae10.gif',
+  picture: 'https://image.ibb.co/gzqkYS/image14.gif',
+
   emotion_pref: 2,
   temperature_pref: 2
   },
@@ -285,7 +286,8 @@ content: "<p></p><p>On October 1st, Catalonia held a referendum to separate from
 picture: 'https://cdn-images-1.medium.com/max/1600/1*1Kjxg36-D3pOVMgu8H2TCA.jpeg',
 category_id: Category.find_by_name("Business & Tech").id,
 user_id: User.find_by_first_name("Anna").id,
-publishing_date: Date.parse("2017-11-13")
+publishing_date: Date.parse("2017-11-13"),
+avg_rating: 3
 },
 {
   title: "On the chase of abandoned buildings and autumn colours.",
@@ -295,7 +297,8 @@ content: "<p></p><p><em>Friend of mine was complaining that my articles have bec
 picture: 'https://cdn-images-1.medium.com/max/2000/1*kEe2a2OMp8nK1QU89tD69Q.jpeg',
 category_id: Category.find_by_name("Travel").id,
 user_id: User.find_by_first_name("Jaan").id,
-publishing_date: Date.parse("2017-10-27")
+publishing_date: Date.parse("2017-10-27"),
+avg_rating: 3
 },
 {
 title: "The Story of a Collaborative Referendum",
@@ -305,7 +308,8 @@ content: "<p></p><p>Today, you can barely understand what’s really going on in
   picture: 'https://cdn-images-1.medium.com/max/1600/1*Rcd_eS4KAwMtUB-F30I2RA.jpeg',
   category_id: Category.find_by_name("Politics").id,
   user_id: User.find_by_first_name("Eric").id,
-  publishing_date: Date.parse("2017-11-08")
+  publishing_date: Date.parse("2017-11-08"),
+avg_rating: 3
 },
 {
 title: "A Forgotten Greece: The Pomakochoria",
@@ -315,17 +319,19 @@ content: "<p></p><p>After miles of mountainous backroads north of the city of Xa
 picture: 'https://cdn-images-1.medium.com/max/2000/1*NTaK3agsNiPvJ2San_3FQQ.jpeg',
 category_id: Category.find_by_name("Politics").id,
 user_id: User.find_by_first_name("John").id,
-publishing_date: Date.parse("2017-10-09")
+publishing_date: Date.parse("2017-10-09"),
+avg_rating: 3
 },
 {
-title: "Is Brussels courting the idea of reversing the refere...",
+title: "Brussels: the idea of reversing the referendum",
 subtitle: "Swaying Brexit ",
 summary: "As Britain tumbles out of Europe, it is sadly fitting that an enterprise we once helped to prop up should also be disappearing over the horizon.",
 content: "<p></p><p>Michel Barnier’s decision to meet with a trio of elite Remainers today is ill-advised and the latest in a series of affronts directed at the British government. </p><p><br></p><p>The meeting — with former Lib Dem leader Nick Clegg, former Conservative Chancellor Ken Clarke and the Labour peer Lord Adonis — has lead to accusations that the three politicians are trying to undermine the Brexit process — a move that could further delay progress in negotiations. </p><p><br></p><p>Mr Barnier’s decision to welcome the men could also deepen divisions in the UK’s negotiating stance — something Brussels has been complaining about since negotiations began. </p><p><br></p><p>EU officials defended the decision, saying that Mr Barnier’s ‘door was always open for people who want to speak to him and his team across the political spectrum and from all walks of life.</p><p><br></p><p>But holding this meeting with three vocal critics of the vote to leave the EU comes quick on the heels of a number of other questionable moves made by the EU Commission in recent months that have undermined Prime Minster Theresa May’s government. </p><p><br></p><p>During the third round of negotiations in Brussels this August, a meeting and photo opportunity between Mr Juncker and former Labour Prime Minister Tony Blair was organised in the same building that negotiations were taking place. </p><p><br></p><p>Then, two week ago, hours before May was to meet with her 27 counterparts at a crucial EU Council in Brussels, Jeremy Corbyn was given a standing ovation by the EU socialist grouping in the European Parliament after meeting with Mr Barnier for the second time in a matter of months. </p><p><br></p><p>Mr Barnier has also met with Shadow Brexit Secretary Keir Starmer twice and held meetings with the leaders of the UK’s devolved Welsh and Scottish assemblies. </p><p><br></p><p>The British government was then left flabbergasted when a damaging account of a dinner in Number 10 between Mr Juncker and Mrs May was released to the German newspaper FAZ. </p><p><br></p><p>Then — to add insult to injury — comments on a second confidential discussions held in Brussels on 16 November between the pair were again leaked to the same newspaper. </p><p><br></p><p>There is a growing belief in London — as well as other European capitals — that Juncker’s inner circle is actively trying to undermine the British government in order to weaken their hand in negotiations with Brussels. </p><p><br></p><p>A senior Berlin source told The Times shortly after this second leak that ‘Angela Merkel is furious at these reports. It is known that she has lost patience with the British Conservatives but the last thing she wants is for Theresa May to be replaced in the middle of the Brexit negotiations.</p><p><br></p><p>The UK could excuse one, or two, such slip-ups. </p><p><br></p><p>But in the EU capital, where manners and appearances are everything, these thinly-veiled attempts to weaken the UK government at a time of such instability on both sides of the Channel is dangerous. </p><p><br></p><p>The Telegraph’s Brussels correspondent, James Crisp, has now reported that the trio also met with EU Financial Affairs Commissioner Pierre Moscovici this afternoon. </p><p><br></p><p>I doubt much detail will be divulged from today’s meetings — the British PM wasn’t invited, after all. </p><p><br></p><p>But it will be interesting to watch what manoeuvres the three Remainers and their close political allies will now carry out in the days to come.</p><p></p>",
 picture: 'https://cdn-images-1.medium.com/max/1600/1*nxJF8P4hUJuw2WQzuN7Ryg.jpeg',
 category_id: Category.find_by_name("Politics").id,
 user_id: User.find_by_first_name("James").id,
-publishing_date: Date.parse("2017-10-30")
+publishing_date: Date.parse("2017-10-30"),
+avg_rating: 3
 },
 {
 title: "Running out of steam",
@@ -335,7 +341,8 @@ content: "<p></p><p>As Britain tumbles out of Europe, it is sadly fitting that a
 picture: 'https://cdn-images-1.medium.com/max/1600/1*CJiJoeaquCUD0i5BwM6dWA.jpeg',
 category_id: Category.find_by_name("Europe").id,
 user_id: User.find_by_first_name("Takahiko").id,
-publishing_date: Date.parse("2017-10-30")
+publishing_date: Date.parse("2017-10-30"),
+avg_rating: 3
 },
 {
 title: "E. Macron’s plans to break nations’ borders.",
@@ -345,7 +352,8 @@ content: "<p></p><p>In a one and a half hour speech hold in la Sorbonne Universi
 picture: 'https://cdn-images-1.medium.com/max/2000/1*17DLR3Zxj76Pg7zEQ2dKqQ.jpeg',
 category_id: Category.find_by_name("Politics").id,
 user_id: User.find_by_first_name("Alexandre").id,
-publishing_date: Date.parse("2017-10-03")
+publishing_date: Date.parse("2017-10-03"),
+avg_rating: 3
 },
 {
 title: "Austrian recipe: Kaiserschmarn",
@@ -355,7 +363,8 @@ content: "<p></p><h3>15 minutes</h3><p>The Autro-hungarian Emperor Franz Josef l
 picture: 'https://cdn-images-1.medium.com/max/2000/1*UfX1V7aOGGbbw6H0xtWnbg.jpeg',
 category_id: Category.find_by_name("Food").id,
 user_id: User.find_by_first_name("Lucas").id,
-publishing_date: Date.parse("2017-09-24")
+publishing_date: Date.parse("2017-09-24"),
+avg_rating: 3
 },
 {
 title: "B-Sides — Polish Fashion Brand You Need to Know",
@@ -365,7 +374,8 @@ content: "<p></p><p>In Poland we have a famous saying “You glorify the foreign
 picture: 'http://bsideshandmade.com/shop/images/page/p1a4vevdn1uo41a1l3duh294k8a.jpg',
 category_id: Category.find_by_name("Fashion").id,
 user_id: User.find_by_first_name("Ania").id,
-publishing_date: Date.parse("2017-09-26")
+publishing_date: Date.parse("2017-09-26"),
+avg_rating: 3
 },
 {
 title: "Not All Who Want Repeal Want Revolution",
@@ -375,17 +385,19 @@ content: "<p></p><p>Last Saturday, around 30,000 people marched through the stre
 picture: 'https://cdn-images-1.medium.com/max/2000/1*TPH5ymetBU1yr3-umomeXA.jpeg',
 category_id: Category.find_by_name("Europe").id,
 user_id: User.find_by_first_name("Ruairi").id,
-publishing_date: Date.parse("2017-10-04")
+publishing_date: Date.parse("2017-10-04"),
+avg_rating: 3
 },
 {
-title: "Which Bank Account to open in Europe for nomad freelancer.",
+title: "Bank Account to open in Europe for freelancers",
 subtitle: "No need to be an eResident of Estonia",
 summary: "If you want to have business in Europe, it’s necessary to have European bank account. Inside of SEPA(Single European Payment Area), there is no fee difference when you send or withdraw your money from your account with IBAN.",
 content: "<p></p><p>If you want to have business in Europe, it’s necessary to have European bank account. Inside of SEPA(Single European Payment Area), there is no fee difference when you send or withdraw your money from your account with IBAN.</p><p><br></p><p>IBAN: International Bank Account Number</p><p>BIC: Bank Identifier Code</p><p><br></p><p>With Estonian eResident you can have company and bank account in Europe, but it costs some money for virtual address, accounting etc. and you don’t have to.</p><p><br></p><h3>How to open an&nbsp;account</h3><p>If you are a nomad and want to have European bank account, just come to Europe! Of course you have to have some rituals. What you need are&nbsp;VISA, mobile phone number and address.</p><p><br></p><p>Some says that you can open an account at N26 even if you are not a resident of the country, but things has changed. Because of refugees and terror attack all over Europe, money laundering law was tightened in Spring 2017, it became more strict to open an account or to have mobile phone number. So you have to have resident permission in somewhere in Europe.</p><p><br></p><h3>Freelance VISA in Berlin&nbsp;2017</h3><p>I’m going to explain about actual VISA issuing situation in Berlin, because I’m in Germany and don’t know much about other countries related to VISA.</p><p>It became also a bit harder but still it’s possible to get VISA as a freelancer in Berlin.</p><p>From 2017 you have to have or will have at least 2 clients in Germany to apply for VISA. It could be your future customer if you have contract or endorsement to prove it. So better to have contacts in advance.</p><p><br></p><h3>Which bank?</h3><p>There are new startups and everything is changing quickly. At this time in October 2017, I would recommend following smart banks.</p><p><br></p><h3>N2<span style='color: inherit;'>6 bank</span></h3><p><span style='color: inherit;'>N</span><a href='https://n26.go2cloud.org/SH7G' target='_blank' style='color: inherit;'>26</a>&nbsp;is a German startup bank in Berlin, but you can open an account if you are a resident of following 17 European countries.</p><p><em>Austria, Belgium, Finland, France, Estonia, Germany, Greece, Ireland, Italy, Latvia, Lithuania, Luxemburg, Netherlands, Portugal, Slovakia, Slovenia, Spain</em></p><p>・free German account with your own real IBAN</p><p>・free MasterCard</p><p>・smartphone based service</p><p>・open an account in 8 minutes (they say and it’s true)</p><p><a href='https://n26.go2cloud.org/SH7G' target='_blank' style='color: inherit;'>N26</a>&nbsp;is basically free but it costs sometimes. For example: withdrawal in foreign currency — 1.7%.</p><h3><br></h3><h3>Revolut</h3><p><a href='http://revolut.com/' target='_blank' style='color: inherit;'>Revolut</a>&nbsp;is a London startup smart-bank. You can have UK account.</p><p>・free UK account</p><p>・multi currency account</p><p>・free MasterCard(virtual &amp; physical)</p><p>・quick to open account(in an hour)</p><p><br></p><p>In July 2017 they raised $66 million and going to expand their services and preparing to come to Germany, so don’t worry about after Brexit.</p><p><br></p><h3>TransferWise</h3><p><a href='https://transferwise.evyy.net/c/470655/26105/985?subId1=medium' target='_blank' style='color: inherit;'>TransferWise</a>&nbsp;is one of the cheapest way of international money transfer. And they started so called&nbsp;borderless account.</p><p>・free account</p><p>・multi currency account in the country of the currency!</p><p>・no credit card</p><p><br></p><p><a href='https://transferwise.evyy.net/c/470655/26105/985?subId1=medium' target='_blank' style='color: inherit;'>TransferWise</a>&nbsp;has no bank license yet and cooperate with other banks. You can get your own IBAN and send/receive money but it’s not really your own and kind of subaccount of TransferWise. As a result, in account holder name you have to add 2 letters of “TW” for Euro account. But you can have UK account for GBP, US account for USD. It means your client doesn’t have to make international transfer!</p><p><br></p><h3>Invoice App: Zervant and Smallinvoice</h3><p>Here I introduce you 2 free invoicing app.</p><p><br></p><h3>Zervant</h3><p><a href='https://www.smallinvoice.de/DE/en/' target='_blank' style='color: inherit;'>Smallinvoice</a></p><p>Both apps have following:</p><p>・free</p><p>・cloud software</p><p>・supporting all currencies</p><p>・create estimate and invoice</p><p>・statistics &amp; reports</p><p>・check overdue</p><p><br></p><p><a href='http://zervant.com/' target='_blank' style='color: inherit;'>Zervant</a>&nbsp;is a Finnish start up based in London. It’s completely free though not yet perfect.</p><p><br></p><p>I’m using this software as a resident in Germany, but it doesn’t show German legal terminology. You have to add footnote if it is needed to be accepted by tax office. I haven’t check another country.</p><p>They raised $4 million and I hope it’s going to be developed further.</p><p><br></p><p>This software is designed for optimal use in Germany, whether VAT rates or terminology. So if you are freelance in Germany, it’s better to use this one.</p><p><br></p><p>Although smallinvoice has more functions and I’m in Germany, I use not smallinvoice but Zervant. Because it’s more simple and has beautiful interface DESIGN. It makes more fun for me and my staffs to work with Zervant. If they both have same design, I would use smallinvoice. Yes, design is very important factor, I noticed.</p><p></p>",
 picture: 'https://cdn-images-1.medium.com/max/1600/1*Q5ghbFepbFoFco5awQT21w.jpeg',
 category_id: Category.find_by_name("Europe").id,
 user_id: User.find_by_first_name("Lorène").id,
-publishing_date: Date.parse("2017-10-04")
+publishing_date: Date.parse("2017-10-04"),
+avg_rating: 3
 },
 {
 title: "Here's how to take drugs",
@@ -395,7 +407,8 @@ content: "<p></p><h3>Drugs + science + youtubers = knowledge airbag?</h3><p>Spee
 picture: 'https://cdn-images-1.medium.com/max/1000/1*P25knMhItPn-X1MrcizlAw.jpeg',
 category_id: Category.find_by_name("Lifestyle").id,
 user_id: User.find_by_first_name("Lena").id,
-publishing_date: Date.parse("2017-10-04")
+publishing_date: Date.parse("2017-10-04"),
+avg_rating: 3
 },
 {
 title: "Theresa May’s Pivotal Florence Speech",
@@ -405,7 +418,8 @@ content: "<p></p><p>With the world’s eyes watching her, Theresa May set out th
 picture: 'https://cdn-images-1.medium.com/max/1600/1*uiMOmu_iM0Ut17txHNzd1A.jpeg',
 category_id: Category.find_by_name("Politics").id,
 user_id: User.find_by_first_name("Martin").id,
-publishing_date: Date.parse("2017-06-19")
+publishing_date: Date.parse("2017-06-19"),
+avg_rating: 3
 },
 {
 title: "NEWS TO BREAK BORDERS",
@@ -415,7 +429,8 @@ content: "<p></p><p>We think society as a vast and spread community. We want thi
 picture: 'https://cdn-images-1.medium.com/max/2000/1*Y1Vu1aEHUAQgXQEBoebsEA.png',
 category_id: Category.find_by_name("Europe").id,
 user_id: User.find_by_first_name("Alexandre").id,
-publishing_date: Date.parse("2017-06-19")
+publishing_date: Date.parse("2017-06-19"),
+avg_rating: 3
 },
 {
 title: "Greece’s Odyssey for Sustainable Fashion",
@@ -425,7 +440,8 @@ content: "<p></p><p>‘If something is well-made, it grows and ages with you; it
 picture: 'https://cdn-images-1.medium.com/max/2000/1*mCAeFNv4Z4tVo7sHeHroog.jpeg',
 category_id: Category.find_by_name("Fashion").id,
 user_id: User.find_by_first_name("India").id,
-publishing_date: Date.parse("2017-05-08")
+publishing_date: Date.parse("2017-05-08"),
+avg_rating: 3
 },
 {
 title: "Why is the Left losing in Germany?",
@@ -436,7 +452,8 @@ content: "<p></p><p>Oliver Nachtwey of Die Linke gave a rather&nbsp;<a href='htt
 picture: 'https://www.youtube.com/embed/RvtqPYggCV4',
 category_id: Category.find_by_name("Politics").id,
 user_id: User.find_by_first_name("Peter").id,
-publishing_date: Date.parse("2017-09-26")
+publishing_date: Date.parse("2017-09-26"),
+avg_rating: 3
 },
 {
   title: "Food for health #5",
@@ -446,10 +463,11 @@ publishing_date: Date.parse("2017-09-26")
 picture: 'https://cdn-images-1.medium.com/max/2000/1*UffYrLHKuVvwSrWSZWYKyQ.jpeg',
 category_id: Category.find_by_name("Business & Tech").id,
 user_id: User.find_by_first_name("Véronique").id,
-publishing_date: Date.parse("2017-09-26")
+publishing_date: Date.parse("2017-09-26"),
+avg_rating: 3
 },
 {
-  title: "A ridiculous way to create 135 art pieces in one weekend.",
+  title: "How to create 135 art pieces in one weekend.",
   subtitle: "From garage doors to art pieces.",
   summary: "Himalajska (himalayan) street in Warsaw, Poland is a short (slightly less than 1 km long) street which has nothing to offer but a shitload of garages. My friend @bartekchlebek told me about the place. He and his girlfriend stumbled upon it while urban hiking. He invited me for a similar hike and was excited to go there again. When we finally went I understood why. What is really fascinating about this place that is that almost each garage door is painted in a different color.",
   content: "<p></p><p>Himalajska (himalayan) street in Warsaw, Poland is a short (slightly less than 1 km long) street which has nothing to offer but a shitload of garages. My friend&nbsp;<a href='https://twitter.com/bartekchlebek' target='_blank' style='color: inherit;'>@bartekchlebek</a>&nbsp;told me about the place. He and his girlfriend stumbled upon it while urban hiking. He invited me for a similar hike and was excited to go there again. When we finally went I understood why. What is really fascinating about this place that is that almost each garage door is painted in a different color.</p><p><br></p><p>Each owner chose the color he liked. There was clearly no collective effort to keep any visual consistency. It’s rather a beauty contest.</p><p>It’s also super clear which garages are used and which are not. Some of them are neat, others clearly neglected.</p><p>I didn’t do any extensive research of the history of this place, but found out that it is somehow connected to&nbsp;<a href='https://en.wikipedia.org/wiki/Warsaw_Babice_Airport' target='_blank' style='color: inherit;'>Babice Airport</a>&nbsp;that lays nearby and has it’s military past.</p><p><br></p><h3>Photoshoot</h3><p>I became inspired by the rich palette of these otherwise identical objects. I was struck by the idea to photograph each of the garage door and use them as large pixels. The idea was to write a computer program that will sort the colors and produce transition.</p><p><br></p><p>I visited the place 3 times during a weekend to take photos. Not that it took so much time. I just didn't’ want any harsh shadows on the garage doors, so went there in different times of the day to compare the lighting. I also went to shoot some closeups and details.</p><p><br></p><p>In the end I photographed 135 garages, which is not even a half of what’s there. I didn’t want to use garages with wooden doors. Also some metal door garages are positioned in a way that always produces harsh shadows.&nbsp;</p><p><br></p><p>Anyways… the easy part was over. Now was the time to write a program.</p><p><br></p><p>By the way… I’m not a software developer. I decided to learn Action Script 3 and gained some proficiency literally moments before the technology died. I still use Flash to build some tools for my personal projects.</p><p><br></p><h3>Sorting colors</h3><p>I put my photos aside and started figuring out color sorting. I didn’t realise the complexity of the problem. I found a&nbsp;<a href='http://www.alanzucconi.com/2015/09/30/colour-sorting/' target='_blank' style='color: inherit;'>great article</a>&nbsp;about it by Alan Zucconi. I did not analyse the Python examples, but the article gave me a good theoretical base to start with my own experiments.</p><p><br></p><p>At the same moment I realised that ages ago I’ve researched the way Magic Wand in photoshop works and shared it on the user group. I knew I could use that knowledge to produce my algorithm for sorting.</p><p><br></p><p>What Magic wand does is select the area of pixels which colors are similar to a sampled pixel. The similarity of selected colors is described by a Tolerance property.</p><p><br></p><p>I googled for my post describing the maths behind that tool and found it. It was posted in May 2005.</p><p>I learned that the difference in color value is measured for each channel.</p><p><br></p><pre spellcheck='false'>var dR:int = r0 - r1
@@ -460,7 +478,8 @@ var dB:int = b0 - b1
 picture: 'https://cdn-images-1.medium.com/max/2000/1*pMzb_tx7Tm8WJoBBDHoMQw.jpeg',
 category_id: Category.find_by_name("Arts").id,
 user_id: User.find_by_first_name("Dawid").id,
-publishing_date: Date.parse("2017-09-26")
+publishing_date: Date.parse("2017-09-26"),
+avg_rating: 3
 },
 {
   title: "Police violence in Catalonia",
@@ -470,7 +489,8 @@ publishing_date: Date.parse("2017-09-26")
 picture: 'https://www.youtube.com/embed/duFUa-Tr_ww',
 category_id: Category.find_by_name("Politics").id,
 user_id: User.find_by_first_name("Mariona").id,
-publishing_date: Date.parse("2017-10-10")
+publishing_date: Date.parse("2017-10-10"),
+avg_rating: 3
 }])
 
 p articles
