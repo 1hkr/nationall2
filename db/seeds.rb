@@ -89,7 +89,7 @@ p '------------------------------Categories created-----------------------------
   {
   first_name: 'Lena',
   last_name: 'Carlson',
-  city: 'Copenhagen, Netherlands',
+  city: 'Amsterdam, Netherlands',
   email: 'lena@nationall.eu',
   password: 'allnations',
   bio: 'Content creator & social media consultant based in Copenhagen.',
@@ -188,7 +188,7 @@ p '------------------------------Categories created-----------------------------
    {
   first_name: 'James',
   last_name: 'Holland',
-  city: 'Brussels, Belgium',
+  city: 'Copenhagen, Denmark',
   email: 'james@nationall.eu',
   password: 'allnations',
   bio: 'EU & Foreign Policy Geek. Rational optimist. Blockchain enthusiast. Franco-Belgo-Brit. Former @DanielJHannan advisor.',
