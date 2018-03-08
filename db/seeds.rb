@@ -76,6 +76,17 @@ p '------------------------------Categories created-----------------------------
   temperature_pref: 3
   },
   {
+  first_name: 'Fernando',
+  last_name: 'Betancor',
+  city: 'Sarragossa, Spain',
+  email: 'fernando@nationall.eu',
+  password: 'allnations',
+  bio: 'Expert in politics',
+  picture: 'https://cdn-images-1.medium.com/fit/c/200/200/0*fdqXwxB_5lnqUhVG.jpeg',
+  emotion_pref: 1,
+  temperature_pref: 3
+  },
+  {
   first_name: 'Lena',
   last_name: 'Carlson',
   city: 'Copenhagen, Netherlands',
@@ -307,7 +318,7 @@ user_id: User.find_by_first_name("John").id,
 publishing_date: Date.parse("2017-10-09")
 },
 {
-title: "Is Brussels courting the idea of reversing the referendum result?",
+title: "Is Brussels courting the idea of reversing the refere...",
 subtitle: "Swaying Brexit ",
 summary: "As Britain tumbles out of Europe, it is sadly fitting that an enterprise we once helped to prop up should also be disappearing over the horizon.",
 content: "<p></p><p>Michel Barnier’s decision to meet with a trio of elite Remainers today is ill-advised and the latest in a series of affronts directed at the British government. </p><p><br></p><p>The meeting — with former Lib Dem leader Nick Clegg, former Conservative Chancellor Ken Clarke and the Labour peer Lord Adonis — has lead to accusations that the three politicians are trying to undermine the Brexit process — a move that could further delay progress in negotiations. </p><p><br></p><p>Mr Barnier’s decision to welcome the men could also deepen divisions in the UK’s negotiating stance — something Brussels has been complaining about since negotiations began. </p><p><br></p><p>EU officials defended the decision, saying that Mr Barnier’s ‘door was always open for people who want to speak to him and his team across the political spectrum and from all walks of life.</p><p><br></p><p>But holding this meeting with three vocal critics of the vote to leave the EU comes quick on the heels of a number of other questionable moves made by the EU Commission in recent months that have undermined Prime Minster Theresa May’s government. </p><p><br></p><p>During the third round of negotiations in Brussels this August, a meeting and photo opportunity between Mr Juncker and former Labour Prime Minister Tony Blair was organised in the same building that negotiations were taking place. </p><p><br></p><p>Then, two week ago, hours before May was to meet with her 27 counterparts at a crucial EU Council in Brussels, Jeremy Corbyn was given a standing ovation by the EU socialist grouping in the European Parliament after meeting with Mr Barnier for the second time in a matter of months. </p><p><br></p><p>Mr Barnier has also met with Shadow Brexit Secretary Keir Starmer twice and held meetings with the leaders of the UK’s devolved Welsh and Scottish assemblies. </p><p><br></p><p>The British government was then left flabbergasted when a damaging account of a dinner in Number 10 between Mr Juncker and Mrs May was released to the German newspaper FAZ. </p><p><br></p><p>Then — to add insult to injury — comments on a second confidential discussions held in Brussels on 16 November between the pair were again leaked to the same newspaper. </p><p><br></p><p>There is a growing belief in London — as well as other European capitals — that Juncker’s inner circle is actively trying to undermine the British government in order to weaken their hand in negotiations with Brussels. </p><p><br></p><p>A senior Berlin source told The Times shortly after this second leak that ‘Angela Merkel is furious at these reports. It is known that she has lost patience with the British Conservatives but the last thing she wants is for Theresa May to be replaced in the middle of the Brexit negotiations.</p><p><br></p><p>The UK could excuse one, or two, such slip-ups. </p><p><br></p><p>But in the EU capital, where manners and appearances are everything, these thinly-veiled attempts to weaken the UK government at a time of such instability on both sides of the Channel is dangerous. </p><p><br></p><p>The Telegraph’s Brussels correspondent, James Crisp, has now reported that the trio also met with EU Financial Affairs Commissioner Pierre Moscovici this afternoon. </p><p><br></p><p>I doubt much detail will be divulged from today’s meetings — the British PM wasn’t invited, after all. </p><p><br></p><p>But it will be interesting to watch what manoeuvres the three Remainers and their close political allies will now carry out in the days to come.</p><p></p>",
@@ -481,6 +492,21 @@ p 'Creating Opinions'
   content: 'This article is so inspiring but lacks details.',
   user_id: User.find_by_first_name("Peter").id,
   article_id: Article.first.id
+  },
+  {
+  content: 'This all referendum was a mistake.',
+  user_id: User.find_by_first_name("Peter").id,
+  article_id: Article.find_by_title("The Story of a Collaborative Referendum").id
+  },
+  {
+  content: 'Has this organisation been inspired by anyone else in history?',
+  user_id: User.find_by_first_name("Mariona").id,
+  article_id: Article.find_by_title("The Story of a Collaborative Referendum").id
+  },
+  {
+  content: "This article is super interesting but I'd love more details!",
+  user_id: User.find_by_first_name("Anna").id,
+  article_id: Article.find_by_title("The Story of a Collaborative Referendum").id
   }])
 
 p opinions
@@ -520,7 +546,7 @@ p 'Creating Reviews'
         {
     rating: 1,
     user_id: User.find_by_first_name("Lucas").id,
-    article_id: Article.find_by_title("Why is the Left losing in Germany?").id,
+    article_id: Article.find_by_title("The Story of a Collaborative Referendum").id,
     emotion: 1,
     temperature: 2
     },
