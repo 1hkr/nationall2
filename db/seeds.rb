@@ -269,7 +269,7 @@ p '------------------------------Categories created-----------------------------
   city: 'Madrid, Spain',
   email: 'eric@nationall.eu',
   password: 'allnations',
-  bio: 'Blockchain advocate',
+  bio: 'I took part in the catalan referendum organisation',
   picture: 'https://image.ibb.co/jmOa07/image18.gif',
   emotion_pref: 1,
   temperature_pref: 1
@@ -483,7 +483,7 @@ avg_rating: 4
 },
 {
   title: "Police violence in Catalonia",
-  subtitle: "People get beaten up during the controversial Referendum",
+  subtitle: "A video about what's happening",
   summary: "“It’s being terrible, we are afraid but we want to vote… there are a lot of videos where you can see the Spanish police hitting elderly people and young people, women and men… But one of the hardest things I’ve received is an audio message with a girl who suffered the violence from the police.",
   content: "<p></p><blockquote><em>“It’s being terrible, we are afraid but we want to vote… there are a lot of videos where you can see the Spanish police hitting elderly people and young people, women and men… But one of the hardest things I’ve received is an audio message with a girl who suffered the violence from the police. She says that the police has broken three fingers from one of her hands. And they’ve done it one by one. They pull her clothes out. People were waiting for the police with their hands up and they acted with violence no matter how. And the hardest part is that the Spanish government is saying that the police is acting in a proportional way and they say they are doing a good job. 337 people have been attended by hospitals.”</em></blockquote><p><br></p><p><br></p><blockquote><em>“It’s the Catalan hymn. We were singing it on my hometown in order to celebrate the end of the day. All along the day I passed from angry and frustrated to sad. But it the end, I feel hope, things are going to change. ’Cause de thing is that today, most of the people that weren’t coinvinced wether to stay or leave spain have just realised in what kind of country we are… and spain for catalans is&nbsp;pain.”</em></blockquote><p></p>",
 picture: 'https://www.youtube.com/embed/duFUa-Tr_ww',
@@ -525,17 +525,17 @@ p 'Creating Opinions'
   article_id: Article.first.id
   },
   {
-  content: 'This all referendum was a mistake.',
-  user_id: User.find_by_first_name("Peter").id,
-  article_id: Article.find_by_title("The Story of a Collaborative Referendum").id
-  },
-  {
   content: 'Has this organisation been inspired by anyone else in history?',
   user_id: User.find_by_first_name("Mariona").id,
   article_id: Article.find_by_title("The Story of a Collaborative Referendum").id
   },
   {
-  content: "This article is super interesting but I'd love more details!",
+  content: 'Instead of quelling pro-independence feeling, the actions of the Spanish Government will likely have increased sympathy for independence. Their actions will not only be resented by pro-independence activists, but also by those who were anti-independence but favoured a referendum on the subject occuring. The firing of rubber bullets has made their case — that Catalonia is better off as part of a united Spain — that much harder to make. Those on both sides feel that the Spanish Government has little respect for Catalonia. The measures taken by the Government in Madrid shall only serve to solidify that feeling.',
+  user_id: User.find_by_first_name("Peter").id,
+  article_id: Article.find_by_title("The Story of a Collaborative Referendum").id
+  },
+  {
+  content: "Yeah ! The Spanish Government should grant the people of Catalonia the chance to hold a legitimate, constitutional referendum. In doing so, not only would they demonstrate their willingness to listen to the Catalan people, they would be able to make the case for a united Spain.",
   user_id: User.find_by_first_name("Anna").id,
   article_id: Article.find_by_title("The Story of a Collaborative Referendum").id
   }])
