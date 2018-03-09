@@ -56,6 +56,10 @@
   justify-content: center;
   align-items: center;
   opacity: 0.7;
+  // font-weight: 400;
+  font-size: larger;
+  // color: $blue;
+  // text-shadow: 0.5px 0 0 $blue, -0.5px 0 0 $blue, 0 0.5px 0 $blue, 0 -0.5px 0 $blue, 0.5px 0.5px $blue, -0.5px -0.5px 0 $blue, 0.5px -0.5px 0 $blue, -0.5px 0.5px 0 $blue;
   &:hover {
     opacity: 1;
     cursor: pointer;
@@ -102,6 +106,10 @@
   justify-content: center;
   text-align:center;
   opacity: 0.8;
+  // font-weight: 400;
+  font-size: larger;
+  // color: $blue;
+  // text-shadow: 0.5px 0 0 $blue, -0.5px 0 0 $blue, 0 0.5px 0 $blue, 0 -0.5px 0 $blue, 0.5px 0.5px $blue, -0.5px -0.5px 0 $blue, 0.5px -0.5px 0 $blue, -0.5px 0.5px 0 $blue;
   &:hover {
     opacity: 1;
     cursor: pointer;

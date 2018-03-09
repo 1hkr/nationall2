@@ -25,7 +25,7 @@ p 'Reviews destroyed'
 p 'Creating categories'
   categories = Category.create([{
   name: "Business & Tech",
-  picture: "https://images.pexels.com/photos/34092/pexels-photo.jpg?w=1260&h=750&auto=compress&cs=tinysrgb"
+  picture: "https://images.pexels.com/photos/590045/pexels-photo-590045.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
   },
   {
   name: 'Politics',
@@ -37,7 +37,7 @@ p 'Creating categories'
   },
   {
   name: 'Food',
-  picture: 'https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb'
+  picture: 'https://images.pexels.com/photos/459469/pexels-photo-459469.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb'
   },
   {
   name: 'Lifestyle',
@@ -57,7 +57,7 @@ p 'Creating categories'
   },
   {
   name: 'Fashion',
-  picture: 'https://images.pexels.com/photos/291762/pexels-photo-291762.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb'
+  picture: 'https://images.pexels.com/photos/346751/pexels-photo-346751.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb'
   }])
 
 p categories
