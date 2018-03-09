@@ -36,12 +36,13 @@
 
         </div>
 
-        <hr>
+
 
         <div class="bio">
-          <h4>Bio</h4>
           <p> <%= @article.user.bio %></p>
         </div>
+
+        <hr>
 
         <% if user_signed_in? && donation = Donation.find_by(user_id: current_user.id, article_id: @article.id) %>
         <div>
