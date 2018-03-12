@@ -546,7 +546,7 @@ p 'Creating Reviews'
     rating: 4,
     user_id: User.find_by_first_name("John").id,
     article_id: Article.find_by_title("E. Macron’s plans to break nations’ borders.").id,
-    emotion: 1,
+    emotion: 2,
     temperature: 2
     },
         {
