@@ -25,7 +25,7 @@ p 'Reviews destroyed'
 p 'Creating categories'
   categories = Category.create([{
   name: "Business & Tech",
-  picture: "https://images.pexels.com/photos/34092/pexels-photo.jpg?w=1260&h=750&auto=compress&cs=tinysrgb"
+  picture: "https://images.pexels.com/photos/590045/pexels-photo-590045.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
   },
   {
   name: 'Politics',
@@ -37,7 +37,7 @@ p 'Creating categories'
   },
   {
   name: 'Food',
-  picture: 'https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb'
+  picture: 'https://images.pexels.com/photos/459469/pexels-photo-459469.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb'
   },
   {
   name: 'Lifestyle',
@@ -57,7 +57,7 @@ p 'Creating categories'
   },
   {
   name: 'Fashion',
-  picture: 'https://images.pexels.com/photos/291762/pexels-photo-291762.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb'
+  picture: 'https://images.pexels.com/photos/346751/pexels-photo-346751.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb'
   }])
 
 p categories
@@ -82,7 +82,7 @@ p '------------------------------Categories created-----------------------------
   email: 'fernando@nationall.eu',
   password: 'allnations',
   bio: 'Expert in politics',
-  picture: 'https://image.ibb.co/eo417n/image21.gif',
+  picture: 'https://image.ibb.co/eJ4OL7/image2.gif',
   emotion_pref: 1,
   temperature_pref: 3
   },
@@ -126,7 +126,7 @@ p '------------------------------Categories created-----------------------------
   email: 'ruairi@nationall.eu',
   password: 'allnations',
   bio: 'Irish; Interested in Politics, Technology & Culture; Believer in Open Societies & Markets; Bibliophile; Hibs Fan',
-  picture: 'https://image.ibb.co/eJ4OL7/image2.gif',
+  picture: 'https://image.ibb.co/eo417n/image21.gif',
   emotion_pref: 1,
   temperature_pref: 3
   },
@@ -269,7 +269,7 @@ p '------------------------------Categories created-----------------------------
   city: 'Madrid, Spain',
   email: 'eric@nationall.eu',
   password: 'allnations',
-  bio: 'Blockchain advocate',
+  bio: 'I took part in the catalan referendum organisation',
   picture: 'https://image.ibb.co/jmOa07/image18.gif',
   emotion_pref: 1,
   temperature_pref: 1
@@ -483,7 +483,7 @@ avg_rating: 4
 },
 {
   title: "Police violence in Catalonia",
-  subtitle: "Two Catalan voices during the controversial Referendum on 10/01/2017",
+  subtitle: "A video about what's happening",
   summary: "“It’s being terrible, we are afraid but we want to vote… there are a lot of videos where you can see the Spanish police hitting elderly people and young people, women and men… But one of the hardest things I’ve received is an audio message with a girl who suffered the violence from the police.",
   content: "<p></p><blockquote><em>“It’s being terrible, we are afraid but we want to vote… there are a lot of videos where you can see the Spanish police hitting elderly people and young people, women and men… But one of the hardest things I’ve received is an audio message with a girl who suffered the violence from the police. She says that the police has broken three fingers from one of her hands. And they’ve done it one by one. They pull her clothes out. People were waiting for the police with their hands up and they acted with violence no matter how. And the hardest part is that the Spanish government is saying that the police is acting in a proportional way and they say they are doing a good job. 337 people have been attended by hospitals.”</em></blockquote><p><br></p><p><br></p><blockquote><em>“It’s the Catalan hymn. We were singing it on my hometown in order to celebrate the end of the day. All along the day I passed from angry and frustrated to sad. But it the end, I feel hope, things are going to change. ’Cause de thing is that today, most of the people that weren’t coinvinced wether to stay or leave spain have just realised in what kind of country we are… and spain for catalans is&nbsp;pain.”</em></blockquote><p></p>",
 picture: 'https://www.youtube.com/embed/duFUa-Tr_ww',
@@ -491,6 +491,17 @@ category_id: Category.find_by_name("Politics").id,
 user_id: User.find_by_first_name("Mariona").id,
 publishing_date: Date.parse("2017-10-10"),
 avg_rating: 3
+},
+{
+  title: "Catalonia Update: Puigdemont Declares Independence",
+  subtitle: "Kind of...",
+  summary: "“Ladies and gentlemen, with the results of the referendum on October 1st, Catalonia has earned the right to be an independent state, and has earned the right to be heard and respected.“",
+  content: "<p></p><blockquote><em>“Ladies and gentlemen, with the results of the referendum on October 1st, Catalonia has earned the right to be an independent state, and has earned the right to be heard and respected.”</em></blockquote><p><em>– Carles Puigdemont</em></p><p><br></p><p>Catalan President Carles Puigdemont made his scheduled appearance in the regional Parliament yesterday&nbsp;<a href='http://www.catalangovernment.eu/pres_gov/government/en/news/303583/official-statement-president-political-situation-catalonia.html' target='_blank' style='color: inherit;'>to give a speech</a>&nbsp;on the 1 October referendum results and “the political state of the country”. This was the only agenda item, but the 6 p.m. meeting was delayed for slightly more than an hour for unknown reasons. The rumor mill reported that the Catalan leader was on the phone with EU Commission President Jean-Claude Juncker (denied), with other EU leaders urging restraint, with his governing coalition partners, by himself in a closet weeping in fear. What we know is that at shortly after 7 p.m. Mr. Puigdemont was introduced by President of the Parliament, Carme Forcadell, and he launched into a bold speech.</p><p><br></p><p><br></p><p>Mr. Puigdemont took maximum advantage of the worldwide coverage his speech was receiving, with something on the order of 1,000 reporters from across the globe in attendance. He began by reminding everyone of the circumstances under which the referendum were held, “the first time in the history of European democracies” that “violent police attacks against voters” were used to sow panic and intimidation. He then channeled his inner Jefferson to show “a decent respect to the opinions of mankind requires that they should declare the causes which impel them to the separation.”<a href='https://nationall.eu/catalonia-update-puigdemont-declares-independence-kind-of-ef0d710d0be7#_edn1' target='_blank' style='color: inherit;'>[1]</a>&nbsp;He explained how Catalonia had contributed as much as anyone to the project of Spanish democracy after Franco’s death as a “modernizing and stabilizing influence”<a href='https://nationall.eu/catalonia-update-puigdemont-declares-independence-kind-of-ef0d710d0be7#_edn2' target='_blank' style='color: inherit;'>[2]</a>, but whereas the Catalans saw this as a good first step, the “hegemonic elites of the state”<a href='https://nationall.eu/catalonia-update-puigdemont-declares-independence-kind-of-ef0d710d0be7#_edn3' target='_blank' style='color: inherit;'>[3]</a>&nbsp;saw this as an end point. He proceeded to hammer home the “long train of abuses and usurpations, pursuing invariably the same Object”<a href='https://nationall.eu/catalonia-update-puigdemont-declares-independence-kind-of-ef0d710d0be7#_edn4' target='_blank' style='color: inherit;'>[4]</a>&nbsp;of which Spain was guilty, beginning with the “campaign of Catalanophobia”<a href='https://nationall.eu/catalonia-update-puigdemont-declares-independence-kind-of-ef0d710d0be7#_edn5' target='_blank' style='color: inherit;'>[5]</a>&nbsp;unleashed by the “irresponsible”<a href='https://nationall.eu/catalonia-update-puigdemont-declares-independence-kind-of-ef0d710d0be7#_edn6' target='_blank' style='color: inherit;'>[6]</a>&nbsp;Spanish government and their “hand-picked magistrates…(in) a disgraceful sentence”<a href='https://nationall.eu/catalonia-update-puigdemont-declares-independence-kind-of-ef0d710d0be7#_edn7' target='_blank' style='color: inherit;'>[7]</a>&nbsp;to overthrow the reformed Estatut (2006) which had already been approved by both governments and a referendum of the Catalan people. Mr. Puigdemont thus lays at the feet of the Partido Popular the responsibility for the current crisis, for having shut the door in this manner to any hope of constitutional changes, all that was left was to follow the unconstitutional path towards independence.</p><p>After praising all those Catalans whose bravery and self-sacrifice had made the referendum possible, the President moved on to the meat of the matter:</p><p><br></p><blockquote><em>“Arriving at this historic moment, and as President of the Generalitat I take it upon myself to say, in presenting to you the results of the referendum before Parliament and our co-citizens, that the people have determined that Catalonia should become an independent state in the form of a republic.”</em><a href='https://nationall.eu/catalonia-update-puigdemont-declares-independence-kind-of-ef0d710d0be7#_edn8' target='_blank' style='color: inherit;'><em>[8]</em></a></blockquote><p><br></p><p>But before more than 10 seconds had passed from making this bold and definitive statement, the Catalan leader hedged it:</p><p><br></p><blockquote><em>“In with the same solemnity, the Government and I myself propose that the Parliament suspends the effects of the declaration of independence so that in the coming weeks we may begin a dialogue without which it is impossible to arrive at an agreed solution.”</em></blockquote><p><br></p><p>So did he or did he not declare Catalonia an independent republic? His most fervent supporters do not believe he has: they mostly went home with tears of frustration in their eyes. Madrid is likely to view it differently: Spanish commentators were quick to label the entire speech as more farce, more blackmail and more unconstitutional illegality.</p><p>The reality seems to be that Mr. Puigdemont crafted a speech designed carefully for two audiences: his supporters and Europe. To the first group, he needed to make it clear that their efforts and sacrifices were not in vain. “Catalonia has earned the right to be an independent state”&#8202;—&#8202;they have earned this right, the volunteers who slept in the schools to keep them open, defied the police and threats of sedition and fines, rushed ballots and boxes to keep them from confiscation, kept up websites and designed the universal voting system. But on the other hand, Mr. Puigdemont is a wily enough politician to know that Catalonia stands no chance of success without European support. So when that second audience repeatedly insists on the need for further dialogue, you have to acquiesce to it. For Carles Puigdemont&#8202;—&#8202;who is a true believe in independence in my view&#8202;—&#8202;this is a small concession: he knows Mariano Rajoy will never negotiate with him.</p><p>For this reason the Spanish government was left out of the speech, except as the villain. Though Mr. Puigdemont made several references to moderation, negotiation and dialogue, he notably left out any terms or starting point for these. If anything, he made his starting position as unacceptable as possible for the Spanish government:</p><p><br></p><blockquote><em>“We firmly believe that this moment needs not only a de-escalation of tension but also a clear and committed willingness to advance the claims of the people of Catalonia from the results of the 1st of October. We must keep these results in mind during the period of dialogue which we are willing to open.”</em><a href='https://nationall.eu/catalonia-update-puigdemont-declares-independence-kind-of-ef0d710d0be7#_edn9' target='_blank' style='color: inherit;'><em>[9]</em></a></blockquote><p><br></p><p>If we take this statement literally, it means that Mr. Puigdemont is really only willing to negotiate the terms of Spanish recognition of an independent Catalonia. This is obviously a non-starter for Madrid. Does that mean that the speech was completely cynical? Not exactly: I’m sure Mr. Puigdemont would prefer a negotiation with Spain on his terms, would jump to it. But it is calculated ploy insofar as it refuses to broaden the terms of discussion to anything short of a recognition of the 1 October results.</p><p>Even if the speech left supporters of independence flat, it was the only speech Mr. Puigdemont could give. Spain will never negotiate or accept independence. The only way to achieve it is to compel Spanish acceptance through EU mediation. EU mediation may or may not eventually come; but it will certainly NOT come if the first act of the Catalan President is to rebuff the “advice” of European leaders and immediately declare independence. So Mr. Puigdemont heeds the advice and calls for moderation and negotiation, but sets the terms in such a manner as he knows will be unacceptable. The Spanish position is that negotiation is only possible if Carles Puigdemont abandons completely all talk of independence and referendums; the Catalan position is that negotiation is always possible as soon as Mariano Rajoy accepts the legality of the referendum’s popular sovereignty.</p><p><br></p><p><br></p><p>Pro-independence Catalan leaders need to portray the Spanish government as ossified, hide-bound, unwavering, inflexible, unwilling even to consider a dialogue with them. Furthermore, they would like to provoke the most aggressive response from Madrid possible: the probabilities of Catalan independence would increase greatly if the Spanish Army were to deploy to the region. How long would it take Tiananmen-like images to be flashed around the world from Barcelona’s Plaça Catalunya? About 15 nanoseconds. That is how Catalonia hopes to win the propaganda war for independence.</p><p>Mariano Rajoy’s government seems to have learned a chastising lesson from the ill-conceived and even worse executed police response to the 1 October referendum. They clearly misjudged the degree of international reaction against the police violence. Round One to the Catalan&nbsp;<em>independentistas</em>. This is very likely the reason why Mr. Puigdemont and Co. were not swept up in the dragnet over the weekend. So it seems reasonable to suppose that the government’s response will attempt to concede anymore unforced errors to their opponents. But it is almost certain that they must react. There is an option to pretend that nothing happened on the 10th of October, to continue playing the waiting game, but this strategy would come at a very heavy political cost to Mr. Rajoy and his Partido Popular. The hard-line faction of former Prime Minister Aznar is already snapping at his heels and offering scathing advice on how to deal with the situation: “mano dura” or in English, “the iron fist”.</p><p><br></p><p>The Spanish government has a number of options at its disposal. It can declare a state of alarm or of emergency<a href='https://nationall.eu/catalonia-update-puigdemont-declares-independence-kind-of-ef0d710d0be7#_edn10' target='_blank' style='color: inherit;'>[10]</a>&nbsp;with a decree from the Council of Ministers and without the approval of the lower house of the Cortes<a href='https://nationall.eu/catalonia-update-puigdemont-declares-independence-kind-of-ef0d710d0be7#_edn11' target='_blank' style='color: inherit;'>[11]</a>. A state of siege&#8202;—&#8202;martial law&#8202;—&#8202;would require the prior authorization of the Deputies. However, these sundry states of exception grant the government only vague powers, to what “an organic law shall make provision for.”<a href='https://nationall.eu/catalonia-update-puigdemont-declares-independence-kind-of-ef0d710d0be7#_edn12' target='_blank' style='color: inherit;'>[12]</a>They make no mention of suspension of constitutional powers ceded to an Autonomous Region, for example. In order to take over the management of the Catalan government completely&#8202;—&#8202;if only temporarily&#8202;—&#8202;the government would have to invoke Article 155, which requires the approval of the majority of the Senate. Even then, the article states only that the government may “take all measures necessary to compel the Community to meet said obligations” which is very vague indeed. Paragraph 2 allows the government to “issue instructions to all the authorities of the Self-governing Communities” for this purpose. In fact, there is nothing in it about suspending charters of autonomy or removing elected officials from office without due process.</p><p><br></p><p>All of these considerations may be mere technicalities: if pressed, Mariano Rajoy is likely to interpret the constitution in the most favorable way possible to his chosen course of action and press the Cortes to back him. He already has&nbsp;<a href='https://www.fdbetancor.com/2017/10/05/catalonia-update-the-kings-speech/' target='_blank' style='color: inherit;'>the backing of the Bourbon monarch</a>. And the Spanish judiciary is fairly well packed<a href='https://nationall.eu/catalonia-update-puigdemont-declares-independence-kind-of-ef0d710d0be7#_edn13' target='_blank' style='color: inherit;'>[13]</a>&nbsp;with conservative judges placed there by the Partido Popular, and so will likely grant a broad interpretation of the government’s constitutional authority.</p><p><br></p><p>The most likely response seems to be the invocation of Article 155. During a televised press conference this afternoon, Prime Minister Rajoy took the first step<a href='https://nationall.eu/catalonia-update-puigdemont-declares-independence-kind-of-ef0d710d0be7#_edn14' target='_blank' style='color: inherit;'>[14]</a>&nbsp;in this process by demanding that the Catalan leader clarify whether independence had been declared or not and to take those steps necessary to rectify his illegal and unconstitutional standing. The Prime Minister issued this statement after meeting today with his Council of Ministers, in whose name the decree would have to be sent to the Senate for approval. While no deadline has been set for a reply by Mr. Puigdemont, it is clear that it is a matter of days, not weeks. Mr. Rajoy does not need any support from other parties to carry through his threat either: a simple majority in the Senate is sufficient and Rajoy’s Partido Popular holds 149 of the 266 seats in that chamber.</p><p>Assuming that Mr. Puigdemont is unable or unwilling to give a satisfactory response&#8202;—&#8202;calling for more moderation and dialogue won’t cut it&#8202;—&#8202;then we can expect Article 155 to be invoked; but what happens then is anybody’s guess. This article has never been invoked in the past and its powers are as vague as I described. Regardless of what powers the Spanish Prime Minister assumes, the next step will almost certainly be the publication of the suspended Catalan declaration of independence, which was apparently signed by leaders of the major pro-independence parties after Mr. Puigdemont’s address. In other words, even if they are all scooped up and sent to jail, the declaration will be out there as a banner around which to rally resistance.</p><p><br></p><p>Once Prime Minister Rajoy has been granted his Article 155 powers, whatever they are, he will face the problem of enforcement. If he acts as he has so far, by ordering people to “cease and desist” from Madrid, he stands a very good chance of being ignored and humiliated. If he sends in the police to arrest the pro-independence leaders, he will face a situation that could rapidly escalate out of control. He knows he will face large scale and protracted protests, work stoppages and blockages of major infrastructure (i.e. ports and highways). If he responds to these forcefully, he runs the risk of more scenes like those of October 1st, many more.</p><p><br></p><p>Over the long run, Spanish occupation will prove difficult. The more intrusive and violent the Spanish response is, the more likely larger and larger segments of Catalan society are to be alienated. People who are apolitical may start turning out at demonstrations; more and more groups may go on strike. The status of the Mossos will be critical for a number of reasons; the Spanish state clearly no longer trusts them as demonstrated by the High Court of Catalonia’s request that the National Police take over the guard functions at the Court house. But does this level of mistrust go so far as to suspecting them of open disloyalty? If so, the Spanish may not want to keep the Mossos armed as an organized force and may attempt to disarm them or limit their functions. But who then will police the streets, investigate crime, and undertake the counterterrorism work of the 17,000-person force? That is far more police and Guardia Civiles than Spain has available, if these are also to occupy key buildings, disperse crowds and guard the public officials who will be replacing those accused of sedition and treason. If Madrid attempts to replace all 72 “disloyal” parliamentarians, as well as the top 50 or so officials at the Generalitat, and the 700 mayors who supported the referendum, it would take another 5,000 police<a href='https://nationall.eu/catalonia-update-puigdemont-declares-independence-kind-of-ef0d710d0be7#_edn15' target='_blank' style='color: inherit;'>[15]</a>&nbsp;to ensure their protection from a potentially hostile Catalan population.</p><p><br></p><p>Prime Minister Rajoy undoubtedly has the legitimacy to run these risks, as well as the stated backing of EU Commissioner Juncker and French President Macron, but as the body count inevitably begins to rise, so will the outcry from Europe. He will need to manage this closely to avoid turning the Catalans into an object of world sympathy. Yet respond he must, for a territory cannot have two national governments and no state can allow mass chaos to go unchecked for a long period of time.</p><p><br></p><p><br></p><p></p>",
+  picture: 'https://image.ibb.co/fsHgsn/quiz1.png',
+  category_id: Category.find_by_name("Politics").id,
+  user_id: User.find_by_first_name("Fernando").id,
+  publishing_date: Date.parse("2017-11-11"),
+  avg_rating: 3
 }])
 
 p articles
@@ -514,17 +525,17 @@ p 'Creating Opinions'
   article_id: Article.first.id
   },
   {
-  content: 'This all referendum was a mistake.',
-  user_id: User.find_by_first_name("Peter").id,
-  article_id: Article.find_by_title("The Story of a Collaborative Referendum").id
-  },
-  {
   content: 'Has this organisation been inspired by anyone else in history?',
   user_id: User.find_by_first_name("Mariona").id,
   article_id: Article.find_by_title("The Story of a Collaborative Referendum").id
   },
   {
-  content: "This article is super interesting but I'd love more details!",
+  content: 'Instead of quelling pro-independence feeling, the actions of the Spanish Government will likely have increased sympathy for independence. Their actions will not only be resented by pro-independence activists, but also by those who were anti-independence but favoured a referendum on the subject occuring. The firing of rubber bullets has made their case — that Catalonia is better off as part of a united Spain — that much harder to make. Those on both sides feel that the Spanish Government has little respect for Catalonia. The measures taken by the Government in Madrid shall only serve to solidify that feeling.',
+  user_id: User.find_by_first_name("Peter").id,
+  article_id: Article.find_by_title("The Story of a Collaborative Referendum").id
+  },
+  {
+  content: "Yeah ! The Spanish Government should grant the people of Catalonia the chance to hold a legitimate, constitutional referendum. In doing so, not only would they demonstrate their willingness to listen to the Catalan people, they would be able to make the case for a united Spain.",
   user_id: User.find_by_first_name("Anna").id,
   article_id: Article.find_by_title("The Story of a Collaborative Referendum").id
   }])
@@ -536,6 +547,27 @@ p '----------------------------------------Opinions created---------------------
 p 'Creating Reviews'
 
   reviews = Review.create([{
+    rating: 4,
+    user_id: User.find_by_first_name("Lucas").id,
+    article_id: Article.find_by_title("The Story of a Collaborative Referendum").id,
+    emotion: 2,
+    temperature: 2
+    },
+    {
+    rating: 3,
+    user_id: User.find_by_first_name("Anna").id,
+    article_id: Article.find_by_title("The Story of a Collaborative Referendum").id,
+    emotion: 2,
+    temperature: 2
+    },
+    {
+    rating: 5,
+    user_id: User.find_by_first_name("Mariona").id,
+    article_id: Article.find_by_title("The Story of a Collaborative Referendum").id,
+    emotion: 2,
+    temperature: 3
+    },
+    {
     rating: 5,
     user_id: User.find_by_first_name("Peter").id,
     article_id: Article.find_by_title("Blockchain: Crypto-Catalonia").id,
@@ -549,28 +581,21 @@ p 'Creating Reviews'
     emotion: 2,
     temperature: 2
     },
-        {
+    {
     rating: 3,
     user_id: User.find_by_first_name("Lucas").id,
     article_id: Article.find_by_title("Blockchain: Crypto-Catalonia").id,
     emotion: 1,
     temperature: 2
     },
-        {
+    {
     rating: 2,
     user_id: User.find_by_first_name("Alexandre").id,
     article_id: Article.find_by_title("E. Macron’s plans to break nations’ borders.").id,
     emotion: 1,
     temperature: 2
     },
-        {
-    rating: 1,
-    user_id: User.find_by_first_name("Lucas").id,
-    article_id: Article.find_by_title("The Story of a Collaborative Referendum").id,
-    emotion: 2,
-    temperature: 2
-    },
-        {
+    {
     rating: 5,
     user_id: User.find_by_first_name("Anna").id,
     article_id: Article.find_by_title("Greece’s Odyssey for Sustainable Fashion").id,
@@ -584,7 +609,14 @@ p 'Creating Reviews'
     emotion: 2,
     temperature: 2
     },
-        {
+    {
+    rating: 3,
+    user_id: User.find_by_first_name("Lorène").id,
+    article_id: Article.find_by_title("A Forgotten Greece: The Pomakochoria").id,
+    emotion: 1,
+    temperature: 2
+    },
+    {
     rating: 3,
     user_id: User.find_by_first_name("Lucas").id,
     article_id: Article.find_by_title("Blockchain: Crypto-Catalonia").id,
@@ -598,7 +630,7 @@ p 'Creating Reviews'
     emotion: 1,
     temperature: 2
     },
-        {
+    {
     rating: 4,
     user_id: User.find_by_first_name("John").id,
     article_id: Article.find_by_title("Police violence in Catalonia").id,

@@ -25,10 +25,10 @@
   min-height: 185px;
   background: rgb(252,252,252);
   transition-duration: 0.4s;
-
   &:hover {
     transform: translateY(-25%);
     transition-duration: 0.4s;
+    background: rgb(252,252,252);
   }
 }
 
