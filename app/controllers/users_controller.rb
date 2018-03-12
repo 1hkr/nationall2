@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :set_article, only: [:show, :create, :edit, :destroy]
 
   def show
+    @user = current_user
   end
 
   def new
