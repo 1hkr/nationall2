@@ -117,7 +117,8 @@ p '------------------------------Categories created-----------------------------
   bio: 'Corporate consultant for well being and care in the workplace',
   picture: 'https://image.ibb.co/icW3L7/image4.gif',
   emotion_pref: 1,
-  temperature_pref: 3
+  temperature_pref: 3,
+  admin: true
   },
   {
   first_name: 'Ruairi',
@@ -166,7 +167,7 @@ p '------------------------------Categories created-----------------------------
   {
   first_name: 'Martin',
   last_name: 'Sartorius',
-  city: 'London, UK',
+  city: 'Liverpool, UK',
   email: 'martin@nationall.eu',
   password: 'allnations',
   bio: 'Independent thoughts on politics, economics, and other current events',
@@ -205,7 +206,8 @@ p '------------------------------Categories created-----------------------------
   bio: 'Founder of Nationall. I\'m also found of flowers.',
   picture: 'https://image.ibb.co/jeKOL7/image12.gif',
   emotion_pref: 1,
-  temperature_pref: 4
+  temperature_pref: 4,
+  admin: true
   },
   {
   first_name: 'India',
@@ -250,7 +252,8 @@ p '------------------------------Categories created-----------------------------
   bio: 'BUSINESS WOMAAAAAAN',
   picture: 'https://image.ibb.co/gRxeSn/image16.gif',
   emotion_pref: 2,
-  temperature_pref: 3
+  temperature_pref: 3,
+  admin: true
   },
   {
   first_name: 'John',
@@ -262,6 +265,18 @@ p '------------------------------Categories created-----------------------------
   picture: 'https://image.ibb.co/eOFYnn/image17.gif',
   emotion_pref: 2,
   temperature_pref: 1
+  },
+  {
+  first_name: 'Tuan',
+  last_name: 'Perera',
+  city: 'London, UK',
+  email: 'tuan@nationall.eu',
+  password: 'allnations',
+  bio: 'Yooooo man!',
+  picture: 'https://image.ibb.co/hN4EiS/Tuan.png',
+  emotion_pref: 2,
+  temperature_pref: 1,
+  admin: true
   },
   {
   first_name: 'Eric',
