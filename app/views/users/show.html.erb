@@ -1,2 +1,47 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+
+<div class="article-banner" style="background-image: url(https://scontent-frt3-2.xx.fbcdn.net/v/t31.0-8/21014147_10211707690341593_2314660178840299177_o.jpg?oh=32c20ff2460ef9b4e7302d4f1ae5b04d&oe=5B40C298);">
+</div>
+<div class="container-fluid side-margin">
+  <div class="row margin-left">
+    <!-- LEFT SIDE -->
+    <div class="col-xs-3 col-md-3 col-sm-3 sticky card-author-container">
+      <div class="card-user">
+          <div class="center">
+            <img class="user-img" src=<%= @user.picture %>>
+          </div>
+        <hr>
+      </div>
+        <div class="profile-options">
+          <p>Profile</p>
+          <p>Articles</p>
+          <p>Following</p>
+          <p>Followers</p>
+          <p>Donations</p>
+          <p>Settings</p>
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="col-xs-8 col-md-8 col-sm-8 front">
+      <div class="profile-page-right">
+        <!-- User informations -->
+        <h3><%= @user.first_name %> <%= @user.last_name %></h3>
+        <hr>
+        <div>
+          <h4>Email</h4>
+          <p> <%= @user.email %></p>
+        </div>
+        <div>
+          <hr>
+          <h4>City</h4>
+          <p><%= @user.city %></p>
+        </div>
+        <hr>
+        <div>
+          <h4>Bio</h4>
+          <p> <%= @user.bio %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

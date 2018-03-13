@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
-  before_action :set_article, only: [:show, :create, :edit, :destroy]
+  before_action :set_article, only: [:create, :edit, :destroy]
 
   def show
-    @user = current_user
+    @user = User.find(params[:id])
+    @articles = Article.where(user_id: @user)
+    authorize @user
   end
 
   def new
