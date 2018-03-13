@@ -14,9 +14,6 @@
         <div class="profile-options">
           <p>Profile</p>
           <p>Articles</p>
-          <p>Following</p>
-          <p>Followers</p>
-          <p>Donations</p>
           <p>Settings</p>
         </div>
     </div>
@@ -24,22 +21,71 @@
     <!-- RIGHT SIDE -->
     <div class="col-xs-8 col-md-8 col-sm-8 front">
       <div class="profile-page-right">
-        <!-- User informations -->
-        <h3><%= @user.first_name %> <%= @user.last_name %></h3>
-        <hr>
-        <div>
-          <h4>Email</h4>
-          <p> <%= @user.email %></p>
-        </div>
-        <div>
-          <hr>
-          <h4>City</h4>
+          <h3><%= @user.first_name %> <%= @user.last_name %></h3>
           <p><%= @user.city %></p>
-        </div>
-        <hr>
+          <hr>
         <div>
           <h4>Bio</h4>
           <p> <%= @user.bio %></p>
+        </div>
+        <div>
+          <hr>
+          <h4>Latest Articles</h4>
+        </div>
+        <div class="latest-articles">
+          <% @articles.each_with_index do |article, index| %>
+          <div class="card-wrapper">
+            <div class="card-container shadow">
+              <% if article.picture.last(3) == 'jpg' || article.picture.last(4) == 'jpeg' || article.picture.last(3) == 'png' || article.picture.last(3) == 'gif' %>
+                  <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url(<%= article.picture %>);">
+                  </div>
+              <% else  %>
+                  <div class="card" style="background-image: url('https://img.youtube.com/vi/<%= article.picture.last(11) %>/hqdefault.jpg');">
+                    <iframe class="video" id="player" src="https://www.youtube.com/embed/<%= article.picture.last(11) %>?showinfo=0&controls=0&rel=0" onmouseover="this.src=playersrc+'&autoplay=1'" onmouseout="this.src=playersrc" frameborder="0"></iframe>
+                  </div>
+              <% end %>
+              <div class="card-text grow">
+                <div class="card-details color">
+                  <p> <%= article.category.name.upcase %></p>
+                  <!-- <p class="top-right"><%= article.publishing_date %></p> -->
+
+                  <% if article.avg_rating %>
+                    <ul class="list-inline top-right">
+                      <% article.avg_rating.times do %>
+                        <li class="list-inline-item"><i class="fas fa-star" style="color:#EDB867"></i></li>
+                      <% end %>
+                      <% unless article.avg_rating == 5 %>
+                        <% (5 - article.avg_rating).times do %>
+                          <li class="list-inline-item "><i class="fas fa-star" style="color:#d2d2d2"></i></li>
+                        <% end %>
+                      <% end %>
+                    </ul>
+                  <% end %>
+
+                </div>
+                <div class="card-titles color">
+                  <h5><%= truncate(article.title, length: 65) %></h5>
+                  <p><%= truncate(article.subtitle, length: 40) %></p>
+                </div>
+                <div class="card-profile">
+                  <div class="align-v">
+                  <div class="center">
+                    <img class="card-user" src=<%= article.user.picture %>>
+                  </div>
+                  <div class="user-details color">
+                    <div>
+                      <p> <b><%= article.user.first_name%> <%= article.user.last_name %></b> </p>
+                    </div>
+                    <div>
+                      <p> <%= article.user.city %></p>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% end %>
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @articles = Article.where(user_id: @user)
+    @articles = Article.where(user_id: @user).first(10)
     authorize @user
   end
 
