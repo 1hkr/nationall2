@@ -1,5 +1,36 @@
+.card-user {
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 82px;
+}
+
+.user-img {
+  width: 120px;
+}
 
 .profile-container {
   padding-top: 50px;
   padding-left: 50px;
+}
+
+.profile-page-right {
+  margin-top: 20px;
+  box-shadow: -1px 1px 23px 0px #7b7b7b24;
+  padding: 70px 100px;
+  width:100%;
+}
+
+.profile-options {
+  padding-left: 75px;
+  color: #99999c;
+  font-size: 16px;
+  font-weight: 100;
+}
+.profile-options p:hover {
+  color: #66afe9;
+  text-decoration: none;
+}
+.profile-options p:active {
+  color: #66afe9;
+  text-decoration: none;
 }
