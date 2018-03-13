@@ -183,11 +183,11 @@
 
       <div class="buttons">
 
-        <% if policy(@article).edit? %>
+        <% if policy(@article).edit? || current_user.admin? %>
         <%= link_to "Edit", edit_article_path(@article), class: "btn-blue-border" %>
         <% end %>
 
-        <% if policy(@article).destroy? %>
+        <% if policy(@article).destroy? || current_user.admin? %>
         <%= link_to "Delete", article_path(@article), class: "btn-blue-border", method: :delete, data: { confirm: "Are you sure?"} %>
         <% end %>
 
