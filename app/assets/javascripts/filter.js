@@ -13,13 +13,6 @@ window.onclick = function(event) {
   }
 }
 
-
-// $(document).ready(function(){
-//   $(".br-theme-fontawesome-fire").click(function(){
-//     $("#temperature").submit();
-//     });
-// });
-
 function changeEventHandler(event) {
   $(".fire-form").submit();
 };
