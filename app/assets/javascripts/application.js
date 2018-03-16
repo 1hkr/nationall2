@@ -6,4 +6,4 @@
 //= require smiley.js
 //= require bootstrap-sprockets
 //= require_tree .
-//= require media
+
