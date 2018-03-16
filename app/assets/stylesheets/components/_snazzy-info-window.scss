@@ -1,8 +1,6 @@
 // Snazzy Info Window
 @import '_settings';
 
-
-
 //////////////////////////////
 // 0. Variables
 //////////////////////////////
@@ -25,8 +23,6 @@ $si-inverse-root-2: 0.7071067811865474;
 $si-rotation: -45deg;
 $si-rotated-shadow-h: $si-inverse-root-2 * ($si-shadow-h - $si-shadow-v);     // Only applies to a -45deg rotation
 $si-rotated-shadow-v: $si-inverse-root-2 * ($si-shadow-h + $si-shadow-v);     // Only applies to a -45deg rotation
-
-
 
 //////////////////////////////
 // 1. Wrapper Styles
@@ -81,8 +77,6 @@ $si-rotated-shadow-v: $si-inverse-root-2 * ($si-shadow-h + $si-shadow-v);     //
     margin-left: $si-default-marker-width - $si-default-marker-anchor-x + $si-default-marker-margin;
     transform: translate(0, -50%);
 }
-
-
 
 //////////////////////////////
 // 2. Infowindow Shadow
@@ -154,8 +148,6 @@ $si-rotated-shadow-v: $si-inverse-root-2 * ($si-shadow-h + $si-shadow-v);     //
     transform: translate(50%, -50%) rotate($si-rotation);
 }
 
-
-
 //////////////////////////////
 // 3. Content Styles
 //////////////////////////////
@@ -211,8 +203,6 @@ $si-rotated-shadow-v: $si-inverse-root-2 * ($si-shadow-h + $si-shadow-v);     //
     }
 }
 
-
-
 //////////////////////////////
 // 5. Pointer Styles
 //////////////////////////////
@@ -265,7 +255,6 @@ $si-triangle-difference: min(round($si-border-width * ($si-root-2 - 1)), $si-poi
         margin-bottom: $si-triangle-difference;
     }
 }
-
 
 // Bottom pointer positioning
 .#{$si-pre}-pointer-bottom {
