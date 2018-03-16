@@ -12,6 +12,7 @@
 <% end %>
 
 <div class="container-fluid side-margin">
+
   <div class="row margin-left">
 
     <!-- LEFT SIDE -->
@@ -20,7 +21,6 @@
 
         <!-- Profile of the writer -->
         <div class="article-profile">
-
           <div class="center author">
             <img class="card-user" src=<%= @article.user.picture %>>
           </div>
@@ -33,10 +33,7 @@
               <p class="grow"> <%= @article.user.city %></p>
             </div>
           </div>
-
         </div>
-
-
 
         <div class="bio">
           <p> <%= @article.user.bio %></p>
@@ -45,11 +42,13 @@
         <hr>
 
         <% if user_signed_in? && donation = Donation.find_by(user_id: current_user.id, article_id: @article.id) %>
+
         <div>
           <%= render 'articles/donation' %>
         </div>
 
         <% else %>
+
         <div id="form-donation">
           <%= simple_form_for [@article, @donation], remote: true do |f| %>
             <div id="donate-form">
@@ -62,7 +61,7 @@
                 Donate to <%= @article.user.first_name %>
               <% end %>
             </div>
-            <% end %>
+          <% end %>
         </div>
 
           <hr>
@@ -70,39 +69,35 @@
       </div>
     </div>
 
-
-
     <!-- RIGHT SIDE -->
     <div class="col-xs-8 col-md-8 col-sm-8 front">
-
       <!-- Article -->
       <div class="card-article">
         <!-- Articles informations -->
         <div class="article-text">
           <div class="article-details">
             <p> <%= @article.category.name.upcase %></p>
-        <!-- Average Rating -->
-        <% if @avg_rating %>
-          <ul class="list-inline show-star-top-right">
-            <% @avg_rating.times do %>
-              <li class="list-inline-item"><i class="fas fa-star" style="color:#EDB867"></i></li>
-            <% end %>
-            <% unless @avg_rating == 5 %>
-              <% (5 - @avg_rating).times do %>
-                <li class="list-inline-item "><i class="fas fa-star" style="color:#d2d2d2"></i></li>
+              <!-- Average Rating -->
+              <% if @avg_rating %>
+                <ul class="list-inline show-star-top-right">
+                  <% @avg_rating.times do %>
+                    <li class="list-inline-item"><i class="fas fa-star" style="color:#EDB867"></i></li>
+                  <% end %>
+                  <% unless @avg_rating == 5 %>
+                    <% (5 - @avg_rating).times do %>
+                      <li class="list-inline-item "><i class="fas fa-star" style="color:#d2d2d2"></i></li>
+                    <% end %>
+                  <% end %>
+                </ul>
               <% end %>
-            <% end %>
-          </ul>
-        <% end %>
 
-          </div>
+        </div>
 
           <h1><%= @article.title %></h1>
           <h4><%= @article.subtitle %></h4>
           <p ><%= @article.publishing_date %></p>
 
           <hr>
-
 
           <h4>Summary</h4>
           <p> <%= @article.summary %></p>
@@ -176,8 +171,6 @@
           <%= link_to "Sign in and leave your opinion", new_user_session_path %>
         </div>
       <% end %>
-
-
 
       <!-- End buttons -->
 

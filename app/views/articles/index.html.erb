@@ -12,11 +12,6 @@
   <% end %>
     <%= render 'shared/filter' %>
 
-
-<!-- <script>var playersrc;</script>
-<iframe class="yt560x315" id="JSytplayer" src="https://www.youtube.com/embed/MVKts0fBW34?rel=0&controls=0&modestbranding=1&showinfo=0" onmouseover="this.src=playersrc+'&autoplay=1'" onmouseout="this.src=playersrc" frameborder="0" allowfullscreen></iframe>
- -->
-
 <script>playersrc=document.getElementById('JSytplayer').src;</script>
   <div class="row margin-left">
     <% @articles.each_with_index do |article, index| %>
@@ -37,7 +32,6 @@
           <div class="card-text grow">
             <div class="card-details color">
               <p> <%= article.category.name.upcase %></p>
-              <!-- <p class="top-right"><%= article.publishing_date %></p> -->
 
               <% if article.avg_rating %>
                 <ul class="list-inline top-right">
