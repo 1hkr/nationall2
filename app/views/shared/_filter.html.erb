@@ -39,8 +39,8 @@
       <div class="dropdown">
         <button class="dropbtn-emotion">🤔</button>
         <div class="dropdown-content">
-          <a><%= link_to "😢", articles_path(avg_emotion: 1, category: params[:category], avg_temperature: params[:avg_temperature]) %></a>
-          <a><%= link_to "😊", articles_path(avg_emotion: 2, category: params[:category], avg_temperature: params[:avg_temperature])%></a>
+          <%= link_to "😢", articles_path(avg_emotion: 1, category: params[:category], avg_temperature: params[:avg_temperature]) %>
+          <%= link_to "😊", articles_path(avg_emotion: 2, category: params[:category], avg_temperature: params[:avg_temperature])%>
         </div>
       </div>
     </div>
