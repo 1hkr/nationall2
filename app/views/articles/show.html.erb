@@ -26,7 +26,7 @@
 
           <div class="user-details">
             <div class="author">
-              <p> <b><%= @article.user.first_name%> <%= @article.user.last_name %></b> </p>
+              <p><b><%= link_to "#{@article.user.first_name} #{@article.user.last_name}", user_path(@article.user) %></b> </p>
             </div>
             <div class="author">
               <p class="grow"> <%= @article.user.city %></p>

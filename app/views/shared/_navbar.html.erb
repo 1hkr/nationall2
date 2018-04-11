@@ -44,7 +44,9 @@
               <% end %>
               <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
                 <li>
-                  <i class="fa fa-sign-out"></i>  <%= link_to "Profile", user_path(current_user) %>
+                  <%= link_to user_path(current_user), method: :get do %>
+                  <i class="fas fa-user"></i>  <%= t(".profile", default: "Profile") %>
+                  <% end %>
                 </li>
 
                 <li>
@@ -52,7 +54,6 @@
                   <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
                   <% end %>
                 </li>
-
               </ul>
             </div>
           </div>
