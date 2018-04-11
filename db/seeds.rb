@@ -273,7 +273,7 @@ p '------------------------------Categories created-----------------------------
   email: 'tuan@nationall.eu',
   password: 'allnations',
   bio: 'Yooooo man!',
-  picture: 'https://image.ibb.co/hN4EiS/Tuan.png',
+  picture: 'https://image.ibb.co/gm9MHx/Tuan.gif',
   emotion_pref: 2,
   temperature_pref: 1,
   admin: true

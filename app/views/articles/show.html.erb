@@ -1,5 +1,4 @@
 <!-- Article banner -->
-
 <% if @article.picture %>
 <% if @article.picture.last(3) == 'jpg' || @article.picture.last(4) == 'jpeg' || @article.picture.last(3) == 'png' || @article.picture.last(3) == 'gif' %>
 <div class="article-banner" style="background-image: url(<%= @article.picture %>);">
@@ -27,7 +26,7 @@
 
           <div class="user-details">
             <div class="author">
-              <p> <b><%= @article.user.first_name%> <%= @article.user.last_name %></b> </p>
+              <p><b><%= link_to "#{@article.user.first_name} #{@article.user.last_name}", user_path(@article.user) %></b> </p>
             </div>
             <div class="author">
               <p class="grow"> <%= @article.user.city %></p>
@@ -180,9 +179,8 @@
 
 
       <!-- End buttons -->
-
       <div class="buttons">
-
+      <% if user_signed_in? %>
         <% if policy(@article).edit? || current_user.admin? %>
         <%= link_to "Edit", edit_article_path(@article), class: "btn-blue-border" %>
         <% end %>
@@ -190,7 +188,7 @@
         <% if policy(@article).destroy? || current_user.admin? %>
         <%= link_to "Delete", article_path(@article), class: "btn-blue-border", method: :delete, data: { confirm: "Are you sure?"} %>
         <% end %>
-
+<% end %>
       </div>
     </div>
 
