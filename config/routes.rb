@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :categories_prefs, only: [:create]
   resource :emotion_prefs, only: [:update]
   resource :temperature_prefs, only: [:update]
-  get 'users/:id', to: "users#show", as: "user"
+  resources :users, only: [:show]
 end
 
 
