@@ -1,27 +1,27 @@
 .filters {
-    height: 32px;
-    width: 950px;
+  height: 32px;
+  width: 950px;
+  font-size: 16px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 0px solid #0000000f;
+  margin-bottom: 28px;
+  align-items: center;
+
+  #category a {
+    color: #99999c;
+    &:hover{
+      color: #03359a;
+    }
+  }
+
+  #temperature #emotion {
     font-size: 16px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-evenly;
-    border-bottom: 0px solid #0000000f;
-    margin-bottom: 28px;
-    align-items: center;
-
-    #category a {
-      color: #99999c;
-      &:hover{
-        color: #03359a;
-      }
+    &:focus {
+      outline: none;
     }
-
-    #temperature #emotion {
-      font-size: 16px;
-      &:focus {
-        outline: none;
-      }
-    }
+  }
 }
 
 .dropbtn-fire {
@@ -49,9 +49,9 @@
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
-    position: relative;
-    display: inline-block;
-    width:30px;
+  position: relative;
+  display: inline-block;
+  width:30px;
   &:focus {
     outline: none;
   }
@@ -63,23 +63,24 @@
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
+  display: none;
+  position: absolute;
+  background-color: #FFFFFF;
+  radius: 5px !important;
+  opacity: 50%;
     // min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    height: 196px;
     width: 50px;
-}
+  }
 
 
 /* Links inside the dropdown */
 .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+  color: $red;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
 /* Change color of dropdown links on hover */
@@ -87,12 +88,12 @@
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
+  background-color: #3e8e41;
 }
 
 // change the size of the fire
