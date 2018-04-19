@@ -1,6 +1,6 @@
 // Import page-specific CSS files here.
 @import "home";
-@import "login";
+@import "devise";
 @import "articles/_show";
 @import "articles/_index_article";
 @import "articles/_new";
@@ -57,6 +57,10 @@ body {
   margin-left: 10px;
 }
 
+.margin-right-10 {
+  margin-right: 10px;
+}
+
 .bottomize {
   display: flex;
   align-items: flex-end;
@@ -90,6 +94,9 @@ body {
   font-size: 62px !important;
   color: rgba(239, 239, 239, 0.8);
   text-shadow: 2px 3px 5px #FFF, 0px 0px 0 #5d5d5d, 1px 4px 6px #fff;
+  &:hover {
+    color: rgba(239, 239, 239, 0.8) !important;
+  }
 }
 
 .Site {
