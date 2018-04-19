@@ -1,10 +1,10 @@
 <% if current_page?('/articles') %>
-  <div class="filters">
-      <% Category.all.each do |category| %>
-    <div id="category">
-      <%= link_to category.name, articles_path(category: category.name, avg_temperature: params[:avg_temperature], avg_emotion: params[:avg_emotion]) %>
-    </div>
-      <% end %>
+<div class="filters">
+  <% Category.all.each do |category| %>
+  <div id="category">
+    <%= link_to category.name, articles_path(category: category.name, avg_temperature: params[:avg_temperature], avg_emotion: params[:avg_emotion]) %>
+  </div>
+  <% end %>
 
     <!-- <div id="emotion">
       <div class="dropdown">
@@ -35,7 +35,7 @@
       </div>
     </div> -->
 
-<div id="emotion">
+    <div id="emotion">
       <div class="dropdown">
         <button class="dropbtn-emotion">🤔</button>
         <div class="dropdown-content">
@@ -45,20 +45,26 @@
       </div>
     </div>
 
-      <div id="temperature">
-        <div class="dropdown">
-          <button class="dropbtn-fire" style="font-size:25px ; margin-bottom:31px">
-            <%= icon("fas", "fire") %>
-          </button>
-          <div class="dropdown-content">
-            <%= form_tag articles_path, class: 'fire-form', method: :get do %>
+    <div id="temperature">
+      <div class="dropdown">
+        <button class="dropbtn-fire" style="font-size:25px ; margin-bottom:31px">
+          <%= icon("fas", "fire") %>
+        </button>
+        <div class="dropdown-content">
+          <%= link_to icon("fas", "fire"), articles_path(avg_emotion: params[:avg_emotion], category: params[:category], avg_temperature: 1) %>
+          <%= link_to icon("fas", "fire"), articles_path(avg_emotion: params[:avg_emotion], category: params[:category], avg_temperature: 2)%>
+          <%= link_to icon("fas", "fire"), articles_path(avg_emotion: params[:avg_emotion], category: params[:category], avg_temperature: 3) %>
+          <%= link_to icon("fas", "fire"), articles_path(avg_emotion: params[:avg_emotion], category: params[:category], avg_temperature: 4)%>
+
+<!--           <%= form_tag articles_path, class: 'fire-form', method: :get do %>
               <%= hidden_field_tag :category, params[:category] %>
               <%= hidden_field_tag :avg_emotion, params[:avg_emotion] %>
               <%= select_tag :avg_temperature, options_for_select(1..4), class: 'temperature-jquery', onchange: 'changeEventHandler(event)' %>
-            <% end %>
+              <% end %> -->
+
+            </div>
           </div>
         </div>
-      </div>
 
 <!--     <div id="temperature">
       <div class="dropdown">
@@ -73,6 +79,6 @@
     </div> -->
 
   </div>
-<% end %>
+  <% end %>
 
 

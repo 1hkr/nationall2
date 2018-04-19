@@ -15,6 +15,10 @@ body {
 }
 
 // Flexbox shortcuts
+.container {
+  min-height: 78vh;
+}
+
 .side-margin {
   margin-right: 40px;
   margin-left: 40px;
