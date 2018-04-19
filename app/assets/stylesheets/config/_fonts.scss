@@ -14,3 +14,8 @@ $headers-font: "Open Sans", "Helvetica", "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+
+.inner-shadow {
+  color: rgba(239, 239, 239, 0.8);
+  text-shadow: 2px 3px 5px #FFF, 0px 0px 0 #5d5d5d, 1px 4px 6px #fff;
+}
