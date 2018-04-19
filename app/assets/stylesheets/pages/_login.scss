@@ -1,0 +1,21 @@
+.login {
+  padding-top: 10vh;
+  padding-bottom: 5vh;
+
+  h2 {
+    font-family: arial !important;
+    font-size: 62px !important;
+    color: rgba(239, 239, 239, 0.8);
+    text-shadow: 2px 3px 5px #FFF, 0px 0px 0 #5d5d5d, 1px 4px 6px $white;
+  }
+
+  label {
+    font-family: arial !important;
+    color: rgb(173, 172, 172);
+  }
+}
+
+
+.padding-form {
+  padding: 6px 12px !important;
+}

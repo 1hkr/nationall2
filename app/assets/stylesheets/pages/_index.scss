@@ -1,5 +1,6 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "login";
 @import "articles/_show";
 @import "articles/_index_article";
 @import "articles/_new";
@@ -48,6 +49,14 @@ body {
   margin-bottom: 15px;
 }
 
+.margin-top-10 {
+  margin-top: 10px;
+}
+
+.margin-left-10 {
+  margin-left: 10px;
+}
+
 .bottomize {
   display: flex;
   align-items: flex-end;
@@ -55,7 +64,7 @@ body {
 
 // main shadow to use
 .shadow {
-  box-shadow: -1px 1px 23px 0px #7b7b7b24;
+  box-shadow: -1px 1px 23px 0px #7b7b7b24 !important;
 }
 
 .padding {
