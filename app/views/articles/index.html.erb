@@ -17,7 +17,6 @@
 <iframe class="yt560x315" id="JSytplayer" src="https://www.youtube.com/embed/MVKts0fBW34?rel=0&controls=0&modestbranding=1&showinfo=0" onmouseover="this.src=playersrc+'&autoplay=1'" onmouseout="this.src=playersrc" frameborder="0" allowfullscreen></iframe>
  -->
 
-<script>playersrc=document.getElementById('JSytplayer').src;</script>
   <div class="row margin-left">
     <% @articles.each_with_index do |article, index| %>
     <%= link_to article_path(article) do %>
@@ -31,8 +30,9 @@
           <% else  %>
 
               <div class="card" style="background-image: url('https://img.youtube.com/vi/<%= article.picture.last(11) %>/hqdefault.jpg');">
-                <iframe class="video" id="player" src="https://www.youtube.com/embed/<%= article.picture.last(11) %>?showinfo=0&controls=0&rel=0" onmouseover="this.src=playersrc+'&autoplay=1'" onmouseout="this.src=playersrc" frameborder="0"></iframe>
+                <iframe class="video" id="player" src="https://www.youtube.com/embed/<%= article.picture.last(11) %>?showinfo=0&controls=0&rel=0" onmouseover="this.src='https://www.youtube.com/embed/<%= article.picture.last(11)%>?showinfo=0&controls=0&rel=0&autoplay=1'" onmouseout="this.src='https://www.youtube.com/embed/<%= article.picture.last(11)%>?showinfo=0&controls=0&rel=0'" frameborder="0"></iframe>
               </div>
+
           <% end %>
           <div class="card-text grow">
             <div class="card-details color">
