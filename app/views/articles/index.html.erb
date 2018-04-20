@@ -31,7 +31,7 @@
           <% else  %>
 
               <div class="card" style="background-image: url('https://img.youtube.com/vi/<%= article.picture.last(11) %>/hqdefault.jpg');">
-                <iframe class="video" id="player" src="https://www.youtube.com/embed/<%= article.picture.last(11) %>?showinfo=0&controls=0&rel=0" onmouseover="this.src=playersrc+'&autoplay=1'" onmouseout="this.src=playersrc" frameborder="0"></iframe>
+                <iframe class="video" id="player" src="https://www.youtube.com/embed/<%= article.picture.last(11) %>?showinfo=0&controls=0&rel=0" onmouseover="this.src='https://www.youtube.com/embed/<%= article.picture.last(11)%>?showinfo=0&controls=0&rel=0&autoplay=1'" onmouseout="this.src='https://www.youtube.com/embed/<%= article.picture.last(11) %>?showinfo=0&controls=0&rel=0' frameborder="0"></iframe>
               </div>
 
           <% end %>
