@@ -37,7 +37,7 @@
 <div class="Site-content">
   <%= yield %>
 </div>
-<%= render 'shared/footer' unless :skip_footer?%>
+<%= render 'shared/footer' unless params[:action] == 'home' %>
 <%= javascript_include_tag 'application' %>
 <%= javascript_pack_tag 'application' %>
 <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
