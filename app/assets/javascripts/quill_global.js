@@ -3,12 +3,10 @@ var defaults = {
         modules: {
             toolbar: [
                 [{ 'header': [2, 3, false] }],
-                [{ 'color': [] }, { 'background': [] }],
-                ['bold', 'italic', 'underline', 'strike'],
+                ['bold', 'italic', 'underline'],
                 ['blockquote', 'code-block'],
                 [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-                [{ 'indent': '-1'}, { 'indent': '+1' }],
-                ['clean']
+                ['link', 'image']
             ]
         }
     };
