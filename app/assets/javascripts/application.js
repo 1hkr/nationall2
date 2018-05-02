@@ -2,6 +2,7 @@
 //= require jquery
 //= require quill.min
 //= require quill.global
+//= require medium-editor
 //= require quizz.js
 //= require smiley.js
 //= require bootstrap-sprockets
