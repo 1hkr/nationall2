@@ -10,6 +10,7 @@
 
 import './rating';
 import './temperature';
+import './dante';
 import { triggerCardSticky } from './card_sticky';
 
 

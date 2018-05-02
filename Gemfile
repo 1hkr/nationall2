@@ -20,6 +20,9 @@ gem "pundit"
 gem 'geocoder'
 gem 'jquery-rails'
 gem 'quilljs-rails'
+gem 'underscore-rails'
+gem 'rails-sanitize-js'
+gem 'dante-editor'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

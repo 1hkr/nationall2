@@ -1,3 +1,7 @@
+  <div id="editor" contenteditable="true" class="editable">
+    your content here
+  </div>
+
 <%= simple_form_for(@article) do |f| %>
 <%= f.input :title, placeholder: "Title", label: false, input_html: { class: 'form_light no_border form_title' } %>
 <%= f.input :subtitle, placeholder: "Subtitle", label: false, input_html: { class: 'form_light no_border form_subtitle margin-bottom' }%>
@@ -11,4 +15,5 @@
 </div>
 <%= f.submit "Publish your article >", class: "btn-blue"  %>
 <% end %>
+
 

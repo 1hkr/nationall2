@@ -3,6 +3,9 @@
 //= require quill.min
 //= require quill.global
 //= require quizz.js
+//= require underscore
+//= require sanitize
+//= require 'dante'
 //= require smiley.js
 //= require bootstrap-sprockets
 //= require_tree .
