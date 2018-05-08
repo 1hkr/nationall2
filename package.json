@@ -3,6 +3,7 @@
   "private": true,
   "dependencies": {
     "@rails/webpacker": "^3.2.2",
+    "Dante2": "^0.4.3",
     "bootstrap": "3",
     "gmaps": "^0.4.24",
     "jquery": "^3.3.1",

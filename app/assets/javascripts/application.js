@@ -1,5 +1,9 @@
 //= require rails-ujs
 //= require jquery
+//= require jquery_ujs
+//= require react
+//= require 'dante-vendors.js'
+//= require 'Dante2.js'
 //= require quill.min
 //= require quill.global
 //= require quizz.js

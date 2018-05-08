@@ -20,6 +20,9 @@ gem "pundit"
 gem 'geocoder'
 gem 'jquery-rails'
 gem 'quilljs-rails'
+gem 'dante2-editor'
+gem 'react-rails'
+gem 'sprockets-coffee-react'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
