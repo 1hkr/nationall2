@@ -7,7 +7,7 @@ var myAutocomplete = autocomplete('#search-input', {hint: false}, [
       displayKey: 'title',
       templates: {
         suggestion: function(suggestion) {
-          var sugTemplate = "<div><img src='"+ suggestion.image +"'><p>"+ suggestion._highlightResult.title.value +"</p></div>"
+          var sugTemplate = "<div><img src='"+ suggestion.image +"'><p>"+ suggestion._highlightResult.title.value.substring(0, 35); +"</p></div>"
           return sugTemplate;
         }
       }

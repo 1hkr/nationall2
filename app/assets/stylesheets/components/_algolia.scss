@@ -1,4 +1,4 @@
-
+i
 .searchbox__reset {
   position: absolute;
   top: 8px;
@@ -121,14 +121,12 @@
   font-size: 1.1em;
   padding: 4px 4px 0;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: nowrap !important;
   width: 100%;
   height: 100px;
   clear: both;
   p {
-    display:inline-block;
-    white-space: nowrap!important;
+    display: inline-block;
     text-overflow: ellipsis;
     overflow: hidden;
     line-height: 2em;
