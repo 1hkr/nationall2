@@ -25,4 +25,11 @@ class Article < ApplicationRecord
     whole_statement = [specific_emotion, specific_temperature, specific_order].join(", ")
     order(whole_statement)
   end
+
+  include AlgoliaSearch
+
+  algoliasearch do
+    attribute :title, :subtitle, :content
+    searchableAttributes ['title', 'subtitle', 'content']
+  end
 end

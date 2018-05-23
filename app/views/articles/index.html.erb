@@ -82,6 +82,7 @@
 </div>
 
 <% content_for :after_js do %>
+
   <script>
     var playersrc = document.getElementById('player').src
 
@@ -96,8 +97,12 @@
     }
 
   </script>
+
   <% if user_signed_in? && current_user.answered === false %>
     <%= javascript_pack_tag "typed" %>
   <% end %>
+
+  <%= javascript_pack_tag "algolia" %>
+
 <% end %>
 
