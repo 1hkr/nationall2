@@ -3,10 +3,14 @@
   "private": true,
   "dependencies": {
     "@rails/webpacker": "^3.2.2",
+    "babel-preset-react": "^6.24.1",
     "bootstrap": "3",
     "gmaps": "^0.4.24",
     "jquery": "^3.3.1",
     "jquery-bar-rating": "^1.2.2",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "snazzy-info-window": "^1.1.1",
     "typed.js": "^2.0.6"
   },

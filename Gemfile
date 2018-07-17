@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.4.3'
+ruby '2.4.4'
 
 gem 'figaro'
 gem 'jbuilder', '~> 2.0'
@@ -20,6 +20,7 @@ gem "pundit"
 gem 'geocoder'
 gem 'jquery-rails'
 gem 'quilljs-rails'
+gem 'dante2-editor'
 gem "algoliasearch-rails"
 
 group :development do
